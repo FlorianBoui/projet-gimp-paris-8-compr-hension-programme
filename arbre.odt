@@ -1,0 +1,6063 @@
+﻿.
+├── acinclude.m4
+├── aclocal.m4
+├── app
+│   ├── about.h
+│   ├── actions
+│   │   ├── actions.c
+│   │   ├── actions.h
+│   │   ├── actions-types.h
+│   │   ├── brush-editor-actions.c
+│   │   ├── brush-editor-actions.h
+│   │   ├── brushes-actions.c
+│   │   ├── brushes-actions.h
+│   │   ├── buffers-actions.c
+│   │   ├── buffers-actions.h
+│   │   ├── buffers-commands.c
+│   │   ├── buffers-commands.h
+│   │   ├── channels-actions.c
+│   │   ├── channels-actions.h
+│   │   ├── channels-commands.c
+│   │   ├── channels-commands.h
+│   │   ├── colormap-actions.c
+│   │   ├── colormap-actions.h
+│   │   ├── colormap-commands.c
+│   │   ├── colormap-commands.h
+│   │   ├── config-actions.c
+│   │   ├── config-actions.h
+│   │   ├── config-commands.c
+│   │   ├── config-commands.h
+│   │   ├── context-actions.c
+│   │   ├── context-actions.h
+│   │   ├── context-commands.c
+│   │   ├── context-commands.h
+│   │   ├── cursor-info-actions.c
+│   │   ├── cursor-info-actions.h
+│   │   ├── cursor-info-commands.c
+│   │   ├── cursor-info-commands.h
+│   │   ├── data-commands.c
+│   │   ├── data-commands.h
+│   │   ├── data-editor-commands.c
+│   │   ├── data-editor-commands.h
+│   │   ├── debug-actions.c
+│   │   ├── debug-actions.h
+│   │   ├── debug-commands.c
+│   │   ├── debug-commands.h
+│   │   ├── dialogs-actions.c
+│   │   ├── dialogs-actions.h
+│   │   ├── dialogs-commands.c
+│   │   ├── dialogs-commands.h
+│   │   ├── dockable-actions.c
+│   │   ├── dockable-actions.h
+│   │   ├── dockable-commands.c
+│   │   ├── dockable-commands.h
+│   │   ├── dock-actions.c
+│   │   ├── dock-actions.h
+│   │   ├── dock-commands.c
+│   │   ├── dock-commands.h
+│   │   ├── documents-actions.c
+│   │   ├── documents-actions.h
+│   │   ├── documents-commands.c
+│   │   ├── documents-commands.h
+│   │   ├── drawable-actions.c
+│   │   ├── drawable-actions.h
+│   │   ├── drawable-commands.c
+│   │   ├── drawable-commands.h
+│   │   ├── dynamics-actions.c
+│   │   ├── dynamics-actions.h
+│   │   ├── dynamics-editor-actions.c
+│   │   ├── dynamics-editor-actions.h
+│   │   ├── edit-actions.c
+│   │   ├── edit-actions.h
+│   │   ├── edit-commands.c
+│   │   ├── edit-commands.h
+│   │   ├── error-console-actions.c
+│   │   ├── error-console-actions.h
+│   │   ├── error-console-commands.c
+│   │   ├── error-console-commands.h
+│   │   ├── file-actions.c
+│   │   ├── file-actions.h
+│   │   ├── file-commands.c
+│   │   ├── file-commands.h
+│   │   ├── fonts-actions.c
+│   │   ├── fonts-actions.h
+│   │   ├── fonts-commands.c
+│   │   ├── fonts-commands.h
+│   │   ├── gradient-editor-actions.c
+│   │   ├── gradient-editor-actions.h
+│   │   ├── gradient-editor-commands.c
+│   │   ├── gradient-editor-commands.h
+│   │   ├── gradients-actions.c
+│   │   ├── gradients-actions.h
+│   │   ├── gradients-commands.c
+│   │   ├── gradients-commands.h
+│   │   ├── help-actions.c
+│   │   ├── help-actions.h
+│   │   ├── help-commands.c
+│   │   ├── help-commands.h
+│   │   ├── image-actions.c
+│   │   ├── image-actions.h
+│   │   ├── image-commands.c
+│   │   ├── image-commands.h
+│   │   ├── images-actions.c
+│   │   ├── images-actions.h
+│   │   ├── images-commands.c
+│   │   ├── images-commands.h
+│   │   ├── layers-actions.c
+│   │   ├── layers-actions.h
+│   │   ├── layers-commands.c
+│   │   ├── layers-commands.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── palette-editor-actions.c
+│   │   ├── palette-editor-actions.h
+│   │   ├── palette-editor-commands.c
+│   │   ├── palette-editor-commands.h
+│   │   ├── palettes-actions.c
+│   │   ├── palettes-actions.h
+│   │   ├── palettes-commands.c
+│   │   ├── palettes-commands.h
+│   │   ├── patterns-actions.c
+│   │   ├── patterns-actions.h
+│   │   ├── plug-in-actions.c
+│   │   ├── plug-in-actions.h
+│   │   ├── plug-in-commands.c
+│   │   ├── plug-in-commands.h
+│   │   ├── quick-mask-actions.c
+│   │   ├── quick-mask-actions.h
+│   │   ├── quick-mask-commands.c
+│   │   ├── quick-mask-commands.h
+│   │   ├── sample-points-actions.c
+│   │   ├── sample-points-actions.h
+│   │   ├── sample-points-commands.c
+│   │   ├── sample-points-commands.h
+│   │   ├── select-actions.c
+│   │   ├── select-actions.h
+│   │   ├── select-commands.c
+│   │   ├── select-commands.h
+│   │   ├── templates-actions.c
+│   │   ├── templates-actions.h
+│   │   ├── templates-commands.c
+│   │   ├── templates-commands.h
+│   │   ├── text-editor-actions.c
+│   │   ├── text-editor-actions.h
+│   │   ├── text-editor-commands.c
+│   │   ├── text-editor-commands.h
+│   │   ├── text-tool-actions.c
+│   │   ├── text-tool-actions.h
+│   │   ├── text-tool-commands.c
+│   │   ├── text-tool-commands.h
+│   │   ├── tool-options-actions.c
+│   │   ├── tool-options-actions.h
+│   │   ├── tool-options-commands.c
+│   │   ├── tool-options-commands.h
+│   │   ├── tool-preset-editor-actions.c
+│   │   ├── tool-preset-editor-actions.h
+│   │   ├── tool-presets-actions.c
+│   │   ├── tool-presets-actions.h
+│   │   ├── tools-actions.c
+│   │   ├── tools-actions.h
+│   │   ├── tools-commands.c
+│   │   ├── tools-commands.h
+│   │   ├── vectors-actions.c
+│   │   ├── vectors-actions.h
+│   │   ├── vectors-commands.c
+│   │   ├── vectors-commands.h
+│   │   ├── view-actions.c
+│   │   ├── view-actions.h
+│   │   ├── view-commands.c
+│   │   ├── view-commands.h
+│   │   ├── window-actions.c
+│   │   ├── window-actions.h
+│   │   ├── window-commands.c
+│   │   ├── window-commands.h
+│   │   ├── windows-actions.c
+│   │   ├── windows-actions.h
+│   │   ├── windows-commands.c
+│   │   └── windows-commands.h
+│   ├── app.c
+│   ├── app.h
+│   ├── base
+│   │   ├── base.c
+│   │   ├── base-enums.c
+│   │   ├── base-enums.h
+│   │   ├── base.h
+│   │   ├── base-types.h
+│   │   ├── base-utils.c
+│   │   ├── base-utils.h
+│   │   ├── boundary.c
+│   │   ├── boundary.h
+│   │   ├── color-balance.c
+│   │   ├── color-balance.h
+│   │   ├── colorize.c
+│   │   ├── colorize.h
+│   │   ├── cpercep.c
+│   │   ├── cpercep.h
+│   │   ├── curves.c
+│   │   ├── curves.h
+│   │   ├── desaturate.c
+│   │   ├── desaturate.h
+│   │   ├── gimphistogram.c
+│   │   ├── gimphistogram.h
+│   │   ├── gimplut.c
+│   │   ├── gimplut.h
+│   │   ├── hue-saturation.c
+│   │   ├── hue-saturation.h
+│   │   ├── levels.c
+│   │   ├── levels.h
+│   │   ├── lut-funcs.c
+│   │   ├── lut-funcs.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── pixel-processor.c
+│   │   ├── pixel-processor.h
+│   │   ├── pixel-region.c
+│   │   ├── pixel-region.h
+│   │   ├── pixel-surround.c
+│   │   ├── pixel-surround.h
+│   │   ├── siox.c
+│   │   ├── siox.h
+│   │   ├── temp-buf.c
+│   │   ├── temp-buf.h
+│   │   ├── threshold.c
+│   │   ├── threshold.h
+│   │   ├── tile.c
+│   │   ├── tile-cache.c
+│   │   ├── tile-cache.h
+│   │   ├── tile.h
+│   │   ├── tile-manager.c
+│   │   ├── tile-manager.h
+│   │   ├── tile-manager-preview.c
+│   │   ├── tile-manager-preview.h
+│   │   ├── tile-manager-private.h
+│   │   ├── tile-private.h
+│   │   ├── tile-pyramid.c
+│   │   ├── tile-pyramid.h
+│   │   ├── tile-rowhints.c
+│   │   ├── tile-rowhints.h
+│   │   ├── tile-swap.c
+│   │   └── tile-swap.h
+│   ├── batch.c
+│   ├── batch.h
+│   ├── composite
+│   │   ├── gimp-composite-3dnow.c
+│   │   ├── gimp-composite-3dnow.h
+│   │   ├── gimp-composite-3dnow-installer.c
+│   │   ├── gimp-composite-3dnow-test.c
+│   │   ├── gimp-composite-altivec.c
+│   │   ├── gimp-composite-altivec.h
+│   │   ├── gimp-composite-altivec-installer.c
+│   │   ├── gimp-composite-altivec-test.c
+│   │   ├── gimp-composite.c
+│   │   ├── gimp-composite-generic.c
+│   │   ├── gimp-composite-generic.h
+│   │   ├── gimp-composite-generic-installer.c
+│   │   ├── gimp-composite.h
+│   │   ├── gimp-composite-mmx.c
+│   │   ├── gimp-composite-mmx.h
+│   │   ├── gimp-composite-mmx-installer.c
+│   │   ├── gimp-composite-mmx-test.c
+│   │   ├── gimp-composite-regression.c
+│   │   ├── gimp-composite-regression.h
+│   │   ├── gimp-composite-sse2.c
+│   │   ├── gimp-composite-sse2.h
+│   │   ├── gimp-composite-sse2-installer.c
+│   │   ├── gimp-composite-sse2-test.c
+│   │   ├── gimp-composite-sse.c
+│   │   ├── gimp-composite-sse.h
+│   │   ├── gimp-composite-sse-installer.c
+│   │   ├── gimp-composite-sse-test.c
+│   │   ├── gimp-composite-test.c
+│   │   ├── gimp-composite-util.h
+│   │   ├── gimp-composite-vis.c
+│   │   ├── gimp-composite-vis.h
+│   │   ├── gimp-composite-vis-installer.c
+│   │   ├── gimp-composite-vis-test.c
+│   │   ├── gimp-composite-x86.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── make-installer.py
+│   │   └── ns.py
+│   ├── config
+│   │   ├── config-enums.c
+│   │   ├── config-enums.h
+│   │   ├── config-types.h
+│   │   ├── gimpbaseconfig.c
+│   │   ├── gimpbaseconfig.h
+│   │   ├── gimpconfig-dump.c
+│   │   ├── gimpconfig-dump.h
+│   │   ├── gimpconfig-file.c
+│   │   ├── gimpconfig-file.h
+│   │   ├── gimpconfig-utils.c
+│   │   ├── gimpconfig-utils.h
+│   │   ├── gimpcoreconfig.c
+│   │   ├── gimpcoreconfig.h
+│   │   ├── gimpdisplayconfig.c
+│   │   ├── gimpdisplayconfig.h
+│   │   ├── gimpdisplayoptions.c
+│   │   ├── gimpdisplayoptions.h
+│   │   ├── gimpguiconfig.c
+│   │   ├── gimpguiconfig.h
+│   │   ├── gimppluginconfig.c
+│   │   ├── gimppluginconfig.h
+│   │   ├── gimprc-blurbs.h
+│   │   ├── gimprc.c
+│   │   ├── gimprc-deserialize.c
+│   │   ├── gimprc-deserialize.h
+│   │   ├── gimprc.h
+│   │   ├── gimprc-serialize.c
+│   │   ├── gimprc-serialize.h
+│   │   ├── gimprc-unknown.c
+│   │   ├── gimprc-unknown.h
+│   │   ├── gimpxmlparser.c
+│   │   ├── gimpxmlparser.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── test-config.c
+│   ├── core
+│   │   ├── core-enums.c
+│   │   ├── core-enums.h
+│   │   ├── core-types.h
+│   │   ├── gimparea.c
+│   │   ├── gimparea.h
+│   │   ├── gimpbezierdesc.c
+│   │   ├── gimpbezierdesc.h
+│   │   ├── gimpbrush-boundary.c
+│   │   ├── gimpbrush-boundary.h
+│   │   ├── gimpbrush.c
+│   │   ├── gimpbrushcache.c
+│   │   ├── gimpbrushcache.h
+│   │   ├── gimpbrushclipboard.c
+│   │   ├── gimpbrushclipboard.h
+│   │   ├── gimpbrushgenerated.c
+│   │   ├── gimpbrushgenerated.h
+│   │   ├── gimpbrushgenerated-load.c
+│   │   ├── gimpbrushgenerated-load.h
+│   │   ├── gimpbrushgenerated-save.c
+│   │   ├── gimpbrushgenerated-save.h
+│   │   ├── gimpbrush.h
+│   │   ├── gimpbrush-header.h
+│   │   ├── gimpbrush-load.c
+│   │   ├── gimpbrush-load.h
+│   │   ├── gimpbrushpipe.c
+│   │   ├── gimpbrushpipe.h
+│   │   ├── gimpbrushpipe-load.c
+│   │   ├── gimpbrushpipe-load.h
+│   │   ├── gimpbrush-transform.c
+│   │   ├── gimpbrush-transform.h
+│   │   ├── gimpbuffer.c
+│   │   ├── gimpbuffer.h
+│   │   ├── gimp.c
+│   │   ├── gimpchannel.c
+│   │   ├── gimpchannel-combine.c
+│   │   ├── gimpchannel-combine.h
+│   │   ├── gimpchannel.h
+│   │   ├── gimpchannel-project.c
+│   │   ├── gimpchannel-project.h
+│   │   ├── gimpchannelpropundo.c
+│   │   ├── gimpchannelpropundo.h
+│   │   ├── gimpchannel-select.c
+│   │   ├── gimpchannel-select.h
+│   │   ├── gimpchannelundo.c
+│   │   ├── gimpchannelundo.h
+│   │   ├── gimpcontainer.c
+│   │   ├── gimpcontainer-filter.c
+│   │   ├── gimpcontainer-filter.h
+│   │   ├── gimpcontainer.h
+│   │   ├── gimpcontext.c
+│   │   ├── gimpcontext.h
+│   │   ├── gimp-contexts.c
+│   │   ├── gimp-contexts.h
+│   │   ├── gimpcoords.c
+│   │   ├── gimpcoords.h
+│   │   ├── gimpcoords-interpolate.c
+│   │   ├── gimpcoords-interpolate.h
+│   │   ├── gimpcurve.c
+│   │   ├── gimpcurve.h
+│   │   ├── gimpcurve-load.c
+│   │   ├── gimpcurve-load.h
+│   │   ├── gimpcurve-map.c
+│   │   ├── gimpcurve-map.h
+│   │   ├── gimpcurve-save.c
+│   │   ├── gimpcurve-save.h
+│   │   ├── gimpdashpattern.c
+│   │   ├── gimpdashpattern.h
+│   │   ├── gimpdata.c
+│   │   ├── gimpdatafactory.c
+│   │   ├── gimpdatafactory.h
+│   │   ├── gimpdata.h
+│   │   ├── gimpdocumentlist.c
+│   │   ├── gimpdocumentlist.h
+│   │   ├── gimpdrawable-blend.c
+│   │   ├── gimpdrawable-blend.h
+│   │   ├── gimpdrawable-brightness-contrast.c
+│   │   ├── gimpdrawable-brightness-contrast.h
+│   │   ├── gimpdrawable-bucket-fill.c
+│   │   ├── gimpdrawable-bucket-fill.h
+│   │   ├── gimpdrawable.c
+│   │   ├── gimpdrawable-color-balance.c
+│   │   ├── gimpdrawable-color-balance.h
+│   │   ├── gimpdrawable-colorize.c
+│   │   ├── gimpdrawable-colorize.h
+│   │   ├── gimpdrawable-combine.c
+│   │   ├── gimpdrawable-combine.h
+│   │   ├── gimpdrawable-convert.c
+│   │   ├── gimpdrawable-convert.h
+│   │   ├── gimpdrawable-curves.c
+│   │   ├── gimpdrawable-curves.h
+│   │   ├── gimpdrawable-desaturate.c
+│   │   ├── gimpdrawable-desaturate.h
+│   │   ├── gimpdrawable-equalize.c
+│   │   ├── gimpdrawable-equalize.h
+│   │   ├── gimpdrawable-foreground-extract.c
+│   │   ├── gimpdrawable-foreground-extract.h
+│   │   ├── gimpdrawable.h
+│   │   ├── gimpdrawable-histogram.c
+│   │   ├── gimpdrawable-histogram.h
+│   │   ├── gimpdrawable-hue-saturation.c
+│   │   ├── gimpdrawable-hue-saturation.h
+│   │   ├── gimpdrawable-invert.c
+│   │   ├── gimpdrawable-invert.h
+│   │   ├── gimpdrawable-levels.c
+│   │   ├── gimpdrawable-levels.h
+│   │   ├── gimpdrawablemodundo.c
+│   │   ├── gimpdrawablemodundo.h
+│   │   ├── gimpdrawable-offset.c
+│   │   ├── gimpdrawable-offset.h
+│   │   ├── gimpdrawable-operation.c
+│   │   ├── gimpdrawable-operation.h
+│   │   ├── gimpdrawable-posterize.c
+│   │   ├── gimpdrawable-posterize.h
+│   │   ├── gimpdrawable-preview.c
+│   │   ├── gimpdrawable-preview.h
+│   │   ├── gimpdrawable-private.h
+│   │   ├── gimpdrawable-process.c
+│   │   ├── gimpdrawable-process.h
+│   │   ├── gimpdrawable-shadow.c
+│   │   ├── gimpdrawable-shadow.h
+│   │   ├── gimpdrawablestack.c
+│   │   ├── gimpdrawablestack.h
+│   │   ├── gimpdrawable-stroke.c
+│   │   ├── gimpdrawable-stroke.h
+│   │   ├── gimpdrawable-threshold.c
+│   │   ├── gimpdrawable-threshold.h
+│   │   ├── gimpdrawable-transform.c
+│   │   ├── gimpdrawable-transform.h
+│   │   ├── gimpdrawableundo.c
+│   │   ├── gimpdrawableundo.h
+│   │   ├── gimpdynamics.c
+│   │   ├── gimpdynamics.h
+│   │   ├── gimpdynamics-load.c
+│   │   ├── gimpdynamics-load.h
+│   │   ├── gimpdynamicsoutput.c
+│   │   ├── gimpdynamicsoutput.h
+│   │   ├── gimpdynamics-save.c
+│   │   ├── gimpdynamics-save.h
+│   │   ├── gimp-edit.c
+│   │   ├── gimp-edit.h
+│   │   ├── gimperror.c
+│   │   ├── gimperror.h
+│   │   ├── gimpfilloptions.c
+│   │   ├── gimpfilloptions.h
+│   │   ├── gimpfilteredcontainer.c
+│   │   ├── gimpfilteredcontainer.h
+│   │   ├── gimpfloatingselundo.c
+│   │   ├── gimpfloatingselundo.h
+│   │   ├── gimpgradient.c
+│   │   ├── gimpgradient.h
+│   │   ├── gimpgradient-load.c
+│   │   ├── gimpgradient-load.h
+│   │   ├── gimpgradient-save.c
+│   │   ├── gimpgradient-save.h
+│   │   ├── gimp-gradients.c
+│   │   ├── gimp-gradients.h
+│   │   ├── gimpgrid.c
+│   │   ├── gimpgrid.h
+│   │   ├── gimpgrouplayer.c
+│   │   ├── gimpgrouplayer.h
+│   │   ├── gimpgrouplayerundo.c
+│   │   ├── gimpgrouplayerundo.h
+│   │   ├── gimp-gui.c
+│   │   ├── gimpguide.c
+│   │   ├── gimpguide.h
+│   │   ├── gimpguideundo.c
+│   │   ├── gimpguideundo.h
+│   │   ├── gimp-gui.h
+│   │   ├── gimp.h
+│   │   ├── gimpidtable.c
+│   │   ├── gimpidtable.h
+│   │   ├── gimpimage-arrange.c
+│   │   ├── gimpimage-arrange.h
+│   │   ├── gimpimage.c
+│   │   ├── gimpimage-colorhash.c
+│   │   ├── gimpimage-colorhash.h
+│   │   ├── gimpimage-colormap.c
+│   │   ├── gimpimage-colormap.h
+│   │   ├── gimpimage-contiguous-region.c
+│   │   ├── gimpimage-contiguous-region.h
+│   │   ├── gimpimage-convert.c
+│   │   ├── gimpimage-convert-data.h
+│   │   ├── gimpimage-convert-fsdither.h
+│   │   ├── gimpimage-convert.h
+│   │   ├── gimpimage-crop.c
+│   │   ├── gimpimage-crop.h
+│   │   ├── gimpimage-duplicate.c
+│   │   ├── gimpimage-duplicate.h
+│   │   ├── gimpimagefile.c
+│   │   ├── gimpimagefile.h
+│   │   ├── gimpimage-flip.c
+│   │   ├── gimpimage-flip.h
+│   │   ├── gimpimage-grid.c
+│   │   ├── gimpimage-grid.h
+│   │   ├── gimpimage-guides.c
+│   │   ├── gimpimage-guides.h
+│   │   ├── gimpimage.h
+│   │   ├── gimpimage-item-list.c
+│   │   ├── gimpimage-item-list.h
+│   │   ├── gimpimagemap.c
+│   │   ├── gimpimagemapconfig.c
+│   │   ├── gimpimagemapconfig.h
+│   │   ├── gimpimagemap.h
+│   │   ├── gimpimage-merge.c
+│   │   ├── gimpimage-merge.h
+│   │   ├── gimpimage-new.c
+│   │   ├── gimpimage-new.h
+│   │   ├── gimpimage-pick-color.c
+│   │   ├── gimpimage-pick-color.h
+│   │   ├── gimpimage-pick-layer.c
+│   │   ├── gimpimage-pick-layer.h
+│   │   ├── gimpimage-preview.c
+│   │   ├── gimpimage-preview.h
+│   │   ├── gimpimage-private.h
+│   │   ├── gimpimage-quick-mask.c
+│   │   ├── gimpimage-quick-mask.h
+│   │   ├── gimpimage-resize.c
+│   │   ├── gimpimage-resize.h
+│   │   ├── gimpimage-rotate.c
+│   │   ├── gimpimage-rotate.h
+│   │   ├── gimpimage-sample-points.c
+│   │   ├── gimpimage-sample-points.h
+│   │   ├── gimpimage-scale.c
+│   │   ├── gimpimage-scale.h
+│   │   ├── gimpimage-snap.c
+│   │   ├── gimpimage-snap.h
+│   │   ├── gimpimage-undo.c
+│   │   ├── gimpimageundo.c
+│   │   ├── gimpimage-undo.h
+│   │   ├── gimpimageundo.h
+│   │   ├── gimpimage-undo-push.c
+│   │   ├── gimpimage-undo-push.h
+│   │   ├── gimpitem.c
+│   │   ├── gimpitem-exclusive.c
+│   │   ├── gimpitem-exclusive.h
+│   │   ├── gimpitem.h
+│   │   ├── gimpitem-linked.c
+│   │   ├── gimpitem-linked.h
+│   │   ├── gimpitem-preview.c
+│   │   ├── gimpitem-preview.h
+│   │   ├── gimpitempropundo.c
+│   │   ├── gimpitempropundo.h
+│   │   ├── gimpitemstack.c
+│   │   ├── gimpitemstack.h
+│   │   ├── gimpitemtree.c
+│   │   ├── gimpitemtree.h
+│   │   ├── gimpitemundo.c
+│   │   ├── gimpitemundo.h
+│   │   ├── gimplayer.c
+│   │   ├── gimplayer-floating-sel.c
+│   │   ├── gimplayer-floating-sel.h
+│   │   ├── gimplayer.h
+│   │   ├── gimplayermask.c
+│   │   ├── gimplayermask.h
+│   │   ├── gimplayermaskpropundo.c
+│   │   ├── gimplayermaskpropundo.h
+│   │   ├── gimplayermaskundo.c
+│   │   ├── gimplayermaskundo.h
+│   │   ├── gimplayer-project.c
+│   │   ├── gimplayer-project.h
+│   │   ├── gimplayerpropundo.c
+│   │   ├── gimplayerpropundo.h
+│   │   ├── gimplayerundo.c
+│   │   ├── gimplayerundo.h
+│   │   ├── gimplist.c
+│   │   ├── gimplist.h
+│   │   ├── gimpmarshal.c
+│   │   ├── gimpmarshal.h
+│   │   ├── gimpmarshal.list
+│   │   ├── gimpmaskundo.c
+│   │   ├── gimpmaskundo.h
+│   │   ├── gimp-modules.c
+│   │   ├── gimp-modules.h
+│   │   ├── gimpobject.c
+│   │   ├── gimpobject.h
+│   │   ├── gimppaintinfo.c
+│   │   ├── gimppaintinfo.h
+│   │   ├── gimppalette.c
+│   │   ├── gimppalette.h
+│   │   ├── gimppalette-import.c
+│   │   ├── gimppalette-import.h
+│   │   ├── gimppalette-load.c
+│   │   ├── gimppalette-load.h
+│   │   ├── gimppalette-save.c
+│   │   ├── gimppalette-save.h
+│   │   ├── gimpparamspecs.c
+│   │   ├── gimpparamspecs-desc.c
+│   │   ├── gimpparamspecs-desc.h
+│   │   ├── gimpparamspecs-duplicate.c
+│   │   ├── gimpparamspecs-duplicate.h
+│   │   ├── gimpparamspecs.h
+│   │   ├── gimpparasitelist.c
+│   │   ├── gimpparasitelist.h
+│   │   ├── gimp-parasites.c
+│   │   ├── gimp-parasites.h
+│   │   ├── gimppattern.c
+│   │   ├── gimppatternclipboard.c
+│   │   ├── gimppatternclipboard.h
+│   │   ├── gimppattern.h
+│   │   ├── gimppattern-header.h
+│   │   ├── gimppattern-load.c
+│   │   ├── gimppattern-load.h
+│   │   ├── gimppdbprogress.c
+│   │   ├── gimppdbprogress.h
+│   │   ├── gimppickable.c
+│   │   ├── gimppickable.h
+│   │   ├── gimppreviewcache.c
+│   │   ├── gimppreviewcache.h
+│   │   ├── gimpprogress.c
+│   │   ├── gimpprogress.h
+│   │   ├── gimpprojectable.c
+│   │   ├── gimpprojectable.h
+│   │   ├── gimpprojection.c
+│   │   ├── gimpprojection-construct.c
+│   │   ├── gimpprojection-construct.h
+│   │   ├── gimpprojection.h
+│   │   ├── gimpsamplepoint.c
+│   │   ├── gimpsamplepoint.h
+│   │   ├── gimpsamplepointundo.c
+│   │   ├── gimpsamplepointundo.h
+│   │   ├── gimpscanconvert.c
+│   │   ├── gimpscanconvert.h
+│   │   ├── gimpselection.c
+│   │   ├── gimpselection.h
+│   │   ├── gimpstrokeoptions.c
+│   │   ├── gimpstrokeoptions.h
+│   │   ├── gimpsubprogress.c
+│   │   ├── gimpsubprogress.h
+│   │   ├── gimptag.c
+│   │   ├── gimptagcache.c
+│   │   ├── gimptagcache.h
+│   │   ├── gimptagged.c
+│   │   ├── gimptaggedcontainer.c
+│   │   ├── gimptaggedcontainer.h
+│   │   ├── gimptagged.h
+│   │   ├── gimptag.h
+│   │   ├── gimp-tags.c
+│   │   ├── gimp-tags.h
+│   │   ├── gimptemplate.c
+│   │   ├── gimptemplate.h
+│   │   ├── gimp-templates.c
+│   │   ├── gimp-templates.h
+│   │   ├── gimptoolinfo.c
+│   │   ├── gimptoolinfo.h
+│   │   ├── gimptooloptions.c
+│   │   ├── gimptooloptions.h
+│   │   ├── gimptoolpreset.c
+│   │   ├── gimptoolpreset.h
+│   │   ├── gimptoolpreset-load.c
+│   │   ├── gimptoolpreset-load.h
+│   │   ├── gimptoolpreset-save.c
+│   │   ├── gimptoolpreset-save.h
+│   │   ├── gimp-transform-region.c
+│   │   ├── gimp-transform-region.h
+│   │   ├── gimp-transform-resize.c
+│   │   ├── gimp-transform-resize.h
+│   │   ├── gimp-transform-utils.c
+│   │   ├── gimp-transform-utils.h
+│   │   ├── gimptreehandler.c
+│   │   ├── gimptreehandler.h
+│   │   ├── gimpundo.c
+│   │   ├── gimpundo.h
+│   │   ├── gimpundostack.c
+│   │   ├── gimpundostack.h
+│   │   ├── gimpunit.c
+│   │   ├── gimpunit.h
+│   │   ├── gimp-units.c
+│   │   ├── gimp-units.h
+│   │   ├── gimp-user-install.c
+│   │   ├── gimp-user-install.h
+│   │   ├── gimp-utils.c
+│   │   ├── gimp-utils.h
+│   │   ├── gimpviewable.c
+│   │   ├── gimpviewable.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── dialogs
+│   │   ├── about-dialog.c
+│   │   ├── about-dialog.h
+│   │   ├── authors.h
+│   │   ├── authors.xsl
+│   │   ├── channel-options-dialog.c
+│   │   ├── channel-options-dialog.h
+│   │   ├── convert-dialog.c
+│   │   ├── convert-dialog.h
+│   │   ├── data-delete-dialog.c
+│   │   ├── data-delete-dialog.h
+│   │   ├── dialogs.c
+│   │   ├── dialogs-constructors.c
+│   │   ├── dialogs-constructors.h
+│   │   ├── dialogs.h
+│   │   ├── dialogs-types.h
+│   │   ├── fade-dialog.c
+│   │   ├── fade-dialog.h
+│   │   ├── file-open-dialog.c
+│   │   ├── file-open-dialog.h
+│   │   ├── file-open-location-dialog.c
+│   │   ├── file-open-location-dialog.h
+│   │   ├── file-save-dialog.c
+│   │   ├── file-save-dialog.h
+│   │   ├── grid-dialog.c
+│   │   ├── grid-dialog.h
+│   │   ├── image-merge-layers-dialog.c
+│   │   ├── image-merge-layers-dialog.h
+│   │   ├── image-new-dialog.c
+│   │   ├── image-new-dialog.h
+│   │   ├── image-properties-dialog.c
+│   │   ├── image-properties-dialog.h
+│   │   ├── image-scale-dialog.c
+│   │   ├── image-scale-dialog.h
+│   │   ├── input-devices-dialog.c
+│   │   ├── input-devices-dialog.h
+│   │   ├── keyboard-shortcuts-dialog.c
+│   │   ├── keyboard-shortcuts-dialog.h
+│   │   ├── layer-add-mask-dialog.c
+│   │   ├── layer-add-mask-dialog.h
+│   │   ├── layer-options-dialog.c
+│   │   ├── layer-options-dialog.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── module-dialog.c
+│   │   ├── module-dialog.h
+│   │   ├── offset-dialog.c
+│   │   ├── offset-dialog.h
+│   │   ├── palette-import-dialog.c
+│   │   ├── palette-import-dialog.h
+│   │   ├── preferences-dialog.c
+│   │   ├── preferences-dialog.h
+│   │   ├── print-size-dialog.c
+│   │   ├── print-size-dialog.h
+│   │   ├── quit-dialog.c
+│   │   ├── quit-dialog.h
+│   │   ├── resize-dialog.c
+│   │   ├── resize-dialog.h
+│   │   ├── resolution-calibrate-dialog.c
+│   │   ├── resolution-calibrate-dialog.h
+│   │   ├── scale-dialog.c
+│   │   ├── scale-dialog.h
+│   │   ├── stroke-dialog.c
+│   │   ├── stroke-dialog.h
+│   │   ├── template-options-dialog.c
+│   │   ├── template-options-dialog.h
+│   │   ├── tips-dialog.c
+│   │   ├── tips-dialog.h
+│   │   ├── tips-parser.c
+│   │   ├── tips-parser.h
+│   │   ├── user-install-dialog.c
+│   │   ├── user-install-dialog.h
+│   │   ├── vectors-export-dialog.c
+│   │   ├── vectors-export-dialog.h
+│   │   ├── vectors-import-dialog.c
+│   │   ├── vectors-import-dialog.h
+│   │   ├── vectors-options-dialog.c
+│   │   └── vectors-options-dialog.h
+│   ├── display
+│   │   ├── display-enums.c
+│   │   ├── display-enums.h
+│   │   ├── display-types.h
+│   │   ├── gimpcanvasarc.c
+│   │   ├── gimpcanvasarc.h
+│   │   ├── gimpcanvasboundary.c
+│   │   ├── gimpcanvasboundary.h
+│   │   ├── gimpcanvas.c
+│   │   ├── gimpcanvascorner.c
+│   │   ├── gimpcanvascorner.h
+│   │   ├── gimpcanvascursor.c
+│   │   ├── gimpcanvascursor.h
+│   │   ├── gimpcanvasgrid.c
+│   │   ├── gimpcanvasgrid.h
+│   │   ├── gimpcanvasgroup.c
+│   │   ├── gimpcanvasgroup.h
+│   │   ├── gimpcanvasguide.c
+│   │   ├── gimpcanvasguide.h
+│   │   ├── gimpcanvas.h
+│   │   ├── gimpcanvashandle.c
+│   │   ├── gimpcanvashandle.h
+│   │   ├── gimpcanvasitem.c
+│   │   ├── gimpcanvasitem.h
+│   │   ├── gimpcanvasitem-utils.c
+│   │   ├── gimpcanvasitem-utils.h
+│   │   ├── gimpcanvaslayerboundary.c
+│   │   ├── gimpcanvaslayerboundary.h
+│   │   ├── gimpcanvasline.c
+│   │   ├── gimpcanvasline.h
+│   │   ├── gimpcanvaspassepartout.c
+│   │   ├── gimpcanvaspassepartout.h
+│   │   ├── gimpcanvaspath.c
+│   │   ├── gimpcanvaspath.h
+│   │   ├── gimpcanvaspen.c
+│   │   ├── gimpcanvaspen.h
+│   │   ├── gimpcanvaspolygon.c
+│   │   ├── gimpcanvaspolygon.h
+│   │   ├── gimpcanvasprogress.c
+│   │   ├── gimpcanvasprogress.h
+│   │   ├── gimpcanvasproxygroup.c
+│   │   ├── gimpcanvasproxygroup.h
+│   │   ├── gimpcanvasrectangle.c
+│   │   ├── gimpcanvasrectangleguides.c
+│   │   ├── gimpcanvasrectangleguides.h
+│   │   ├── gimpcanvasrectangle.h
+│   │   ├── gimpcanvassamplepoint.c
+│   │   ├── gimpcanvassamplepoint.h
+│   │   ├── gimpcanvastextcursor.c
+│   │   ├── gimpcanvastextcursor.h
+│   │   ├── gimpcanvastransformguides.c
+│   │   ├── gimpcanvastransformguides.h
+│   │   ├── gimpcanvastransformpreview.c
+│   │   ├── gimpcanvastransformpreview.h
+│   │   ├── gimpcursorview.c
+│   │   ├── gimpcursorview.h
+│   │   ├── gimpdisplay.c
+│   │   ├── gimpdisplay-foreach.c
+│   │   ├── gimpdisplay-foreach.h
+│   │   ├── gimpdisplay.h
+│   │   ├── gimpdisplay-handlers.c
+│   │   ├── gimpdisplay-handlers.h
+│   │   ├── gimpdisplayshell-appearance.c
+│   │   ├── gimpdisplayshell-appearance.h
+│   │   ├── gimpdisplayshell-autoscroll.c
+│   │   ├── gimpdisplayshell-autoscroll.h
+│   │   ├── gimpdisplayshell.c
+│   │   ├── gimpdisplayshell-callbacks.c
+│   │   ├── gimpdisplayshell-callbacks.h
+│   │   ├── gimpdisplayshell-close.c
+│   │   ├── gimpdisplayshell-close.h
+│   │   ├── gimpdisplayshell-cursor.c
+│   │   ├── gimpdisplayshell-cursor.h
+│   │   ├── gimpdisplayshell-dnd.c
+│   │   ├── gimpdisplayshell-dnd.h
+│   │   ├── gimpdisplayshell-draw.c
+│   │   ├── gimpdisplayshell-draw.h
+│   │   ├── gimpdisplayshell-expose.c
+│   │   ├── gimpdisplayshell-expose.h
+│   │   ├── gimpdisplayshell-filter.c
+│   │   ├── gimpdisplayshell-filter-dialog.c
+│   │   ├── gimpdisplayshell-filter-dialog.h
+│   │   ├── gimpdisplayshell-filter.h
+│   │   ├── gimpdisplayshell-grab.c
+│   │   ├── gimpdisplayshell-grab.h
+│   │   ├── gimpdisplayshell.h
+│   │   ├── gimpdisplayshell-handlers.c
+│   │   ├── gimpdisplayshell-handlers.h
+│   │   ├── gimpdisplayshell-icon.c
+│   │   ├── gimpdisplayshell-icon.h
+│   │   ├── gimpdisplayshell-items.c
+│   │   ├── gimpdisplayshell-items.h
+│   │   ├── gimpdisplayshell-layer-select.c
+│   │   ├── gimpdisplayshell-layer-select.h
+│   │   ├── gimpdisplayshell-progress.c
+│   │   ├── gimpdisplayshell-progress.h
+│   │   ├── gimpdisplayshell-render.c
+│   │   ├── gimpdisplayshell-render.h
+│   │   ├── gimpdisplayshell-scale.c
+│   │   ├── gimpdisplayshell-scale-dialog.c
+│   │   ├── gimpdisplayshell-scale-dialog.h
+│   │   ├── gimpdisplayshell-scale.h
+│   │   ├── gimpdisplayshell-scroll.c
+│   │   ├── gimpdisplayshell-scroll.h
+│   │   ├── gimpdisplayshell-selection.c
+│   │   ├── gimpdisplayshell-selection.h
+│   │   ├── gimpdisplayshell-style.c
+│   │   ├── gimpdisplayshell-style.h
+│   │   ├── gimpdisplayshell-title.c
+│   │   ├── gimpdisplayshell-title.h
+│   │   ├── gimpdisplayshell-tool-events.c
+│   │   ├── gimpdisplayshell-tool-events.h
+│   │   ├── gimpdisplayshell-transform.c
+│   │   ├── gimpdisplayshell-transform.h
+│   │   ├── gimpimagewindow.c
+│   │   ├── gimpimagewindow.h
+│   │   ├── gimpmotionbuffer.c
+│   │   ├── gimpmotionbuffer.h
+│   │   ├── gimpmultiwindowstrategy.c
+│   │   ├── gimpmultiwindowstrategy.h
+│   │   ├── gimpnavigationeditor.c
+│   │   ├── gimpnavigationeditor.h
+│   │   ├── gimpscalecombobox.c
+│   │   ├── gimpscalecombobox.h
+│   │   ├── gimpsinglewindowstrategy.c
+│   │   ├── gimpsinglewindowstrategy.h
+│   │   ├── gimpstatusbar.c
+│   │   ├── gimpstatusbar.h
+│   │   ├── gimptooldialog.c
+│   │   ├── gimptooldialog.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── errors.c
+│   ├── errors.h
+│   ├── file
+│   │   ├── file-open.c
+│   │   ├── file-open.h
+│   │   ├── file-procedure.c
+│   │   ├── file-procedure.h
+│   │   ├── file-save.c
+│   │   ├── file-save.h
+│   │   ├── file-utils.c
+│   │   ├── file-utils.h
+│   │   ├── gimp-file.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── gegl
+│   │   ├── gimpbrightnesscontrastconfig.c
+│   │   ├── gimpbrightnesscontrastconfig.h
+│   │   ├── gimpcageconfig.c
+│   │   ├── gimpcageconfig.h
+│   │   ├── gimpcolorbalanceconfig.c
+│   │   ├── gimpcolorbalanceconfig.h
+│   │   ├── gimpcolorizeconfig.c
+│   │   ├── gimpcolorizeconfig.h
+│   │   ├── gimpcurvesconfig.c
+│   │   ├── gimpcurvesconfig.h
+│   │   ├── gimpdesaturateconfig.c
+│   │   ├── gimpdesaturateconfig.h
+│   │   ├── gimp-gegl.c
+│   │   ├── gimp-gegl-enums.c
+│   │   ├── gimp-gegl-enums.h
+│   │   ├── gimp-gegl.h
+│   │   ├── gimp-gegl-types.h
+│   │   ├── gimp-gegl-utils.c
+│   │   ├── gimp-gegl-utils.h
+│   │   ├── gimphuesaturationconfig.c
+│   │   ├── gimphuesaturationconfig.h
+│   │   ├── gimplevelsconfig.c
+│   │   ├── gimplevelsconfig.h
+│   │   ├── gimpoperationadditionmode.c
+│   │   ├── gimpoperationadditionmode.h
+│   │   ├── gimpoperationantierasemode.c
+│   │   ├── gimpoperationantierasemode.h
+│   │   ├── gimpoperationbehindmode.c
+│   │   ├── gimpoperationbehindmode.h
+│   │   ├── gimpoperationbrightnesscontrast.c
+│   │   ├── gimpoperationbrightnesscontrast.h
+│   │   ├── gimpoperationburnmode.c
+│   │   ├── gimpoperationburnmode.h
+│   │   ├── gimpoperationcagecoefcalc.c
+│   │   ├── gimpoperationcagecoefcalc.h
+│   │   ├── gimpoperationcagetransform.c
+│   │   ├── gimpoperationcagetransform.h
+│   │   ├── gimpoperationcolorbalance.c
+│   │   ├── gimpoperationcolorbalance.h
+│   │   ├── gimpoperationcolorerasemode.c
+│   │   ├── gimpoperationcolorerasemode.h
+│   │   ├── gimpoperationcolorize.c
+│   │   ├── gimpoperationcolorize.h
+│   │   ├── gimpoperationcolormode.c
+│   │   ├── gimpoperationcolormode.h
+│   │   ├── gimpoperationcurves.c
+│   │   ├── gimpoperationcurves.h
+│   │   ├── gimpoperationdarkenonlymode.c
+│   │   ├── gimpoperationdarkenonlymode.h
+│   │   ├── gimpoperationdesaturate.c
+│   │   ├── gimpoperationdesaturate.h
+│   │   ├── gimpoperationdifferencemode.c
+│   │   ├── gimpoperationdifferencemode.h
+│   │   ├── gimpoperationdissolvemode.c
+│   │   ├── gimpoperationdissolvemode.h
+│   │   ├── gimpoperationdividemode.c
+│   │   ├── gimpoperationdividemode.h
+│   │   ├── gimpoperationdodgemode.c
+│   │   ├── gimpoperationdodgemode.h
+│   │   ├── gimpoperationerasemode.c
+│   │   ├── gimpoperationerasemode.h
+│   │   ├── gimpoperationgrainextractmode.c
+│   │   ├── gimpoperationgrainextractmode.h
+│   │   ├── gimpoperationgrainmergemode.c
+│   │   ├── gimpoperationgrainmergemode.h
+│   │   ├── gimpoperationhardlightmode.c
+│   │   ├── gimpoperationhardlightmode.h
+│   │   ├── gimpoperationhuemode.c
+│   │   ├── gimpoperationhuemode.h
+│   │   ├── gimpoperationhuesaturation.c
+│   │   ├── gimpoperationhuesaturation.h
+│   │   ├── gimpoperationlevels.c
+│   │   ├── gimpoperationlevels.h
+│   │   ├── gimpoperationlightenonlymode.c
+│   │   ├── gimpoperationlightenonlymode.h
+│   │   ├── gimpoperationmultiplymode.c
+│   │   ├── gimpoperationmultiplymode.h
+│   │   ├── gimpoperationoverlaymode.c
+│   │   ├── gimpoperationoverlaymode.h
+│   │   ├── gimpoperationpointfilter.c
+│   │   ├── gimpoperationpointfilter.h
+│   │   ├── gimpoperationpointlayermode.c
+│   │   ├── gimpoperationpointlayermode.h
+│   │   ├── gimpoperationposterize.c
+│   │   ├── gimpoperationposterize.h
+│   │   ├── gimpoperationreplacemode.c
+│   │   ├── gimpoperationreplacemode.h
+│   │   ├── gimpoperationsaturationmode.c
+│   │   ├── gimpoperationsaturationmode.h
+│   │   ├── gimpoperationscreenmode.c
+│   │   ├── gimpoperationscreenmode.h
+│   │   ├── gimpoperationsoftlightmode.c
+│   │   ├── gimpoperationsoftlightmode.h
+│   │   ├── gimpoperationsubtractmode.c
+│   │   ├── gimpoperationsubtractmode.h
+│   │   ├── gimpoperationthreshold.c
+│   │   ├── gimpoperationthreshold.h
+│   │   ├── gimpoperationtilesink.c
+│   │   ├── gimpoperationtilesink.h
+│   │   ├── gimpoperationtilesource.c
+│   │   ├── gimpoperationtilesource.h
+│   │   ├── gimpoperationvaluemode.c
+│   │   ├── gimpoperationvaluemode.h
+│   │   ├── gimpposterizeconfig.c
+│   │   ├── gimpposterizeconfig.h
+│   │   ├── gimpthresholdconfig.c
+│   │   ├── gimpthresholdconfig.h
+│   │   ├── gimptilebackendtilemanager.c
+│   │   ├── gimptilebackendtilemanager.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── gimp-debug.c
+│   ├── gimp-debug.h
+│   ├── gimp-intl.h
+│   ├── gimp-log.c
+│   ├── gimp-log.h
+│   ├── git-version.h
+│   ├── gui
+│   │   ├── color-history.c
+│   │   ├── color-history.h
+│   │   ├── dbus-service.xml
+│   │   ├── gimpdbusservice.c
+│   │   ├── gimpdbusservice-glue.h
+│   │   ├── gimpdbusservice.h
+│   │   ├── gimpuiconfigurer.c
+│   │   ├── gimpuiconfigurer.h
+│   │   ├── gui.c
+│   │   ├── gui.h
+│   │   ├── gui-message.c
+│   │   ├── gui-message.h
+│   │   ├── gui-types.h
+│   │   ├── gui-unique.c
+│   │   ├── gui-unique.h
+│   │   ├── gui-vtable.c
+│   │   ├── gui-vtable.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── session.c
+│   │   ├── session.h
+│   │   ├── splash.c
+│   │   ├── splash.h
+│   │   ├── themes.c
+│   │   └── themes.h
+│   ├── language.c
+│   ├── language.h
+│   ├── main.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── menus
+│   │   ├── dockable-menu.c
+│   │   ├── dockable-menu.h
+│   │   ├── file-menu.c
+│   │   ├── file-menu.h
+│   │   ├── image-menu.c
+│   │   ├── image-menu.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── menus.c
+│   │   ├── menus.h
+│   │   ├── menus-types.h
+│   │   ├── plug-in-menus.c
+│   │   ├── plug-in-menus.h
+│   │   ├── tool-options-menu.c
+│   │   ├── tool-options-menu.h
+│   │   ├── window-menu.c
+│   │   ├── window-menu.h
+│   │   ├── windows-menu.c
+│   │   └── windows-menu.h
+│   ├── paint
+│   │   ├── gimpairbrush.c
+│   │   ├── gimpairbrush.h
+│   │   ├── gimpairbrushoptions.c
+│   │   ├── gimpairbrushoptions.h
+│   │   ├── gimpbrushcore.c
+│   │   ├── gimpbrushcore.h
+│   │   ├── gimpbrushcore-kernels.h
+│   │   ├── gimpclone.c
+│   │   ├── gimpclone.h
+│   │   ├── gimpcloneoptions.c
+│   │   ├── gimpcloneoptions.h
+│   │   ├── gimpconvolve.c
+│   │   ├── gimpconvolve.h
+│   │   ├── gimpconvolveoptions.c
+│   │   ├── gimpconvolveoptions.h
+│   │   ├── gimpdodgeburn.c
+│   │   ├── gimpdodgeburn.h
+│   │   ├── gimpdodgeburnoptions.c
+│   │   ├── gimpdodgeburnoptions.h
+│   │   ├── gimperaser.c
+│   │   ├── gimperaser.h
+│   │   ├── gimperaseroptions.c
+│   │   ├── gimperaseroptions.h
+│   │   ├── gimpheal.c
+│   │   ├── gimpheal.h
+│   │   ├── gimpink-blob.c
+│   │   ├── gimpink-blob.h
+│   │   ├── gimpink.c
+│   │   ├── gimpink.h
+│   │   ├── gimpinkoptions.c
+│   │   ├── gimpinkoptions.h
+│   │   ├── gimpinkundo.c
+│   │   ├── gimpinkundo.h
+│   │   ├── gimppaintbrush.c
+│   │   ├── gimppaintbrush.h
+│   │   ├── gimp-paint.c
+│   │   ├── gimppaintcore.c
+│   │   ├── gimppaintcore.h
+│   │   ├── gimppaintcore-stroke.c
+│   │   ├── gimppaintcore-stroke.h
+│   │   ├── gimppaintcoreundo.c
+│   │   ├── gimppaintcoreundo.h
+│   │   ├── gimp-paint.h
+│   │   ├── gimppaintoptions.c
+│   │   ├── gimppaintoptions.h
+│   │   ├── gimppencil.c
+│   │   ├── gimppencil.h
+│   │   ├── gimppenciloptions.c
+│   │   ├── gimppenciloptions.h
+│   │   ├── gimpperspectiveclone.c
+│   │   ├── gimpperspectiveclone.h
+│   │   ├── gimpperspectivecloneoptions.c
+│   │   ├── gimpperspectivecloneoptions.h
+│   │   ├── gimpsmudge.c
+│   │   ├── gimpsmudge.h
+│   │   ├── gimpsmudgeoptions.c
+│   │   ├── gimpsmudgeoptions.h
+│   │   ├── gimpsourcecore.c
+│   │   ├── gimpsourcecore.h
+│   │   ├── gimpsourceoptions.c
+│   │   ├── gimpsourceoptions.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── paint-enums.c
+│   │   ├── paint-enums.h
+│   │   └── paint-types.h
+│   ├── paint-funcs
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── paint-funcs.c
+│   │   ├── paint-funcs-generic.h
+│   │   ├── paint-funcs.h
+│   │   ├── paint-funcs-types.h
+│   │   ├── paint-funcs-utils.h
+│   │   ├── reduce-region.c
+│   │   ├── reduce-region.h
+│   │   ├── scale-region.c
+│   │   ├── scale-region.h
+│   │   ├── subsample-region.c
+│   │   └── subsample-region.h
+│   ├── pdb
+│   │   ├── brush-cmds.c
+│   │   ├── brushes-cmds.c
+│   │   ├── brush-select-cmds.c
+│   │   ├── buffer-cmds.c
+│   │   ├── channel-cmds.c
+│   │   ├── color-cmds.c
+│   │   ├── context-cmds.c
+│   │   ├── convert-cmds.c
+│   │   ├── display-cmds.c
+│   │   ├── drawable-cmds.c
+│   │   ├── drawable-transform-cmds.c
+│   │   ├── dynamics-cmds.c
+│   │   ├── edit-cmds.c
+│   │   ├── fileops-cmds.c
+│   │   ├── floating-sel-cmds.c
+│   │   ├── fonts-cmds.c
+│   │   ├── font-select-cmds.c
+│   │   ├── gimp-cmds.c
+│   │   ├── gimppdb.c
+│   │   ├── gimp-pdb-compat.c
+│   │   ├── gimp-pdb-compat.h
+│   │   ├── gimppdbcontext.c
+│   │   ├── gimppdbcontext.h
+│   │   ├── gimppdberror.c
+│   │   ├── gimppdberror.h
+│   │   ├── gimppdb.h
+│   │   ├── gimppdb-query.c
+│   │   ├── gimppdb-query.h
+│   │   ├── gimppdb-utils.c
+│   │   ├── gimppdb-utils.h
+│   │   ├── gimpprocedure.c
+│   │   ├── gimpprocedure.h
+│   │   ├── gimprc-cmds.c
+│   │   ├── gradient-cmds.c
+│   │   ├── gradients-cmds.c
+│   │   ├── gradient-select-cmds.c
+│   │   ├── grid-cmds.c
+│   │   ├── guides-cmds.c
+│   │   ├── help-cmds.c
+│   │   ├── image-cmds.c
+│   │   ├── image-select-cmds.c
+│   │   ├── internal-procs.c
+│   │   ├── internal-procs.h
+│   │   ├── item-cmds.c
+│   │   ├── item-transform-cmds.c
+│   │   ├── layer-cmds.c
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── message-cmds.c
+│   │   ├── paint-tools-cmds.c
+│   │   ├── palette-cmds.c
+│   │   ├── palettes-cmds.c
+│   │   ├── palette-select-cmds.c
+│   │   ├── paths-cmds.c
+│   │   ├── pattern-cmds.c
+│   │   ├── patterns-cmds.c
+│   │   ├── pattern-select-cmds.c
+│   │   ├── pdb-types.h
+│   │   ├── plug-in-cmds.c
+│   │   ├── procedural-db-cmds.c
+│   │   ├── progress-cmds.c
+│   │   ├── README
+│   │   ├── selection-cmds.c
+│   │   ├── selection-tools-cmds.c
+│   │   ├── text-layer-cmds.c
+│   │   ├── text-tool-cmds.c
+│   │   ├── transform-tools-cmds.c
+│   │   ├── undo-cmds.c
+│   │   ├── unit-cmds.c
+│   │   └── vectors-cmds.c
+│   ├── plug-in
+│   │   ├── gimpenvirontable.c
+│   │   ├── gimpenvirontable.h
+│   │   ├── gimpinterpreterdb.c
+│   │   ├── gimpinterpreterdb.h
+│   │   ├── gimpplugin.c
+│   │   ├── gimpplugin-cleanup.c
+│   │   ├── gimpplugin-cleanup.h
+│   │   ├── gimpplugin-context.c
+│   │   ├── gimpplugin-context.h
+│   │   ├── gimpplugindebug.c
+│   │   ├── gimpplugindebug.h
+│   │   ├── gimpplugindef.c
+│   │   ├── gimpplugindef.h
+│   │   ├── gimppluginerror.c
+│   │   ├── gimppluginerror.h
+│   │   ├── gimpplugin.h
+│   │   ├── gimppluginmanager.c
+│   │   ├── gimppluginmanager-call.c
+│   │   ├── gimppluginmanager-call.h
+│   │   ├── gimppluginmanager-data.c
+│   │   ├── gimppluginmanager-data.h
+│   │   ├── gimppluginmanager-file.c
+│   │   ├── gimppluginmanager-file.h
+│   │   ├── gimppluginmanager.h
+│   │   ├── gimppluginmanager-help-domain.c
+│   │   ├── gimppluginmanager-help-domain.h
+│   │   ├── gimppluginmanager-history.c
+│   │   ├── gimppluginmanager-history.h
+│   │   ├── gimppluginmanager-locale-domain.c
+│   │   ├── gimppluginmanager-locale-domain.h
+│   │   ├── gimppluginmanager-menu-branch.c
+│   │   ├── gimppluginmanager-menu-branch.h
+│   │   ├── gimppluginmanager-query.c
+│   │   ├── gimppluginmanager-query.h
+│   │   ├── gimppluginmanager-restore.c
+│   │   ├── gimppluginmanager-restore.h
+│   │   ├── gimpplugin-message.c
+│   │   ├── gimpplugin-message.h
+│   │   ├── gimppluginprocedure.c
+│   │   ├── gimppluginprocedure.h
+│   │   ├── gimppluginprocframe.c
+│   │   ├── gimppluginprocframe.h
+│   │   ├── gimpplugin-progress.c
+│   │   ├── gimpplugin-progress.h
+│   │   ├── gimppluginshm.c
+│   │   ├── gimppluginshm.h
+│   │   ├── gimptemporaryprocedure.c
+│   │   ├── gimptemporaryprocedure.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── plug-in-enums.c
+│   │   ├── plug-in-enums.h
+│   │   ├── plug-in-icc-profile.c
+│   │   ├── plug-in-icc-profile.h
+│   │   ├── plug-in-menu-path.c
+│   │   ├── plug-in-menu-path.h
+│   │   ├── plug-in-params.c
+│   │   ├── plug-in-params.h
+│   │   ├── plug-in-rc.c
+│   │   ├── plug-in-rc.h
+│   │   └── plug-in-types.h
+│   ├── sanity.c
+│   ├── sanity.h
+│   ├── signals.c
+│   ├── signals.h
+│   ├── tests
+│   │   ├── files
+│   │   │   ├── gimp-2-6-file.xcf
+│   │   │   ├── Makefile.am
+│   │   │   └── Makefile.in
+│   │   ├── gimp-app-test-utils.c
+│   │   ├── gimp-app-test-utils.h
+│   │   ├── gimpdir
+│   │   │   ├── brushes
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── dockrc
+│   │   │   ├── dockrc-2-6
+│   │   │   ├── dockrc-2-8
+│   │   │   ├── dockrc-expected
+│   │   │   ├── gradients
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── patterns
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── sessionrc
+│   │   │   ├── sessionrc-2-6
+│   │   │   ├── sessionrc-2-8-multi-window
+│   │   │   ├── sessionrc-2-8-single-window
+│   │   │   ├── sessionrc-expected-2-6
+│   │   │   ├── sessionrc-expected-multi-window
+│   │   │   ├── sessionrc-expected-single-window
+│   │   │   └── tags.xml
+│   │   ├── gimpdir-empty
+│   │   │   ├── brushes
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── gradients
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── patterns
+│   │   │   │   ├── Makefile.am
+│   │   │   │   └── Makefile.in
+│   │   │   └── tags.xml
+│   │   ├── gimp-test-session-utils.c
+│   │   ├── gimp-test-session-utils.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── test-core.c
+│   │   ├── test-gimpidtable.c
+│   │   ├── test-gimptilebackendtilemanager.c
+│   │   ├── test-save-and-export.c
+│   │   ├── test-session-2-6-compatibility.c
+│   │   ├── test-session-2-8-compatibility-multi-window.c
+│   │   ├── test-session-2-8-compatibility-single-window.c
+│   │   ├── test-single-window-mode.c
+│   │   ├── test-tools.c
+│   │   ├── test-ui.c
+│   │   └── test-xcf.c
+│   ├── tests.c
+│   ├── tests.h
+│   ├── text
+│   │   ├── gimpfont.c
+│   │   ├── gimpfont.h
+│   │   ├── gimpfontlist.c
+│   │   ├── gimpfontlist.h
+│   │   ├── gimp-fonts.c
+│   │   ├── gimp-fonts.h
+│   │   ├── gimptext.c
+│   │   ├── gimptext-compat.c
+│   │   ├── gimptext-compat.h
+│   │   ├── gimptext.h
+│   │   ├── gimptextlayer.c
+│   │   ├── gimptextlayer.h
+│   │   ├── gimptextlayer-transform.c
+│   │   ├── gimptextlayer-transform.h
+│   │   ├── gimptextlayer-xcf.c
+│   │   ├── gimptextlayer-xcf.h
+│   │   ├── gimptextlayout.c
+│   │   ├── gimptextlayout.h
+│   │   ├── gimptextlayout-render.c
+│   │   ├── gimptextlayout-render.h
+│   │   ├── gimptext-parasite.c
+│   │   ├── gimptext-parasite.h
+│   │   ├── gimptextundo.c
+│   │   ├── gimptextundo.h
+│   │   ├── gimptext-vectors.c
+│   │   ├── gimptext-vectors.h
+│   │   ├── gimptext-xlfd.c
+│   │   ├── gimptext-xlfd.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── text-enums.c
+│   │   ├── text-enums.h
+│   │   └── text-types.h
+│   ├── tools
+│   │   ├── gimpairbrushtool.c
+│   │   ├── gimpairbrushtool.h
+│   │   ├── gimpalignoptions.c
+│   │   ├── gimpalignoptions.h
+│   │   ├── gimpaligntool.c
+│   │   ├── gimpaligntool.h
+│   │   ├── gimpblendoptions.c
+│   │   ├── gimpblendoptions.h
+│   │   ├── gimpblendtool.c
+│   │   ├── gimpblendtool.h
+│   │   ├── gimpbrightnesscontrasttool.c
+│   │   ├── gimpbrightnesscontrasttool.h
+│   │   ├── gimpbrushtool.c
+│   │   ├── gimpbrushtool.h
+│   │   ├── gimpbucketfilloptions.c
+│   │   ├── gimpbucketfilloptions.h
+│   │   ├── gimpbucketfilltool.c
+│   │   ├── gimpbucketfilltool.h
+│   │   ├── gimpbycolorselecttool.c
+│   │   ├── gimpbycolorselecttool.h
+│   │   ├── gimpcageoptions.c
+│   │   ├── gimpcageoptions.h
+│   │   ├── gimpcagetool.c
+│   │   ├── gimpcagetool.h
+│   │   ├── gimpclonetool.c
+│   │   ├── gimpclonetool.h
+│   │   ├── gimpcolorbalancetool.c
+│   │   ├── gimpcolorbalancetool.h
+│   │   ├── gimpcolorizetool.c
+│   │   ├── gimpcolorizetool.h
+│   │   ├── gimpcoloroptions.c
+│   │   ├── gimpcoloroptions.h
+│   │   ├── gimpcolorpickeroptions.c
+│   │   ├── gimpcolorpickeroptions.h
+│   │   ├── gimpcolorpickertool.c
+│   │   ├── gimpcolorpickertool.h
+│   │   ├── gimpcolortool.c
+│   │   ├── gimpcolortool.h
+│   │   ├── gimpconvolvetool.c
+│   │   ├── gimpconvolvetool.h
+│   │   ├── gimpcropoptions.c
+│   │   ├── gimpcropoptions.h
+│   │   ├── gimpcroptool.c
+│   │   ├── gimpcroptool.h
+│   │   ├── gimpcurvestool.c
+│   │   ├── gimpcurvestool.h
+│   │   ├── gimpdesaturatetool.c
+│   │   ├── gimpdesaturatetool.h
+│   │   ├── gimpdodgeburntool.c
+│   │   ├── gimpdodgeburntool.h
+│   │   ├── gimpdrawtool.c
+│   │   ├── gimpdrawtool.h
+│   │   ├── gimpeditselectiontool.c
+│   │   ├── gimpeditselectiontool.h
+│   │   ├── gimpellipseselecttool.c
+│   │   ├── gimpellipseselecttool.h
+│   │   ├── gimperasertool.c
+│   │   ├── gimperasertool.h
+│   │   ├── gimpflipoptions.c
+│   │   ├── gimpflipoptions.h
+│   │   ├── gimpfliptool.c
+│   │   ├── gimpfliptool.h
+│   │   ├── gimpforegroundselectoptions.c
+│   │   ├── gimpforegroundselectoptions.h
+│   │   ├── gimpforegroundselecttool.c
+│   │   ├── gimpforegroundselecttool.h
+│   │   ├── gimpforegroundselecttoolundo.c
+│   │   ├── gimpforegroundselecttoolundo.h
+│   │   ├── gimpfreeselecttool.c
+│   │   ├── gimpfreeselecttool.h
+│   │   ├── gimpfuzzyselecttool.c
+│   │   ├── gimpfuzzyselecttool.h
+│   │   ├── gimpgegltool.c
+│   │   ├── gimpgegltool.h
+│   │   ├── gimphealtool.c
+│   │   ├── gimphealtool.h
+│   │   ├── gimphistogramoptions.c
+│   │   ├── gimphistogramoptions.h
+│   │   ├── gimphuesaturationtool.c
+│   │   ├── gimphuesaturationtool.h
+│   │   ├── gimpimagemapoptions.c
+│   │   ├── gimpimagemapoptions.h
+│   │   ├── gimpimagemaptool.c
+│   │   ├── gimpimagemaptool.h
+│   │   ├── gimpimagemaptool-settings.c
+│   │   ├── gimpimagemaptool-settings.h
+│   │   ├── gimpinkoptions-gui.c
+│   │   ├── gimpinkoptions-gui.h
+│   │   ├── gimpinktool.c
+│   │   ├── gimpinktool.h
+│   │   ├── gimpiscissorsoptions.c
+│   │   ├── gimpiscissorsoptions.h
+│   │   ├── gimpiscissorstool.c
+│   │   ├── gimpiscissorstool.h
+│   │   ├── gimplevelstool.c
+│   │   ├── gimplevelstool.h
+│   │   ├── gimpmagnifyoptions.c
+│   │   ├── gimpmagnifyoptions.h
+│   │   ├── gimpmagnifytool.c
+│   │   ├── gimpmagnifytool.h
+│   │   ├── gimpmeasureoptions.c
+│   │   ├── gimpmeasureoptions.h
+│   │   ├── gimpmeasuretool.c
+│   │   ├── gimpmeasuretool.h
+│   │   ├── gimpmoveoptions.c
+│   │   ├── gimpmoveoptions.h
+│   │   ├── gimpmovetool.c
+│   │   ├── gimpmovetool.h
+│   │   ├── gimppaintbrushtool.c
+│   │   ├── gimppaintbrushtool.h
+│   │   ├── gimppaintoptions-gui.c
+│   │   ├── gimppaintoptions-gui.h
+│   │   ├── gimppainttool.c
+│   │   ├── gimppainttool.h
+│   │   ├── gimppenciltool.c
+│   │   ├── gimppenciltool.h
+│   │   ├── gimpperspectiveclonetool.c
+│   │   ├── gimpperspectiveclonetool.h
+│   │   ├── gimpperspectivetool.c
+│   │   ├── gimpperspectivetool.h
+│   │   ├── gimpposterizetool.c
+│   │   ├── gimpposterizetool.h
+│   │   ├── gimprectangleoptions.c
+│   │   ├── gimprectangleoptions.h
+│   │   ├── gimprectangleselectoptions.c
+│   │   ├── gimprectangleselectoptions.h
+│   │   ├── gimprectangleselecttool.c
+│   │   ├── gimprectangleselecttool.h
+│   │   ├── gimprectangletool.c
+│   │   ├── gimprectangletool.h
+│   │   ├── gimpregionselectoptions.c
+│   │   ├── gimpregionselectoptions.h
+│   │   ├── gimpregionselecttool.c
+│   │   ├── gimpregionselecttool.h
+│   │   ├── gimprotatetool.c
+│   │   ├── gimprotatetool.h
+│   │   ├── gimpscaletool.c
+│   │   ├── gimpscaletool.h
+│   │   ├── gimpselectionoptions.c
+│   │   ├── gimpselectionoptions.h
+│   │   ├── gimpselectiontool.c
+│   │   ├── gimpselectiontool.h
+│   │   ├── gimpsheartool.c
+│   │   ├── gimpsheartool.h
+│   │   ├── gimpsmudgetool.c
+│   │   ├── gimpsmudgetool.h
+│   │   ├── gimpsourcetool.c
+│   │   ├── gimpsourcetool.h
+│   │   ├── gimptextoptions.c
+│   │   ├── gimptextoptions.h
+│   │   ├── gimptexttool.c
+│   │   ├── gimptexttool-editor.c
+│   │   ├── gimptexttool-editor.h
+│   │   ├── gimptexttool.h
+│   │   ├── gimpthresholdtool.c
+│   │   ├── gimpthresholdtool.h
+│   │   ├── gimptool.c
+│   │   ├── gimptoolcontrol.c
+│   │   ├── gimptoolcontrol.h
+│   │   ├── gimptool.h
+│   │   ├── gimptooloptions-gui.c
+│   │   ├── gimptooloptions-gui.h
+│   │   ├── gimptool-progress.c
+│   │   ├── gimptool-progress.h
+│   │   ├── gimp-tools.c
+│   │   ├── gimp-tools.h
+│   │   ├── gimptransformoptions.c
+│   │   ├── gimptransformoptions.h
+│   │   ├── gimptransformtool.c
+│   │   ├── gimptransformtool.h
+│   │   ├── gimptransformtoolundo.c
+│   │   ├── gimptransformtoolundo.h
+│   │   ├── gimpvectoroptions.c
+│   │   ├── gimpvectoroptions.h
+│   │   ├── gimpvectortool.c
+│   │   ├── gimpvectortool.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── tool_manager.c
+│   │   ├── tool_manager.h
+│   │   ├── tools-enums.c
+│   │   ├── tools-enums.h
+│   │   └── tools-types.h
+│   ├── unique.c
+│   ├── unique.h
+│   ├── units.c
+│   ├── units.h
+│   ├── vectors
+│   │   ├── gimpanchor.c
+│   │   ├── gimpanchor.h
+│   │   ├── gimpbezierstroke.c
+│   │   ├── gimpbezierstroke.h
+│   │   ├── gimpstroke.c
+│   │   ├── gimpstroke.h
+│   │   ├── gimpstroke-new.c
+│   │   ├── gimpstroke-new.h
+│   │   ├── gimpvectors.c
+│   │   ├── gimpvectors-compat.c
+│   │   ├── gimpvectors-compat.h
+│   │   ├── gimpvectors-export.c
+│   │   ├── gimpvectors-export.h
+│   │   ├── gimpvectors.h
+│   │   ├── gimpvectors-import.c
+│   │   ├── gimpvectors-import.h
+│   │   ├── gimpvectorsmodundo.c
+│   │   ├── gimpvectorsmodundo.h
+│   │   ├── gimpvectors-preview.c
+│   │   ├── gimpvectors-preview.h
+│   │   ├── gimpvectorspropundo.c
+│   │   ├── gimpvectorspropundo.h
+│   │   ├── gimpvectorsundo.c
+│   │   ├── gimpvectorsundo.h
+│   │   ├── gimpvectors-warp.c
+│   │   ├── gimpvectors-warp.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── vectors-enums.h
+│   │   └── vectors-types.h
+│   ├── version.c
+│   ├── version.h
+│   ├── widgets
+│   │   ├── gimpaction.c
+│   │   ├── gimpactioneditor.c
+│   │   ├── gimpactioneditor.h
+│   │   ├── gimpactionfactory.c
+│   │   ├── gimpactionfactory.h
+│   │   ├── gimpactiongroup.c
+│   │   ├── gimpactiongroup.h
+│   │   ├── gimpaction.h
+│   │   ├── gimpactionview.c
+│   │   ├── gimpactionview.h
+│   │   ├── gimpblobeditor.c
+│   │   ├── gimpblobeditor.h
+│   │   ├── gimpbrusheditor.c
+│   │   ├── gimpbrusheditor.h
+│   │   ├── gimpbrushfactoryview.c
+│   │   ├── gimpbrushfactoryview.h
+│   │   ├── gimpbrushselect.c
+│   │   ├── gimpbrushselect.h
+│   │   ├── gimpbufferview.c
+│   │   ├── gimpbufferview.h
+│   │   ├── gimpcairo.c
+│   │   ├── gimpcairo.h
+│   │   ├── gimpcairo-wilber.c
+│   │   ├── gimpcairo-wilber.h
+│   │   ├── gimpcellrendererdashes.c
+│   │   ├── gimpcellrendererdashes.h
+│   │   ├── gimpcellrendererviewable.c
+│   │   ├── gimpcellrendererviewable.h
+│   │   ├── gimpchanneltreeview.c
+│   │   ├── gimpchanneltreeview.h
+│   │   ├── gimpclipboard.c
+│   │   ├── gimpclipboard.h
+│   │   ├── gimpcolorbar.c
+│   │   ├── gimpcolorbar.h
+│   │   ├── gimpcolordialog.c
+│   │   ├── gimpcolordialog.h
+│   │   ├── gimpcolordisplayeditor.c
+│   │   ├── gimpcolordisplayeditor.h
+│   │   ├── gimpcoloreditor.c
+│   │   ├── gimpcoloreditor.h
+│   │   ├── gimpcolorframe.c
+│   │   ├── gimpcolorframe.h
+│   │   ├── gimpcolormapeditor.c
+│   │   ├── gimpcolormapeditor.h
+│   │   ├── gimpcolorpanel.c
+│   │   ├── gimpcolorpanel.h
+│   │   ├── gimpcolorselectorpalette.c
+│   │   ├── gimpcolorselectorpalette.h
+│   │   ├── gimpcombotagentry.c
+│   │   ├── gimpcombotagentry.h
+│   │   ├── gimpcomponenteditor.c
+│   │   ├── gimpcomponenteditor.h
+│   │   ├── gimpcontainerbox.c
+│   │   ├── gimpcontainerbox.h
+│   │   ├── gimpcontainercombobox.c
+│   │   ├── gimpcontainercombobox.h
+│   │   ├── gimpcontainereditor.c
+│   │   ├── gimpcontainereditor.h
+│   │   ├── gimpcontainerentry.c
+│   │   ├── gimpcontainerentry.h
+│   │   ├── gimpcontainergridview.c
+│   │   ├── gimpcontainergridview.h
+│   │   ├── gimpcontainericonview.c
+│   │   ├── gimpcontainericonview.h
+│   │   ├── gimpcontainerpopup.c
+│   │   ├── gimpcontainerpopup.h
+│   │   ├── gimpcontainertreestore.c
+│   │   ├── gimpcontainertreestore.h
+│   │   ├── gimpcontainertreeview.c
+│   │   ├── gimpcontainertreeview-dnd.c
+│   │   ├── gimpcontainertreeview-dnd.h
+│   │   ├── gimpcontainertreeview.h
+│   │   ├── gimpcontainertreeview-private.h
+│   │   ├── gimpcontainerview.c
+│   │   ├── gimpcontainerview.h
+│   │   ├── gimpcontainerview-utils.c
+│   │   ├── gimpcontainerview-utils.h
+│   │   ├── gimpcontrollereditor.c
+│   │   ├── gimpcontrollereditor.h
+│   │   ├── gimpcontrollerinfo.c
+│   │   ├── gimpcontrollerinfo.h
+│   │   ├── gimpcontrollerkeyboard.c
+│   │   ├── gimpcontrollerkeyboard.h
+│   │   ├── gimpcontrollerlist.c
+│   │   ├── gimpcontrollerlist.h
+│   │   ├── gimpcontrollermouse.c
+│   │   ├── gimpcontrollermouse.h
+│   │   ├── gimpcontrollers.c
+│   │   ├── gimpcontrollers.h
+│   │   ├── gimpcontrollerwheel.c
+│   │   ├── gimpcontrollerwheel.h
+│   │   ├── gimpcursor.c
+│   │   ├── gimpcursor.h
+│   │   ├── gimpcurveview.c
+│   │   ├── gimpcurveview.h
+│   │   ├── gimpdasheditor.c
+│   │   ├── gimpdasheditor.h
+│   │   ├── gimpdataeditor.c
+│   │   ├── gimpdataeditor.h
+│   │   ├── gimpdatafactoryview.c
+│   │   ├── gimpdatafactoryview.h
+│   │   ├── gimpdeviceeditor.c
+│   │   ├── gimpdeviceeditor.h
+│   │   ├── gimpdeviceinfo.c
+│   │   ├── gimpdeviceinfo-coords.c
+│   │   ├── gimpdeviceinfo-coords.h
+│   │   ├── gimpdeviceinfoeditor.c
+│   │   ├── gimpdeviceinfoeditor.h
+│   │   ├── gimpdeviceinfo.h
+│   │   ├── gimpdevicemanager.c
+│   │   ├── gimpdevicemanager.h
+│   │   ├── gimpdevices.c
+│   │   ├── gimpdevices.h
+│   │   ├── gimpdevicestatus.c
+│   │   ├── gimpdevicestatus.h
+│   │   ├── gimpdialogfactory.c
+│   │   ├── gimpdialogfactory.h
+│   │   ├── gimpdnd.c
+│   │   ├── gimpdnd.h
+│   │   ├── gimpdnd-xds.c
+│   │   ├── gimpdnd-xds.h
+│   │   ├── gimpdockable.c
+│   │   ├── gimpdockable.h
+│   │   ├── gimpdockbook.c
+│   │   ├── gimpdockbook.h
+│   │   ├── gimpdock.c
+│   │   ├── gimpdockcolumns.c
+│   │   ├── gimpdockcolumns.h
+│   │   ├── gimpdockcontainer.c
+│   │   ├── gimpdockcontainer.h
+│   │   ├── gimpdocked.c
+│   │   ├── gimpdocked.h
+│   │   ├── gimpdock.h
+│   │   ├── gimpdockwindow.c
+│   │   ├── gimpdockwindow.h
+│   │   ├── gimpdocumentview.c
+│   │   ├── gimpdocumentview.h
+│   │   ├── gimpdrawabletreeview.c
+│   │   ├── gimpdrawabletreeview.h
+│   │   ├── gimpdynamicseditor.c
+│   │   ├── gimpdynamicseditor.h
+│   │   ├── gimpdynamicsfactoryview.c
+│   │   ├── gimpdynamicsfactoryview.h
+│   │   ├── gimpdynamicsoutputeditor.c
+│   │   ├── gimpdynamicsoutputeditor.h
+│   │   ├── gimpeditor.c
+│   │   ├── gimpeditor.h
+│   │   ├── gimpenumaction.c
+│   │   ├── gimpenumaction.h
+│   │   ├── gimperrorconsole.c
+│   │   ├── gimperrorconsole.h
+│   │   ├── gimperrordialog.c
+│   │   ├── gimperrordialog.h
+│   │   ├── gimpfgbgeditor.c
+│   │   ├── gimpfgbgeditor.h
+│   │   ├── gimpfgbgview.c
+│   │   ├── gimpfgbgview.h
+│   │   ├── gimpfiledialog.c
+│   │   ├── gimpfiledialog.h
+│   │   ├── gimpfileprocview.c
+│   │   ├── gimpfileprocview.h
+│   │   ├── gimpfilleditor.c
+│   │   ├── gimpfilleditor.h
+│   │   ├── gimpfontselect.c
+│   │   ├── gimpfontselect.h
+│   │   ├── gimpfontview.c
+│   │   ├── gimpfontview.h
+│   │   ├── gimpgradienteditor.c
+│   │   ├── gimpgradienteditor.h
+│   │   ├── gimpgradientselect.c
+│   │   ├── gimpgradientselect.h
+│   │   ├── gimpgrideditor.c
+│   │   ├── gimpgrideditor.h
+│   │   ├── gimphandlebar.c
+│   │   ├── gimphandlebar.h
+│   │   ├── gimphelp.c
+│   │   ├── gimphelp.h
+│   │   ├── gimphelp-ids.h
+│   │   ├── gimphistogrambox.c
+│   │   ├── gimphistogrambox.h
+│   │   ├── gimphistogrameditor.c
+│   │   ├── gimphistogrameditor.h
+│   │   ├── gimphistogramview.c
+│   │   ├── gimphistogramview.h
+│   │   ├── gimpiconpicker.c
+│   │   ├── gimpiconpicker.h
+│   │   ├── gimpimagecommenteditor.c
+│   │   ├── gimpimagecommenteditor.h
+│   │   ├── gimpimageeditor.c
+│   │   ├── gimpimageeditor.h
+│   │   ├── gimpimageparasiteview.c
+│   │   ├── gimpimageparasiteview.h
+│   │   ├── gimpimageprofileview.c
+│   │   ├── gimpimageprofileview.h
+│   │   ├── gimpimagepropview.c
+│   │   ├── gimpimagepropview.h
+│   │   ├── gimpimageview.c
+│   │   ├── gimpimageview.h
+│   │   ├── gimpitemtreeview.c
+│   │   ├── gimpitemtreeview.h
+│   │   ├── gimplanguagecombobox.c
+│   │   ├── gimplanguagecombobox.h
+│   │   ├── gimplanguageentry.c
+│   │   ├── gimplanguageentry.h
+│   │   ├── gimplanguagestore.c
+│   │   ├── gimplanguagestore.h
+│   │   ├── gimplanguagestore-parser.c
+│   │   ├── gimplanguagestore-parser.h
+│   │   ├── gimplayertreeview.c
+│   │   ├── gimplayertreeview.h
+│   │   ├── gimpmenudock.c
+│   │   ├── gimpmenudock.h
+│   │   ├── gimpmenufactory.c
+│   │   ├── gimpmenufactory.h
+│   │   ├── gimpmessagebox.c
+│   │   ├── gimpmessagebox.h
+│   │   ├── gimpmessagedialog.c
+│   │   ├── gimpmessagedialog.h
+│   │   ├── gimpnavigationview.c
+│   │   ├── gimpnavigationview.h
+│   │   ├── gimpoverlaybox.c
+│   │   ├── gimpoverlaybox.h
+│   │   ├── gimpoverlaychild.c
+│   │   ├── gimpoverlaychild.h
+│   │   ├── gimpoverlaydialog.c
+│   │   ├── gimpoverlaydialog.h
+│   │   ├── gimpoverlayframe.c
+│   │   ├── gimpoverlayframe.h
+│   │   ├── gimppaletteeditor.c
+│   │   ├── gimppaletteeditor.h
+│   │   ├── gimppaletteselect.c
+│   │   ├── gimppaletteselect.h
+│   │   ├── gimppaletteview.c
+│   │   ├── gimppaletteview.h
+│   │   ├── gimppanedbox.c
+│   │   ├── gimppanedbox.h
+│   │   ├── gimppatternfactoryview.c
+│   │   ├── gimppatternfactoryview.h
+│   │   ├── gimppatternselect.c
+│   │   ├── gimppatternselect.h
+│   │   ├── gimppdbdialog.c
+│   │   ├── gimppdbdialog.h
+│   │   ├── gimppixbuf.c
+│   │   ├── gimppixbuf.h
+│   │   ├── gimppluginaction.c
+│   │   ├── gimppluginaction.h
+│   │   ├── gimpprofilechooserdialog.c
+│   │   ├── gimpprofilechooserdialog.h
+│   │   ├── gimpprogressbox.c
+│   │   ├── gimpprogressbox.h
+│   │   ├── gimpprogressdialog.c
+│   │   ├── gimpprogressdialog.h
+│   │   ├── gimppropwidgets.c
+│   │   ├── gimppropwidgets.h
+│   │   ├── gimpradioaction.c
+│   │   ├── gimpradioaction.h
+│   │   ├── gimprender.c
+│   │   ├── gimprender.h
+│   │   ├── gimpsamplepointeditor.c
+│   │   ├── gimpsamplepointeditor.h
+│   │   ├── gimpscalebutton.c
+│   │   ├── gimpscalebutton.h
+│   │   ├── gimpselectiondata.c
+│   │   ├── gimpselectiondata.h
+│   │   ├── gimpselectioneditor.c
+│   │   ├── gimpselectioneditor.h
+│   │   ├── gimpsessioninfo-aux.c
+│   │   ├── gimpsessioninfo-aux.h
+│   │   ├── gimpsessioninfo-book.c
+│   │   ├── gimpsessioninfo-book.h
+│   │   ├── gimpsessioninfo.c
+│   │   ├── gimpsessioninfo-dockable.c
+│   │   ├── gimpsessioninfo-dockable.h
+│   │   ├── gimpsessioninfo-dock.c
+│   │   ├── gimpsessioninfo-dock.h
+│   │   ├── gimpsessioninfo.h
+│   │   ├── gimpsessioninfo-private.h
+│   │   ├── gimpsessionmanaged.c
+│   │   ├── gimpsessionmanaged.h
+│   │   ├── gimpsettingsbox.c
+│   │   ├── gimpsettingsbox.h
+│   │   ├── gimpsettingseditor.c
+│   │   ├── gimpsettingseditor.h
+│   │   ├── gimpsizebox.c
+│   │   ├── gimpsizebox.h
+│   │   ├── gimpspinscale.c
+│   │   ├── gimpspinscale.h
+│   │   ├── gimpstringaction.c
+│   │   ├── gimpstringaction.h
+│   │   ├── gimpstrokeeditor.c
+│   │   ├── gimpstrokeeditor.h
+│   │   ├── gimptagentry.c
+│   │   ├── gimptagentry.h
+│   │   ├── gimptagpopup.c
+│   │   ├── gimptagpopup.h
+│   │   ├── gimptemplateeditor.c
+│   │   ├── gimptemplateeditor.h
+│   │   ├── gimptemplateview.c
+│   │   ├── gimptemplateview.h
+│   │   ├── gimptextbuffer.c
+│   │   ├── gimptextbuffer.h
+│   │   ├── gimptextbuffer-serialize.c
+│   │   ├── gimptextbuffer-serialize.h
+│   │   ├── gimptexteditor.c
+│   │   ├── gimptexteditor.h
+│   │   ├── gimptextproxy.c
+│   │   ├── gimptextproxy.h
+│   │   ├── gimptextstyleeditor.c
+│   │   ├── gimptextstyleeditor.h
+│   │   ├── gimptexttag.c
+│   │   ├── gimptexttag.h
+│   │   ├── gimpthumbbox.c
+│   │   ├── gimpthumbbox.h
+│   │   ├── gimptoggleaction.c
+│   │   ├── gimptoggleaction.h
+│   │   ├── gimptoolbox.c
+│   │   ├── gimptoolbox-color-area.c
+│   │   ├── gimptoolbox-color-area.h
+│   │   ├── gimptoolbox-dnd.c
+│   │   ├── gimptoolbox-dnd.h
+│   │   ├── gimptoolbox.h
+│   │   ├── gimptoolbox-image-area.c
+│   │   ├── gimptoolbox-image-area.h
+│   │   ├── gimptoolbox-indicator-area.c
+│   │   ├── gimptoolbox-indicator-area.h
+│   │   ├── gimptooleditor.c
+│   │   ├── gimptooleditor.h
+│   │   ├── gimptooloptionseditor.c
+│   │   ├── gimptooloptionseditor.h
+│   │   ├── gimptoolpalette.c
+│   │   ├── gimptoolpalette.h
+│   │   ├── gimptoolpreseteditor.c
+│   │   ├── gimptoolpreseteditor.h
+│   │   ├── gimptoolpresetfactoryview.c
+│   │   ├── gimptoolpresetfactoryview.h
+│   │   ├── gimptranslationstore.c
+│   │   ├── gimptranslationstore.h
+│   │   ├── gimpuimanager.c
+│   │   ├── gimpuimanager.h
+│   │   ├── gimpundoeditor.c
+│   │   ├── gimpundoeditor.h
+│   │   ├── gimpvectorstreeview.c
+│   │   ├── gimpvectorstreeview.h
+│   │   ├── gimpviewablebox.c
+│   │   ├── gimpviewablebox.h
+│   │   ├── gimpviewablebutton.c
+│   │   ├── gimpviewablebutton.h
+│   │   ├── gimpviewabledialog.c
+│   │   ├── gimpviewabledialog.h
+│   │   ├── gimpview.c
+│   │   ├── gimpview.h
+│   │   ├── gimpview-popup.c
+│   │   ├── gimpview-popup.h
+│   │   ├── gimpviewrendererbrush.c
+│   │   ├── gimpviewrendererbrush.h
+│   │   ├── gimpviewrendererbuffer.c
+│   │   ├── gimpviewrendererbuffer.h
+│   │   ├── gimpviewrenderer.c
+│   │   ├── gimpviewrendererdrawable.c
+│   │   ├── gimpviewrendererdrawable.h
+│   │   ├── gimpviewrenderer-frame.c
+│   │   ├── gimpviewrenderer-frame.h
+│   │   ├── gimpviewrenderergradient.c
+│   │   ├── gimpviewrenderergradient.h
+│   │   ├── gimpviewrenderer.h
+│   │   ├── gimpviewrendererimage.c
+│   │   ├── gimpviewrendererimagefile.c
+│   │   ├── gimpviewrendererimagefile.h
+│   │   ├── gimpviewrendererimage.h
+│   │   ├── gimpviewrendererlayer.c
+│   │   ├── gimpviewrendererlayer.h
+│   │   ├── gimpviewrendererpalette.c
+│   │   ├── gimpviewrendererpalette.h
+│   │   ├── gimpviewrenderer-utils.c
+│   │   ├── gimpviewrenderer-utils.h
+│   │   ├── gimpviewrenderervectors.c
+│   │   ├── gimpviewrenderervectors.h
+│   │   ├── gimpwidgets-constructors.c
+│   │   ├── gimpwidgets-constructors.h
+│   │   ├── gimpwidgets-utils.c
+│   │   ├── gimpwidgets-utils.h
+│   │   ├── gimpwindow.c
+│   │   ├── gimpwindow.h
+│   │   ├── gimpwindowstrategy.c
+│   │   ├── gimpwindowstrategy.h
+│   │   ├── gtkhwrapbox.c
+│   │   ├── gtkhwrapbox.h
+│   │   ├── gtkwrapbox.c
+│   │   ├── gtkwrapbox.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── widgets-enums.c
+│   │   ├── widgets-enums.h
+│   │   └── widgets-types.h
+│   └── xcf
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── xcf.c
+│       ├── xcf.h
+│       ├── xcf-load.c
+│       ├── xcf-load.h
+│       ├── xcf-private.h
+│       ├── xcf-read.c
+│       ├── xcf-read.h
+│       ├── xcf-save.c
+│       ├── xcf-save.h
+│       ├── xcf-seek.c
+│       ├── xcf-seek.h
+│       ├── xcf-write.c
+│       └── xcf-write.h
+├── AUTHORS
+├── authors.dtd
+├── authors.xml
+├── authors.xsl
+├── build
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── osx
+│   │   ├── info.plist
+│   │   ├── info.plist.in
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── README
+│   └── windows
+│       ├── fileicon.ico
+│       ├── gimp.manifest
+│       ├── gimp-plug-ins.rc
+│       ├── gimp-plug-ins.rc.in
+│       ├── gimp.rc
+│       ├── gimp.rc.in
+│       ├── gimprc-plug-ins.rule
+│       ├── gimprc.rule
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── plug-ins.ico
+│       └── wilber.ico
+├── ChangeLog
+├── ChangeLog.pre-1-0
+├── ChangeLog.pre-1-2
+├── ChangeLog.pre-2-0
+├── ChangeLog.pre-2-2
+├── ChangeLog.pre-2-4
+├── ChangeLog.pre-2-6
+├── ChangeLog.pre-git
+├── compile
+├── config.guess
+├── config.h.in
+├── config.h.win32
+├── config.sub
+├── configure
+├── configure.ac
+├── COPYING
+├── cursors
+│   ├── cursor-bad-bw.png
+│   ├── cursor-bad.png
+│   ├── cursor-color-picker-bw.png
+│   ├── cursor-color-picker.png
+│   ├── cursor-corner-bottom-left-bw.png
+│   ├── cursor-corner-bottom-left.png
+│   ├── cursor-corner-bottom-right-bw.png
+│   ├── cursor-corner-bottom-right.png
+│   ├── cursor-corner-top-left-bw.png
+│   ├── cursor-corner-top-left.png
+│   ├── cursor-corner-top-right-bw.png
+│   ├── cursor-corner-top-right.png
+│   ├── cursor-crosshair-bw.png
+│   ├── cursor-crosshair.png
+│   ├── cursor-crosshair-small-bw.png
+│   ├── cursor-crosshair-small.png
+│   ├── cursor-mouse-bw.png
+│   ├── cursor-mouse.png
+│   ├── cursor-move-bw.png
+│   ├── cursor-move.png
+│   ├── cursor-none-bw.png
+│   ├── cursor-none.png
+│   ├── cursor-side-bottom-bw.png
+│   ├── cursor-side-bottom.png
+│   ├── cursor-side-left-bw.png
+│   ├── cursor-side-left.png
+│   ├── cursor-side-right-bw.png
+│   ├── cursor-side-right.png
+│   ├── cursor-side-top-bw.png
+│   ├── cursor-side-top.png
+│   ├── cursor-zoom-bw.png
+│   ├── cursor-zoom.png
+│   ├── gimp-tool-cursors.xcf
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── modifier-anchor.png
+│   ├── modifier-background.png
+│   ├── modifier-bad.png
+│   ├── modifier-control.png
+│   ├── modifier-foreground.png
+│   ├── modifier-intersect.png
+│   ├── modifier-join.png
+│   ├── modifier-minus.png
+│   ├── modifier-move.png
+│   ├── modifier-pattern.png
+│   ├── modifier-plus.png
+│   ├── modifier-resize.png
+│   ├── modifier-select.png
+│   ├── tool-airbrush-bw.png
+│   ├── tool-airbrush.png
+│   ├── tool-blend-bw.png
+│   ├── tool-blend.png
+│   ├── tool-blur-bw.png
+│   ├── tool-blur.png
+│   ├── tool-bucket-fill-bw.png
+│   ├── tool-bucket-fill.png
+│   ├── tool-burn-bw.png
+│   ├── tool-burn.png
+│   ├── tool-clone-bw.png
+│   ├── tool-clone.png
+│   ├── tool-color-picker-bw.png
+│   ├── tool-color-picker.png
+│   ├── tool-crop-bw.png
+│   ├── tool-crop.png
+│   ├── tool-dodge-bw.png
+│   ├── tool-dodge.png
+│   ├── tool-ellipse-select-bw.png
+│   ├── tool-ellipse-select.png
+│   ├── tool-eraser-bw.png
+│   ├── tool-eraser.png
+│   ├── tool-flip-horizontal-bw.png
+│   ├── tool-flip-horizontal.png
+│   ├── tool-flip-vertical-bw.png
+│   ├── tool-flip-vertical.png
+│   ├── tool-free-select-bw.png
+│   ├── tool-free-select.png
+│   ├── tool-fuzzy-select-bw.png
+│   ├── tool-fuzzy-select.png
+│   ├── tool-hand-bw.png
+│   ├── tool-hand.png
+│   ├── tool-heal-bw.png
+│   ├── tool-heal.png
+│   ├── tool-ink-bw.png
+│   ├── tool-ink.png
+│   ├── tool-iscissors-bw.png
+│   ├── tool-iscissors.png
+│   ├── tool-measure-bw.png
+│   ├── tool-measure.png
+│   ├── tool-move-bw.png
+│   ├── tool-move.png
+│   ├── tool-paintbrush-bw.png
+│   ├── tool-paintbrush.png
+│   ├── tool-paths-anchor-bw.png
+│   ├── tool-paths-anchor.png
+│   ├── tool-paths-bw.png
+│   ├── tool-paths-control-bw.png
+│   ├── tool-paths-control.png
+│   ├── tool-paths.png
+│   ├── tool-paths-segment-bw.png
+│   ├── tool-paths-segment.png
+│   ├── tool-pencil-bw.png
+│   ├── tool-pencil.png
+│   ├── tool-perspective-bw.png
+│   ├── tool-perspective.png
+│   ├── tool-polygon-select-bw.png
+│   ├── tool-polygon-select.png
+│   ├── tool-rect-select-bw.png
+│   ├── tool-rect-select.png
+│   ├── tool-resize-bw.png
+│   ├── tool-resize.png
+│   ├── tool-rotate-bw.png
+│   ├── tool-rotate.png
+│   ├── tool-shear-bw.png
+│   ├── tool-shear.png
+│   ├── tool-smudge-bw.png
+│   ├── tool-smudge.png
+│   ├── tool-text-bw.png
+│   ├── tool-text.png
+│   ├── tool-zoom-bw.png
+│   └── tool-zoom.png
+├── data
+│   ├── brushes
+│   │   ├── Basic
+│   │   │   ├── 1-pixel.vbr
+│   │   │   ├── Block-01.vbr
+│   │   │   ├── Block-02.vbr
+│   │   │   ├── Block-03.vbr
+│   │   │   ├── Hardness-025.vbr
+│   │   │   ├── Hardness-050.vbr
+│   │   │   ├── Hardness-075.vbr
+│   │   │   ├── Hardness-100.vbr
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── pixel.gbr
+│   │   │   └── Star.vbr
+│   │   ├── gimp-obsolete-files
+│   │   │   ├── 10x10squareBlur.gbr
+│   │   │   ├── 10x10square.gbr
+│   │   │   ├── 20x20squareBlur.gbr
+│   │   │   ├── 20x20square.gbr
+│   │   │   ├── 5x5squareBlur.gbr
+│   │   │   ├── 5x5square.gbr
+│   │   │   ├── Calligraphic-Brush-0.vbr
+│   │   │   ├── Calligraphic-Brush-1.vbr
+│   │   │   ├── Calligraphic-Brush-2.vbr
+│   │   │   ├── Calligraphic-Brush-3.vbr
+│   │   │   ├── Circle-11.vbr
+│   │   │   ├── Circle-13.vbr
+│   │   │   ├── Circle-15.vbr
+│   │   │   ├── Circle-17.vbr
+│   │   │   ├── Circle-19.vbr
+│   │   │   ├── Circle-1.vbr
+│   │   │   ├── Circle-3.vbr
+│   │   │   ├── Circle-5.vbr
+│   │   │   ├── Circle-7.vbr
+│   │   │   ├── Circle-9.vbr
+│   │   │   ├── Circle-Fuzzy-11.vbr
+│   │   │   ├── Circle-Fuzzy-13.vbr
+│   │   │   ├── Circle-Fuzzy-15.vbr
+│   │   │   ├── Circle-Fuzzy-17.vbr
+│   │   │   ├── Circle-Fuzzy-19.vbr
+│   │   │   ├── Circle-Fuzzy-3.vbr
+│   │   │   ├── Circle-Fuzzy-5.vbr
+│   │   │   ├── Circle-Fuzzy-7.vbr
+│   │   │   ├── Circle-Fuzzy-9.vbr
+│   │   │   ├── Diagonal-Star-11.vbr
+│   │   │   ├── Diagonal-Star-17.vbr
+│   │   │   ├── Diagonal-Star-25.vbr
+│   │   │   ├── feltpen.gih
+│   │   │   ├── galaxy_small.gbr
+│   │   │   ├── Grass1.gih
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── pepper.gbr
+│   │   │   ├── pixel.gbr
+│   │   │   ├── SketchBrush-16.gih
+│   │   │   ├── SketchBrush-32.gih
+│   │   │   └── SketchBrush-64.gih
+│   │   ├── Legacy
+│   │   │   ├── confetti.gbr
+│   │   │   ├── confetti.gih
+│   │   │   ├── dunes.gbr
+│   │   │   ├── galaxy-big.gbr
+│   │   │   ├── galaxy.gbr
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── pepper.gbr
+│   │   │   └── vine.gih
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── Media
+│   │   │   ├── Acrylic-01.gih
+│   │   │   ├── Acrylic-02.gih
+│   │   │   ├── Acrylic-03.gih
+│   │   │   ├── Acrylic-04.gih
+│   │   │   ├── Acrylic-05.gih
+│   │   │   ├── Bristles-01.gbr
+│   │   │   ├── Bristles-02.gbr
+│   │   │   ├── Bristles-03.gbr
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Oils-01.gbr
+│   │   │   ├── Oils-02.gbr
+│   │   │   └── Oils-03.gbr
+│   │   ├── Sketch
+│   │   │   ├── Chalk-01.gih
+│   │   │   ├── Chalk-02.gih
+│   │   │   ├── Chalk-03.gih
+│   │   │   ├── Charcoal-01.gbr
+│   │   │   ├── Charcoal-02.gbr
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Pencil-01.gih
+│   │   │   ├── Pencil-02.gih
+│   │   │   └── Pencil-Scratch.gbr
+│   │   ├── Splatters
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Sparks-Hose.gih
+│   │   │   ├── Splats-01.gih
+│   │   │   ├── Splats-02.gih
+│   │   │   ├── Sponge-01.gbr
+│   │   │   └── Sponge-02.gbr
+│   │   └── Texture
+│   │       ├── Cell-01.gbr
+│   │       ├── Cell-02.gbr
+│   │       ├── Grass.gih
+│   │       ├── Makefile.am
+│   │       ├── Makefile.in
+│   │       ├── Smoke.gbr
+│   │       ├── Structure.gbr
+│   │       ├── Texture-01.gbr
+│   │       ├── Texture-02.gbr
+│   │       ├── Texture-Hose-01.gih
+│   │       ├── Texture-Hose-02.gih
+│   │       ├── Texture-Hose-03.gih
+│   │       ├── Vegetation-01.gbr
+│   │       └── Vegetation-02.gih
+│   ├── dynamics
+│   │   ├── Basic
+│   │   │   ├── Basic-Simple.gdyn
+│   │   │   ├── Dynamics-Random.gdyn
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Negative-Size-Pressure.gdyn
+│   │   │   ├── Pencil-Generic.gdyn
+│   │   │   ├── Pencil-Shader.gdyn
+│   │   │   ├── Pen-Generic.gdyn
+│   │   │   └── Pressure-Opacity.gdyn
+│   │   ├── Basic-Dynamics.gdyn
+│   │   ├── Color-From-Gradient.gdyn
+│   │   ├── Dynamics-Off.gdyn
+│   │   ├── Fade-Tapering.gdyn
+│   │   ├── FX
+│   │   │   ├── Confetti.gdyn
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Perspective.gdyn
+│   │   │   └── Speed_Size_Opacity.gdyn
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── Random-Color.gdyn
+│   │   ├── Tilt-Angle.gdyn
+│   │   ├── Track-Direction.gdyn
+│   │   └── Velocity-Tapering.gdyn
+│   ├── environ
+│   │   ├── default.env
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── gradients
+│   │   ├── Abstract_1.ggr
+│   │   ├── Abstract_2.ggr
+│   │   ├── Abstract_3.ggr
+│   │   ├── Aneurism.ggr
+│   │   ├── Blinds.ggr
+│   │   ├── Blue_Green.ggr
+│   │   ├── Browns.ggr
+│   │   ├── Brushed_Aluminium.ggr
+│   │   ├── Burning_Paper.ggr
+│   │   ├── Burning_Transparency.ggr
+│   │   ├── Caribbean_Blues.ggr
+│   │   ├── CD.ggr
+│   │   ├── CD_Half.ggr
+│   │   ├── Coffee.ggr
+│   │   ├── Cold_Steel_2.ggr
+│   │   ├── Cold_Steel.ggr
+│   │   ├── Crown_molding.ggr
+│   │   ├── Dark_1.ggr
+│   │   ├── Deep_Sea.ggr
+│   │   ├── Default.ggr
+│   │   ├── Flare_Glow_Angular_1.ggr
+│   │   ├── Flare_Glow_Radial_1.ggr
+│   │   ├── Flare_Glow_Radial_2.ggr
+│   │   ├── Flare_Glow_Radial_3.ggr
+│   │   ├── Flare_Glow_Radial_4.ggr
+│   │   ├── Flare_Radial_101.ggr
+│   │   ├── Flare_Radial_102.ggr
+│   │   ├── Flare_Radial_103.ggr
+│   │   ├── Flare_Rays_Radial_1.ggr
+│   │   ├── Flare_Rays_Radial_2.ggr
+│   │   ├── Flare_Rays_Size_1.ggr
+│   │   ├── Flare_Sizefac_101.ggr
+│   │   ├── Four_bars.ggr
+│   │   ├── French_flag.ggr
+│   │   ├── French_flag_smooth.ggr
+│   │   ├── Full_saturation_spectrum_CCW.ggr
+│   │   ├── Full_saturation_spectrum_CW.ggr
+│   │   ├── German_flag.ggr
+│   │   ├── German_flag_smooth.ggr
+│   │   ├── Golden.ggr
+│   │   ├── Greens.ggr
+│   │   ├── Horizon_1.ggr
+│   │   ├── Horizon_2.ggr
+│   │   ├── Incandescent.ggr
+│   │   ├── Land_1.ggr
+│   │   ├── Land_and_Sea.ggr
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── Metallic_Something.ggr
+│   │   ├── Mexican_flag.ggr
+│   │   ├── Mexican_flag_smooth.ggr
+│   │   ├── Nauseating_Headache.ggr
+│   │   ├── Neon_Cyan.ggr
+│   │   ├── Neon_Green.ggr
+│   │   ├── Neon_Yellow.ggr
+│   │   ├── Pastel_Rainbow.ggr
+│   │   ├── Pastels.ggr
+│   │   ├── Purples.ggr
+│   │   ├── Radial_Eyeball_Blue.ggr
+│   │   ├── Radial_Eyeball_Brown.ggr
+│   │   ├── Radial_Eyeball_Green.ggr
+│   │   ├── Radial_Glow_1.ggr
+│   │   ├── Radial_Rainbow_Hoop.ggr
+│   │   ├── Romanian_flag.ggr
+│   │   ├── Romanian_flag_smooth.ggr
+│   │   ├── Rounded_edge.ggr
+│   │   ├── Shadows_1.ggr
+│   │   ├── Shadows_2.ggr
+│   │   ├── Shadows_3.ggr
+│   │   ├── Skyline.ggr
+│   │   ├── Skyline_polluted.ggr
+│   │   ├── Square_Wood_Frame.ggr
+│   │   ├── Sunrise.ggr
+│   │   ├── Three_bars_sin.ggr
+│   │   ├── Tropical_Colors.ggr
+│   │   ├── Tube_Red.ggr
+│   │   ├── Wood_1.ggr
+│   │   ├── Wood_2.ggr
+│   │   ├── Yellow_Contrast.ggr
+│   │   └── Yellow_Orange.ggr
+│   ├── images
+│   │   ├── gimp-logo.png
+│   │   ├── gimp-splash.png
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── wilber.png
+│   ├── interpreters
+│   │   ├── default.interp
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── palettes
+│   │   ├── Bears.gpl
+│   │   ├── Bgold.gpl
+│   │   ├── Blues.gpl
+│   │   ├── Borders.gpl
+│   │   ├── Browns_And_Yellows.gpl
+│   │   ├── Caramel.gpl
+│   │   ├── Cascade.gpl
+│   │   ├── China.gpl
+│   │   ├── Coldfire.gpl
+│   │   ├── Cool_Colors.gpl
+│   │   ├── Cranes.gpl
+│   │   ├── Dark_pastels.gpl
+│   │   ├── Default.gpl
+│   │   ├── Ega.gpl
+│   │   ├── Firecode.gpl
+│   │   ├── Gold.gpl
+│   │   ├── Grayblue.gpl
+│   │   ├── Grays.gpl
+│   │   ├── GrayViolet.gpl
+│   │   ├── Greens.gpl
+│   │   ├── Hilite.gpl
+│   │   ├── Khaki.gpl
+│   │   ├── Lights.gpl
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── Muted.gpl
+│   │   ├── Named_Colors.gpl
+│   │   ├── News3.gpl
+│   │   ├── Op2.gpl
+│   │   ├── Paintjet.gpl
+│   │   ├── Pastels.gpl
+│   │   ├── Plasma.gpl
+│   │   ├── Reds_And_Purples.gpl
+│   │   ├── Reds.gpl
+│   │   ├── Royal.gpl
+│   │   ├── Tango.gpl
+│   │   ├── Topographic.gpl
+│   │   ├── Visibone_2.gpl
+│   │   ├── Visibone.gpl
+│   │   ├── Volcano.gpl
+│   │   ├── Warm_Colors.gpl
+│   │   └── Web.gpl
+│   ├── patterns
+│   │   ├── 3dgreen.pat
+│   │   ├── amethyst.pat
+│   │   ├── bark.pat
+│   │   ├── bluegrid.pat
+│   │   ├── blue.pat
+│   │   ├── bluesquares.pat
+│   │   ├── blueweb.pat
+│   │   ├── brick.pat
+│   │   ├── burlap.pat
+│   │   ├── burlwood.pat
+│   │   ├── choc_swirl.pat
+│   │   ├── corkboard.pat
+│   │   ├── cracked.pat
+│   │   ├── Craters.pat
+│   │   ├── crinklepaper.pat
+│   │   ├── electric.pat
+│   │   ├── fibers.pat
+│   │   ├── granite1.pat
+│   │   ├── ground1.pat
+│   │   ├── ice.pat
+│   │   ├── java.pat
+│   │   ├── leather.pat
+│   │   ├── leaves.pat
+│   │   ├── leopard.pat
+│   │   ├── lightning.pat
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── marble1.pat
+│   │   ├── marble2.pat
+│   │   ├── marble3.pat
+│   │   ├── Moonfoot.pat
+│   │   ├── nops.pat
+│   │   ├── paper.pat
+│   │   ├── parque1.pat
+│   │   ├── parque2.pat
+│   │   ├── parque3.pat
+│   │   ├── pastel.pat
+│   │   ├── pine.pat
+│   │   ├── pink_marble.pat
+│   │   ├── pool.pat
+│   │   ├── qube1.pat
+│   │   ├── rain.pat
+│   │   ├── recessed.pat
+│   │   ├── redcube.pat
+│   │   ├── rock.pat
+│   │   ├── sky.pat
+│   │   ├── slate.pat
+│   │   ├── sm_squares.pat
+│   │   ├── starfield.pat
+│   │   ├── stone33.pat
+│   │   ├── Stripes1px.pat
+│   │   ├── Stripes2px.pat
+│   │   ├── terra.pat
+│   │   ├── walnut.pat
+│   │   ├── warning.pat
+│   │   ├── wood1.pat
+│   │   ├── wood2.pat
+│   │   ├── wood3.pat
+│   │   ├── wood4.pat
+│   │   └── wood5.pat
+│   ├── tags
+│   │   ├── gimp-tags-default.xml
+│   │   ├── gimp-tags-default.xml.in
+│   │   ├── gimp-tags.dtd
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── tips
+│   │   ├── fortunes.xsl
+│   │   ├── gimp-tips.dtd
+│   │   ├── gimp-tips.xml
+│   │   ├── gimp-tips.xml.in
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   └── tool-presets
+│       ├── FX
+│       │   ├── Crop-16-9.gtp
+│       │   ├── Crop-Composition.gtp
+│       │   ├── Fill-Paper.gtp
+│       │   ├── FX-Confetti.gtp
+│       │   ├── FX-Radial-Softlight.gtp
+│       │   ├── Glow-Lights.gtp
+│       │   ├── Makefile.am
+│       │   ├── Makefile.in
+│       │   ├── Smooth-Clone.gtp
+│       │   └── Vignette.gtp
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── Paint
+│       │   ├── Airbrush-Color-From-Gradient.gtp
+│       │   ├── Airbrush.gtp
+│       │   ├── Basic-Knife.gtp
+│       │   ├── Basic-Round-Detail.gtp
+│       │   ├── Basic-Round.gtp
+│       │   ├── Bristles.gtp
+│       │   ├── Eraser-Hard.gtp
+│       │   ├── Makefile.am
+│       │   ├── Makefile.in
+│       │   ├── Noise.gtp
+│       │   ├── Paintbrush-Color-From-Gradient.gtp
+│       │   ├── Pencil-Color-From-Gradient.gtp
+│       │   ├── Smudge-Rough.gtp
+│       │   ├── Smudge-Soft.gtp
+│       │   ├── Soft-Oil.gtp
+│       │   ├── Splatters.gtp
+│       │   ├── Structure.gtp
+│       │   └── Vegetal.gtp
+│       ├── Selection
+│       │   ├── Circle-200px.gtp
+│       │   ├── Feathered-Selection.gtp
+│       │   ├── Makefile.am
+│       │   └── Makefile.in
+│       └── Sketch
+│           ├── Blue-Pen.gtp
+│           ├── Eraser-Soft.gtp
+│           ├── Ink-Smooth.gtp
+│           ├── Ink-Thin.gtp
+│           ├── Makefile.am
+│           ├── Makefile.in
+│           ├── Pencil.gtp
+│           └── Pencil-Soft.gtp
+├── depcomp
+├── desktop
+│   ├── 16x16
+│   │   └── gimp.png
+│   ├── 22x22
+│   │   └── gimp.png
+│   ├── 24x24
+│   │   └── gimp.png
+│   ├── 256x256
+│   │   └── gimp.png
+│   ├── 32x32
+│   │   └── gimp.png
+│   ├── 48x48
+│   │   └── gimp.png
+│   ├── 64x64
+│   │   └── gimp.png
+│   ├── gimp.appdata.xml.in
+│   ├── gimp.desktop.in.in
+│   ├── Makefile.am
+│   └── Makefile.in
+├── devel-docs
+│   ├── app
+│   │   ├── app-docs.sgml
+│   │   ├── app-overrides.txt
+│   │   ├── app-sections.txt
+│   │   ├── app.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── bugzilla-milestones.txt
+│   ├── contexts.txt
+│   ├── debug-plug-ins.txt
+│   ├── exif-handling.txt
+│   ├── gbr.txt
+│   ├── gegl-porting-plan.txt
+│   ├── ggr.txt
+│   ├── gih.txt
+│   ├── gpb.txt
+│   ├── gtkbuilder-porting-guide.txt
+│   ├── includes.txt
+│   ├── libgimp
+│   │   ├── html
+│   │   │   ├── GimpAspectPreview.html
+│   │   │   ├── GimpBrushSelectButton.html
+│   │   │   ├── GimpDrawablePreview.html
+│   │   │   ├── GimpFontSelectButton.html
+│   │   │   ├── GimpGradientSelectButton.html
+│   │   │   ├── GimpImageComboBox.html
+│   │   │   ├── GimpPaletteSelectButton.html
+│   │   │   ├── GimpPatternSelectButton.html
+│   │   │   ├── GimpProcBrowserDialog.html
+│   │   │   ├── GimpProgressBar.html
+│   │   │   ├── GimpSelectButton.html
+│   │   │   ├── GimpZoomPreview.html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimp-data.html
+│   │   │   ├── libgimp.devhelp2
+│   │   │   ├── libgimp-general.html
+│   │   │   ├── libgimp-gimpbrushes.html
+│   │   │   ├── libgimp-gimpbrush.html
+│   │   │   ├── libgimp-gimpbrushmenu.html
+│   │   │   ├── libgimp-gimpbrushselect.html
+│   │   │   ├── libgimp-gimpbuffer.html
+│   │   │   ├── libgimp-gimpchannel.html
+│   │   │   ├── libgimp-gimpcolor.html
+│   │   │   ├── libgimp-gimpcontext.html
+│   │   │   ├── libgimp-gimpconvert.html
+│   │   │   ├── libgimp-gimpdisplay.html
+│   │   │   ├── libgimp-gimpdrawable.html
+│   │   │   ├── libgimp-gimpdrawabletransform.html
+│   │   │   ├── libgimp-gimpdynamics.html
+│   │   │   ├── libgimp-gimpedit.html
+│   │   │   ├── libgimp-gimpenums.html
+│   │   │   ├── libgimp-gimpexport.html
+│   │   │   ├── libgimp-gimpfileops.html
+│   │   │   ├── libgimp-gimpfloatingsel.html
+│   │   │   ├── libgimp-gimpfontmenu.html
+│   │   │   ├── libgimp-gimpfontselect.html
+│   │   │   ├── libgimp-gimpfonts.html
+│   │   │   ├── libgimp-gimpgimprc.html
+│   │   │   ├── libgimp-gimpgradient.html
+│   │   │   ├── libgimp-gimpgradientmenu.html
+│   │   │   ├── libgimp-gimpgradientselect.html
+│   │   │   ├── libgimp-gimpgradients.html
+│   │   │   ├── libgimp-gimpgrid.html
+│   │   │   ├── libgimp-gimpguides.html
+│   │   │   ├── libgimp-gimphelp.html
+│   │   │   ├── libgimp-gimp.html
+│   │   │   ├── libgimp-gimpimage.html
+│   │   │   ├── libgimp-gimpimageselect.html
+│   │   │   ├── libgimp-GimpItemComboBox.html
+│   │   │   ├── libgimp-gimpitem.html
+│   │   │   ├── libgimp-gimpitemtransform.html
+│   │   │   ├── libgimp-gimplayer.html
+│   │   │   ├── libgimp-gimpmenu.html
+│   │   │   ├── libgimp-gimpmessage.html
+│   │   │   ├── libgimp-gimppainttools.html
+│   │   │   ├── libgimp-gimppalette.html
+│   │   │   ├── libgimp-gimppalettemenu.html
+│   │   │   ├── libgimp-gimppaletteselect.html
+│   │   │   ├── libgimp-gimppalettes.html
+│   │   │   ├── libgimp-gimppaths.html
+│   │   │   ├── libgimp-gimppattern.html
+│   │   │   ├── libgimp-gimppatternmenu.html
+│   │   │   ├── libgimp-gimppatternselect.html
+│   │   │   ├── libgimp-gimppatterns.html
+│   │   │   ├── libgimp-gimppixbuf.html
+│   │   │   ├── libgimp-gimppixelfetcher.html
+│   │   │   ├── libgimp-gimppixelrgn.html
+│   │   │   ├── libgimp-gimpplugin.html
+│   │   │   ├── libgimp-gimpproceduraldb.html
+│   │   │   ├── libgimp-GimpProcView.html
+│   │   │   ├── libgimp-gimpprogress.html
+│   │   │   ├── libgimp-gimpregioniterator.html
+│   │   │   ├── libgimp-gimpselection.html
+│   │   │   ├── libgimp-gimpselectiontools.html
+│   │   │   ├── libgimp-gimptextlayer.html
+│   │   │   ├── libgimp-gimptexttool.html
+│   │   │   ├── libgimp-gimptile.html
+│   │   │   ├── libgimp-gimptransformtools.html
+│   │   │   ├── libgimp-gimpui.html
+│   │   │   ├── libgimp-gimpundo.html
+│   │   │   ├── libgimp-gimpvectors.html
+│   │   │   ├── libgimp.html
+│   │   │   ├── libgimp-image.html
+│   │   │   ├── libgimp-index-deprecated.html
+│   │   │   ├── libgimp-index.html
+│   │   │   ├── libgimp-index-new-in-2-2.html
+│   │   │   ├── libgimp-index-new-in-2-4.html
+│   │   │   ├── libgimp-index-new-in-2-6.html
+│   │   │   ├── libgimp-index-new-in-2-8.html
+│   │   │   ├── libgimp-selectors.html
+│   │   │   ├── libgimpui-hierarchy.html
+│   │   │   ├── libgimpui.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimp-docs.sgml
+│   │   ├── libgimp-overrides.txt
+│   │   ├── libgimp-sections.txt
+│   │   ├── libgimp.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpbase
+│   │   ├── html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpbase.devhelp2
+│   │   │   ├── libgimpbase-gimpbaseenums.html
+│   │   │   ├── libgimpbase-gimpbasetypes.html
+│   │   │   ├── libgimpbase-gimpchecks.html
+│   │   │   ├── libgimpbase-gimpcpuaccel.html
+│   │   │   ├── libgimpbase-gimpdatafiles.html
+│   │   │   ├── libgimpbase-gimpenv.html
+│   │   │   ├── libgimpbase-gimplimits.html
+│   │   │   ├── libgimpbase-gimpmemsize.html
+│   │   │   ├── libgimpbase-gimpparam.html
+│   │   │   ├── libgimpbase-gimpparasite.html
+│   │   │   ├── libgimpbase-gimpparasiteio.html
+│   │   │   ├── libgimpbase-gimprectangle.html
+│   │   │   ├── libgimpbase-gimpsignal.html
+│   │   │   ├── libgimpbase-gimpunit.html
+│   │   │   ├── libgimpbase-gimputils.html
+│   │   │   ├── libgimpbase-gimpversion.html
+│   │   │   ├── libgimpbase.html
+│   │   │   ├── libgimpbase-index-deprecated.html
+│   │   │   ├── libgimpbase-index.html
+│   │   │   ├── libgimpbase-index-new-in-2-2.html
+│   │   │   ├── libgimpbase-index-new-in-2-4.html
+│   │   │   ├── libgimpbase-index-new-in-2-6.html
+│   │   │   ├── libgimpbase-index-new-in-2-8.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpbase-docs.sgml
+│   │   ├── libgimpbase-overrides.txt
+│   │   ├── libgimpbase-sections.txt
+│   │   ├── libgimpbase.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpcolor
+│   │   ├── html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpcolor.devhelp2
+│   │   │   ├── libgimpcolor-GimpAdaptiveSupersample.html
+│   │   │   ├── libgimpcolor-GimpBilinear.html
+│   │   │   ├── libgimpcolor-GimpCairoColor.html
+│   │   │   ├── libgimpcolor-GimpCMYK.html
+│   │   │   ├── libgimpcolor-GimpColorManaged.html
+│   │   │   ├── libgimpcolor-GimpColorSpace.html
+│   │   │   ├── libgimpcolor-GimpHSV.html
+│   │   │   ├── libgimpcolor-GimpRGB.html
+│   │   │   ├── libgimpcolor.html
+│   │   │   ├── libgimpcolor-index-deprecated.html
+│   │   │   ├── libgimpcolor-index.html
+│   │   │   ├── libgimpcolor-index-new-in-2-2.html
+│   │   │   ├── libgimpcolor-index-new-in-2-4.html
+│   │   │   ├── libgimpcolor-index-new-in-2-6.html
+│   │   │   ├── libgimpcolor-index-new-in-2-8.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpcolor-docs.sgml
+│   │   ├── libgimpcolor-overrides.txt
+│   │   ├── libgimpcolor-sections.txt
+│   │   ├── libgimpcolor.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpconfig
+│   │   ├── html
+│   │   │   ├── GimpColorConfig.html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpconfig.devhelp2
+│   │   │   ├── libgimpconfig-GimpConfig-deserialize.html
+│   │   │   ├── libgimpconfig-GimpConfigError.html
+│   │   │   ├── libgimpconfig-GimpConfig.html
+│   │   │   ├── libgimpconfig-GimpConfig-params.html
+│   │   │   ├── libgimpconfig-GimpConfig-path.html
+│   │   │   ├── libgimpconfig-GimpConfig-serialize.html
+│   │   │   ├── libgimpconfig-GimpConfig-utils.html
+│   │   │   ├── libgimpconfig-GimpConfigWriter.html
+│   │   │   ├── libgimpconfig-GimpScanner.html
+│   │   │   ├── libgimpconfig-hierarchy.html
+│   │   │   ├── libgimpconfig.html
+│   │   │   ├── libgimpconfig-index-deprecated.html
+│   │   │   ├── libgimpconfig-index.html
+│   │   │   ├── libgimpconfig-index-new-in-2-4.html
+│   │   │   ├── libgimpconfig-index-new-in-2-6.html
+│   │   │   ├── libgimpconfig-index-new-in-2-8.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpconfig-docs.sgml
+│   │   ├── libgimpconfig-overrides.txt
+│   │   ├── libgimpconfig-sections.txt
+│   │   ├── libgimpconfig.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpmath
+│   │   ├── html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpmath.devhelp2
+│   │   │   ├── libgimpmath-GimpMath.html
+│   │   │   ├── libgimpmath-GimpMatrix.html
+│   │   │   ├── libgimpmath-GimpMD5.html
+│   │   │   ├── libgimpmath-GimpVector.html
+│   │   │   ├── libgimpmath.html
+│   │   │   ├── libgimpmath-index-deprecated.html
+│   │   │   ├── libgimpmath-index.html
+│   │   │   ├── libgimpmath-index-new-in-2-2.html
+│   │   │   ├── libgimpmath-index-new-in-2-4.html
+│   │   │   ├── libgimpmath-index-new-in-2-6.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpmath-docs.sgml
+│   │   ├── libgimpmath-overrides.txt
+│   │   ├── libgimpmath-sections.txt
+│   │   ├── libgimpmath.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpmodule
+│   │   ├── html
+│   │   │   ├── GimpModuleDB.html
+│   │   │   ├── GimpModule.html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpmodule.devhelp2
+│   │   │   ├── libgimpmodule.html
+│   │   │   ├── libgimpmodule-index-deprecated.html
+│   │   │   ├── libgimpmodule-index.html
+│   │   │   ├── libgimpmodule-index-new-in-2-2.html
+│   │   │   ├── libgimpmodule-index-new-in-2-4.html
+│   │   │   ├── libgimpmodule-index-new-in-2-6.html
+│   │   │   ├── libgimpmodule-index-new-in-2-8.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpmodule-docs.sgml
+│   │   ├── libgimpmodule-overrides.txt
+│   │   ├── libgimpmodule-sections.txt
+│   │   ├── libgimpmodule.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpthumb
+│   │   ├── html
+│   │   │   ├── GimpThumbnail.html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpthumb.devhelp2
+│   │   │   ├── libgimpthumb-GimpThumb-enums.html
+│   │   │   ├── libgimpthumb-GimpThumb-error.html
+│   │   │   ├── libgimpthumb-GimpThumb-utils.html
+│   │   │   ├── libgimpthumb.html
+│   │   │   ├── libgimpthumb-index-deprecated.html
+│   │   │   ├── libgimpthumb-index.html
+│   │   │   ├── libgimpthumb-index-new-in-2-2.html
+│   │   │   ├── libgimpthumb-index-new-in-2-4.html
+│   │   │   ├── libgimpthumb-index-new-in-2-6.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── libgimpthumb-docs.sgml
+│   │   ├── libgimpthumb-overrides.txt
+│   │   ├── libgimpthumb-sections.txt
+│   │   ├── libgimpthumb.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── version.in
+│   ├── libgimpwidgets
+│   │   ├── html
+│   │   │   ├── GimpBrowser.html
+│   │   │   ├── gimp-browser.png
+│   │   │   ├── GimpButton.html
+│   │   │   ├── gimp-button.png
+│   │   │   ├── GimpCellRendererColor.html
+│   │   │   ├── GimpCellRendererToggle.html
+│   │   │   ├── GimpChainButton.html
+│   │   │   ├── gimp-chain-button.png
+│   │   │   ├── GimpColorArea.html
+│   │   │   ├── gimp-color-area.png
+│   │   │   ├── GimpColorButton.html
+│   │   │   ├── gimp-color-button.png
+│   │   │   ├── GimpColorDisplay.html
+│   │   │   ├── GimpColorDisplayStack.html
+│   │   │   ├── GimpColorHexEntry.html
+│   │   │   ├── gimp-color-hex-entry.png
+│   │   │   ├── GimpColorNotebook.html
+│   │   │   ├── GimpColorProfileComboBox.html
+│   │   │   ├── gimp-color-profile-combo-box.png
+│   │   │   ├── GimpColorProfileStore.html
+│   │   │   ├── GimpColorScale.html
+│   │   │   ├── gimp-color-scale.png
+│   │   │   ├── GimpColorScales.html
+│   │   │   ├── GimpColorSelect.html
+│   │   │   ├── GimpColorSelection.html
+│   │   │   ├── gimp-color-selection.png
+│   │   │   ├── GimpColorSelector.html
+│   │   │   ├── GimpController.html
+│   │   │   ├── GimpDialog.html
+│   │   │   ├── gimp-dialog.png
+│   │   │   ├── GimpEnumComboBox.html
+│   │   │   ├── gimp-enum-combo-box.png
+│   │   │   ├── GimpEnumLabel.html
+│   │   │   ├── gimp-enum-label.png
+│   │   │   ├── GimpEnumStore.html
+│   │   │   ├── GimpFileEntry.html
+│   │   │   ├── gimp-file-entry.png
+│   │   │   ├── GimpFrame.html
+│   │   │   ├── gimp-frame.png
+│   │   │   ├── gimp-hint-box.png
+│   │   │   ├── GimpIntComboBox.html
+│   │   │   ├── gimp-int-combo-box.png
+│   │   │   ├── GimpIntStore.html
+│   │   │   ├── GimpMemsizeEntry.html
+│   │   │   ├── gimp-memsize-entry.png
+│   │   │   ├── GimpNumberPairEntry.html
+│   │   │   ├── gimp-number-pair-entry.png
+│   │   │   ├── GimpOffsetArea.html
+│   │   │   ├── gimp-offset-area.png
+│   │   │   ├── GimpPageSelector.html
+│   │   │   ├── gimp-page-selector.png
+│   │   │   ├── GimpPathEditor.html
+│   │   │   ├── gimp-path-editor.png
+│   │   │   ├── GimpPickButton.html
+│   │   │   ├── gimp-pick-button.png
+│   │   │   ├── GimpPixmap.html
+│   │   │   ├── GimpPreviewArea.html
+│   │   │   ├── gimp-preview-area.png
+│   │   │   ├── GimpPreview.html
+│   │   │   ├── GimpRuler.html
+│   │   │   ├── GimpScrolledPreview.html
+│   │   │   ├── GimpSizeEntry.html
+│   │   │   ├── GimpStringComboBox.html
+│   │   │   ├── gimp-string-combo-box.png
+│   │   │   ├── GimpUnitComboBox.html
+│   │   │   ├── GimpUnitMenu.html
+│   │   │   ├── gimp-unit-menu.png
+│   │   │   ├── GimpUnitStore.html
+│   │   │   ├── GimpZoomModel.html
+│   │   │   ├── home.png
+│   │   │   ├── index.html
+│   │   │   ├── left-insensitive.png
+│   │   │   ├── left.png
+│   │   │   ├── libgimpwidgets-cell-renderers.html
+│   │   │   ├── libgimpwidgets-colordisplay.html
+│   │   │   ├── libgimpwidgets-colorselector.html
+│   │   │   ├── libgimpwidgets-controller.html
+│   │   │   ├── libgimpwidgets-deprecated.html
+│   │   │   ├── libgimpwidgets.devhelp2
+│   │   │   ├── libgimpwidgets-gallery.html
+│   │   │   ├── libgimpwidgets-GimpCairoUtils.html
+│   │   │   ├── libgimpwidgets-GimpEnumWidgets.html
+│   │   │   ├── libgimpwidgets-GimpHelpUI.html
+│   │   │   ├── libgimpwidgets-GimpHintBox.html
+│   │   │   ├── libgimpwidgets-GimpOldWidgets.html
+│   │   │   ├── libgimpwidgets-GimpPropWidgets.html
+│   │   │   ├── libgimpwidgets-GimpQueryBox.html
+│   │   │   ├── libgimpwidgets-GimpStock.html
+│   │   │   ├── libgimpwidgets-GimpWidgets.html
+│   │   │   ├── libgimpwidgets-hierarchy.html
+│   │   │   ├── libgimpwidgets-index-deprecated.html
+│   │   │   ├── libgimpwidgets-index.html
+│   │   │   ├── libgimpwidgets-index-new-in-2-2.html
+│   │   │   ├── libgimpwidgets-index-new-in-2-4.html
+│   │   │   ├── libgimpwidgets-index-new-in-2-6.html
+│   │   │   ├── libgimpwidgets-index-new-in-2-8.html
+│   │   │   ├── libgimpwidgets-utils.html
+│   │   │   ├── libgimpwidgets-widgets.html
+│   │   │   ├── right-insensitive.png
+│   │   │   ├── right.png
+│   │   │   ├── stock-anchor-16.png
+│   │   │   ├── stock-cap-butt-16.png
+│   │   │   ├── stock-cap-round-16.png
+│   │   │   ├── stock-cap-square-16.png
+│   │   │   ├── stock-center-16.png
+│   │   │   ├── stock-center-24.png
+│   │   │   ├── stock-channel-16.png
+│   │   │   ├── stock-channel-24.png
+│   │   │   ├── stock-channel-32.png
+│   │   │   ├── stock-channel-48.png
+│   │   │   ├── stock-channel-alpha-16.png
+│   │   │   ├── stock-channel-alpha-24.png
+│   │   │   ├── stock-channel-alpha-32.png
+│   │   │   ├── stock-channel-alpha-48.png
+│   │   │   ├── stock-channel-blue-16.png
+│   │   │   ├── stock-channel-blue-24.png
+│   │   │   ├── stock-channel-blue-32.png
+│   │   │   ├── stock-channel-blue-48.png
+│   │   │   ├── stock-channel-gray-16.png
+│   │   │   ├── stock-channel-gray-24.png
+│   │   │   ├── stock-channel-gray-32.png
+│   │   │   ├── stock-channel-gray-48.png
+│   │   │   ├── stock-channel-green-16.png
+│   │   │   ├── stock-channel-green-24.png
+│   │   │   ├── stock-channel-green-32.png
+│   │   │   ├── stock-channel-green-48.png
+│   │   │   ├── stock-channel-indexed-16.png
+│   │   │   ├── stock-channel-indexed-24.png
+│   │   │   ├── stock-channel-indexed-32.png
+│   │   │   ├── stock-channel-indexed-48.png
+│   │   │   ├── stock-channel-red-16.png
+│   │   │   ├── stock-channel-red-24.png
+│   │   │   ├── stock-channel-red-32.png
+│   │   │   ├── stock-channel-red-48.png
+│   │   │   ├── stock-channels-16.png
+│   │   │   ├── stock-channels-24.png
+│   │   │   ├── stock-char-picker-22.png
+│   │   │   ├── stock-close-12.png
+│   │   │   ├── stock-colormap-16.png
+│   │   │   ├── stock-colormap-24.png
+│   │   │   ├── stock-color-picker-black-18.png
+│   │   │   ├── stock-color-picker-gray-18.png
+│   │   │   ├── stock-color-picker-white-18.png
+│   │   │   ├── stock-color-pick-from-screen-16.png
+│   │   │   ├── stock-color-triangle-16.png
+│   │   │   ├── stock-controller-16.png
+│   │   │   ├── stock-controller-24.png
+│   │   │   ├── stock-controller-keyboard-16.png
+│   │   │   ├── stock-controller-keyboard-24.png
+│   │   │   ├── stock-controller-linux-input-16.png
+│   │   │   ├── stock-controller-linux-input-24.png
+│   │   │   ├── stock-controller-midi-16.png
+│   │   │   ├── stock-controller-midi-24.png
+│   │   │   ├── stock-controller-wheel-16.png
+│   │   │   ├── stock-controller-wheel-24.png
+│   │   │   ├── stock-convert-grayscale-16.png
+│   │   │   ├── stock-convert-indexed-16.png
+│   │   │   ├── stock-convert-rgb-16.png
+│   │   │   ├── stock-cursor-16.png
+│   │   │   ├── stock-cursor-24.png
+│   │   │   ├── stock-curve-free-16.png
+│   │   │   ├── stock-curve-smooth-16.png
+│   │   │   ├── stock-default-colors-12.png
+│   │   │   ├── stock-device-status-16.png
+│   │   │   ├── stock-device-status-24.png
+│   │   │   ├── stock-display-filter-16.png
+│   │   │   ├── stock-display-filter-24.png
+│   │   │   ├── stock-display-filter-colorblind-16.png
+│   │   │   ├── stock-display-filter-colorblind-24.png
+│   │   │   ├── stock-display-filter-contrast-16.png
+│   │   │   ├── stock-display-filter-contrast-24.png
+│   │   │   ├── stock-display-filter-gamma-16.png
+│   │   │   ├── stock-display-filter-gamma-24.png
+│   │   │   ├── stock-display-filter-lcms-16.png
+│   │   │   ├── stock-display-filter-lcms-24.png
+│   │   │   ├── stock-display-filter-proof-16.png
+│   │   │   ├── stock-display-filter-proof-24.png
+│   │   │   ├── stock-duplicate-16.png
+│   │   │   ├── stock-dynamics-16.png
+│   │   │   ├── stock-dynamics-22.png
+│   │   │   ├── stock-edit-16.png
+│   │   │   ├── stock-error-64.png
+│   │   │   ├── stock-eye-12.png
+│   │   │   ├── stock-eye-20.png
+│   │   │   ├── stock-flip-horizontal-16.png
+│   │   │   ├── stock-flip-vertical-16.png
+│   │   │   ├── stock-floating-selection-16.png
+│   │   │   ├── stock-floating-selection-24.png
+│   │   │   ├── stock-floating-selection-32.png
+│   │   │   ├── stock-floating-selection-48.png
+│   │   │   ├── stock-frame-64.png
+│   │   │   ├── stock-gegl-16.png
+│   │   │   ├── stock-gegl-22.png
+│   │   │   ├── stock-gradient-bilinear-16.png
+│   │   │   ├── stock-gradient-conical-asymmetric-16.png
+│   │   │   ├── stock-gradient-conical-symmetric-16.png
+│   │   │   ├── stock-gradient-linear-16.png
+│   │   │   ├── stock-gradient-radial-16.png
+│   │   │   ├── stock-gradient-shapeburst-angular-16.png
+│   │   │   ├── stock-gradient-shapeburst-dimpled-16.png
+│   │   │   ├── stock-gradient-shapeburst-spherical-16.png
+│   │   │   ├── stock-gradient-spiral-anticlockwise-16.png
+│   │   │   ├── stock-gradient-spiral-clockwise-16.png
+│   │   │   ├── stock-gradient-square-16.png
+│   │   │   ├── stock-gravity-east-24.png
+│   │   │   ├── stock-gravity-north-24.png
+│   │   │   ├── stock-gravity-north-east-24.png
+│   │   │   ├── stock-gravity-north-west-24.png
+│   │   │   ├── stock-gravity-south-24.png
+│   │   │   ├── stock-gravity-south-east-24.png
+│   │   │   ├── stock-gravity-south-west-24.png
+│   │   │   ├── stock-gravity-west-24.png
+│   │   │   ├── stock-grid-16.png
+│   │   │   ├── stock-hcenter-24.png
+│   │   │   ├── stock-hchain-24.png
+│   │   │   ├── stock-hchain-broken-24.png
+│   │   │   ├── stock-histogram-16.png
+│   │   │   ├── stock-histogram-22.png
+│   │   │   ├── stock-histogram-linear-16.png
+│   │   │   ├── stock-histogram-logarithmic-16.png
+│   │   │   ├── stock-image-16.png
+│   │   │   ├── stock-image-24.png
+│   │   │   ├── stock-image-32.png
+│   │   │   ├── stock-image-48.png
+│   │   │   ├── stock-images-16.png
+│   │   │   ├── stock-images-24.png
+│   │   │   ├── stock-info-16.png
+│   │   │   ├── stock-info-24.png
+│   │   │   ├── stock-info-64.png
+│   │   │   ├── stock-input-device-16.png
+│   │   │   ├── stock-input-device-22.png
+│   │   │   ├── stock-invert-16.png
+│   │   │   ├── stock-join-bevel-16.png
+│   │   │   ├── stock-join-miter-16.png
+│   │   │   ├── stock-join-round-16.png
+│   │   │   ├── stock-landscape-16.png
+│   │   │   ├── stock-landscape-22.png
+│   │   │   ├── stock-layer-16.png
+│   │   │   ├── stock-layer-24.png
+│   │   │   ├── stock-layer-32.png
+│   │   │   ├── stock-layer-48.png
+│   │   │   ├── stock-layer-mask-16.png
+│   │   │   ├── stock-layer-mask-24.png
+│   │   │   ├── stock-layer-mask-32.png
+│   │   │   ├── stock-layer-mask-48.png
+│   │   │   ├── stock-layers-16.png
+│   │   │   ├── stock-layers-24.png
+│   │   │   ├── stock-layer-to-imagesize-16.png
+│   │   │   ├── stock-letter-spacing-22.png
+│   │   │   ├── stock-line-spacing-22.png
+│   │   │   ├── stock-linked-12.png
+│   │   │   ├── stock-linked-20.png
+│   │   │   ├── stock-list-16.png
+│   │   │   ├── stock-menu-left-12.png
+│   │   │   ├── stock-menu-right-12.png
+│   │   │   ├── stock-merge-down-16.png
+│   │   │   ├── stock-move-to-screen-16.png
+│   │   │   ├── stock-move-to-screen-24.png
+│   │   │   ├── stock-navigation-16.png
+│   │   │   ├── stock-paste-as-new-16.png
+│   │   │   ├── stock-paste-into-16.png
+│   │   │   ├── stock-path-16.png
+│   │   │   ├── stock-path-22.png
+│   │   │   ├── stock-paths-16.png
+│   │   │   ├── stock-paths-22.png
+│   │   │   ├── stock-path-stroke-16.png
+│   │   │   ├── stock-plugin-16.png
+│   │   │   ├── stock-portrait-16.png
+│   │   │   ├── stock-portrait-22.png
+│   │   │   ├── stock-print-resolution-16.png
+│   │   │   ├── stock-print-resolution-24.png
+│   │   │   ├── stock-question-64.png
+│   │   │   ├── stock-quick-mask-off-12.png
+│   │   │   ├── stock-quick-mask-on-12.png
+│   │   │   ├── stock-reset-16.png
+│   │   │   ├── stock-reshow-filter-16.png
+│   │   │   ├── stock-resize-16.png
+│   │   │   ├── stock-rotate-180-16.png
+│   │   │   ├── stock-rotate-270-16.png
+│   │   │   ├── stock-rotate-90-16.png
+│   │   │   ├── stock-sample-point-16.png
+│   │   │   ├── stock-sample-point-24.png
+│   │   │   ├── stock-scale-16.png
+│   │   │   ├── stock-selection-16.png
+│   │   │   ├── stock-selection-add-16.png
+│   │   │   ├── stock-selection-all-16.png
+│   │   │   ├── stock-selection-border-16.png
+│   │   │   ├── stock-selection-grow-16.png
+│   │   │   ├── stock-selection-intersect-16.png
+│   │   │   ├── stock-selection-none-16.png
+│   │   │   ├── stock-selection-replace-16.png
+│   │   │   ├── stock-selection-shrink-16.png
+│   │   │   ├── stock-selection-stroke-16.png
+│   │   │   ├── stock-selection-subtract-16.png
+│   │   │   ├── stock-selection-to-channel-16.png
+│   │   │   ├── stock-selection-to-path-16.png
+│   │   │   ├── stock-shape-circle-16.png
+│   │   │   ├── stock-shape-diamond-16.png
+│   │   │   ├── stock-shape-square-16.png
+│   │   │   ├── stock-swap-colors-12.png
+│   │   │   ├── stock-template-16.png
+│   │   │   ├── stock-template-24.png
+│   │   │   ├── stock-text-dir-ltr-24.png
+│   │   │   ├── stock-text-dir-rtl-24.png
+│   │   │   ├── stock-text-layer-16.png
+│   │   │   ├── stock-text-layer-24.png
+│   │   │   ├── stock-text-layer-32.png
+│   │   │   ├── stock-text-layer-48.png
+│   │   │   ├── stock-texture-64.png
+│   │   │   ├── stock-toilet-paper-16.png
+│   │   │   ├── stock-toilet-paper-24.png
+│   │   │   ├── stock-tool-airbrush-16.png
+│   │   │   ├── stock-tool-airbrush-22.png
+│   │   │   ├── stock-tool-align-16.png
+│   │   │   ├── stock-tool-align-22.png
+│   │   │   ├── stock-tool-blend-16.png
+│   │   │   ├── stock-tool-blend-22.png
+│   │   │   ├── stock-tool-blur-16.png
+│   │   │   ├── stock-tool-blur-22.png
+│   │   │   ├── stock-tool-brightness-contrast-16.png
+│   │   │   ├── stock-tool-brightness-contrast-22.png
+│   │   │   ├── stock-tool-bucket-fill-16.png
+│   │   │   ├── stock-tool-bucket-fill-22.png
+│   │   │   ├── stock-tool-by-color-select-16.png
+│   │   │   ├── stock-tool-by-color-select-22.png
+│   │   │   ├── stock-tool-cage-16.png
+│   │   │   ├── stock-tool-cage-22.png
+│   │   │   ├── stock-tool-clone-16.png
+│   │   │   ├── stock-tool-clone-22.png
+│   │   │   ├── stock-tool-color-balance-16.png
+│   │   │   ├── stock-tool-color-balance-22.png
+│   │   │   ├── stock-tool-colorize-16.png
+│   │   │   ├── stock-tool-colorize-22.png
+│   │   │   ├── stock-tool-color-picker-16.png
+│   │   │   ├── stock-tool-color-picker-22.png
+│   │   │   ├── stock-tool-crop-16.png
+│   │   │   ├── stock-tool-crop-22.png
+│   │   │   ├── stock-tool-curves-16.png
+│   │   │   ├── stock-tool-curves-22.png
+│   │   │   ├── stock-tool-desaturate-16.png
+│   │   │   ├── stock-tool-desaturate-22.png
+│   │   │   ├── stock-tool-dodge-16.png
+│   │   │   ├── stock-tool-dodge-22.png
+│   │   │   ├── stock-tool-ellipse-select-16.png
+│   │   │   ├── stock-tool-ellipse-select-22.png
+│   │   │   ├── stock-tool-eraser-16.png
+│   │   │   ├── stock-tool-eraser-22.png
+│   │   │   ├── stock-tool-flip-16.png
+│   │   │   ├── stock-tool-flip-22.png
+│   │   │   ├── stock-tool-foreground-select-16.png
+│   │   │   ├── stock-tool-foreground-select-22.png
+│   │   │   ├── stock-tool-free-select-16.png
+│   │   │   ├── stock-tool-free-select-22.png
+│   │   │   ├── stock-tool-fuzzy-select-16.png
+│   │   │   ├── stock-tool-fuzzy-select-22.png
+│   │   │   ├── stock-tool-heal-16.png
+│   │   │   ├── stock-tool-heal-22.png
+│   │   │   ├── stock-tool-hue-saturation-16.png
+│   │   │   ├── stock-tool-hue-saturation-22.png
+│   │   │   ├── stock-tool-ink-16.png
+│   │   │   ├── stock-tool-ink-22.png
+│   │   │   ├── stock-tool-iscissors-16.png
+│   │   │   ├── stock-tool-iscissors-22.png
+│   │   │   ├── stock-tool-levels-16.png
+│   │   │   ├── stock-tool-levels-22.png
+│   │   │   ├── stock-tool-measure-16.png
+│   │   │   ├── stock-tool-measure-22.png
+│   │   │   ├── stock-tool-move-16.png
+│   │   │   ├── stock-tool-move-22.png
+│   │   │   ├── stock-tool-options-16.png
+│   │   │   ├── stock-tool-options-24.png
+│   │   │   ├── stock-tool-paintbrush-16.png
+│   │   │   ├── stock-tool-paintbrush-22.png
+│   │   │   ├── stock-tool-path-16.png
+│   │   │   ├── stock-tool-path-22.png
+│   │   │   ├── stock-tool-pencil-16.png
+│   │   │   ├── stock-tool-pencil-22.png
+│   │   │   ├── stock-tool-perspective-16.png
+│   │   │   ├── stock-tool-perspective-22.png
+│   │   │   ├── stock-tool-perspective-clone-16.png
+│   │   │   ├── stock-tool-perspective-clone-22.png
+│   │   │   ├── stock-tool-posterize-16.png
+│   │   │   ├── stock-tool-posterize-22.png
+│   │   │   ├── stock-tool-preset-16.png
+│   │   │   ├── stock-tool-preset-22.png
+│   │   │   ├── stock-tool-rect-select-16.png
+│   │   │   ├── stock-tool-rect-select-22.png
+│   │   │   ├── stock-tool-rotate-16.png
+│   │   │   ├── stock-tool-rotate-22.png
+│   │   │   ├── stock-tools-16.png
+│   │   │   ├── stock-tools-24.png
+│   │   │   ├── stock-tool-scale-16.png
+│   │   │   ├── stock-tool-scale-22.png
+│   │   │   ├── stock-tool-shear-16.png
+│   │   │   ├── stock-tool-shear-22.png
+│   │   │   ├── stock-tool-smudge-16.png
+│   │   │   ├── stock-tool-smudge-22.png
+│   │   │   ├── stock-tool-text-16.png
+│   │   │   ├── stock-tool-text-22.png
+│   │   │   ├── stock-tool-threshold-16.png
+│   │   │   ├── stock-tool-threshold-22.png
+│   │   │   ├── stock-tool-zoom-16.png
+│   │   │   ├── stock-tool-zoom-22.png
+│   │   │   ├── stock-transparency-16.png
+│   │   │   ├── stock-transparency-24.png
+│   │   │   ├── stock-undo-history-16.png
+│   │   │   ├── stock-undo-history-24.png
+│   │   │   ├── stock-user-manual-16.png
+│   │   │   ├── stock-user-manual-24.png
+│   │   │   ├── stock-user-manual-32.png
+│   │   │   ├── stock-user-manual-64.png
+│   │   │   ├── stock-vcenter-24.png
+│   │   │   ├── stock-vchain-24.png
+│   │   │   ├── stock-vchain-broken-24.png
+│   │   │   ├── stock-video-16.png
+│   │   │   ├── stock-video-24.png
+│   │   │   ├── stock-warning-16.png
+│   │   │   ├── stock-warning-24.png
+│   │   │   ├── stock-warning-64.png
+│   │   │   ├── stock-web-16.png
+│   │   │   ├── stock-web-24.png
+│   │   │   ├── stock-wilber-16.png
+│   │   │   ├── stock-wilber-22.png
+│   │   │   ├── stock-wilber-64.png
+│   │   │   ├── stock-wilber-eek-64.png
+│   │   │   ├── stock-zoom-follow-window-12.png
+│   │   │   ├── style.css
+│   │   │   ├── up-insensitive.png
+│   │   │   └── up.png
+│   │   ├── images
+│   │   │   ├── gimp-browser.png
+│   │   │   ├── gimp-button.png
+│   │   │   ├── gimp-chain-button.png
+│   │   │   ├── gimp-color-area.png
+│   │   │   ├── gimp-color-button.png
+│   │   │   ├── gimp-color-hex-entry.png
+│   │   │   ├── gimp-color-profile-combo-box.png
+│   │   │   ├── gimp-color-scale.png
+│   │   │   ├── gimp-color-selection.png
+│   │   │   ├── gimp-dialog.png
+│   │   │   ├── gimp-enum-combo-box.png
+│   │   │   ├── gimp-enum-label.png
+│   │   │   ├── gimp-file-entry.png
+│   │   │   ├── gimp-frame.png
+│   │   │   ├── gimp-hint-box.png
+│   │   │   ├── gimp-int-combo-box.png
+│   │   │   ├── gimp-memsize-entry.png
+│   │   │   ├── gimp-number-pair-entry.png
+│   │   │   ├── gimp-offset-area.png
+│   │   │   ├── gimp-page-selector.png
+│   │   │   ├── gimp-path-editor.png
+│   │   │   ├── gimp-pick-button.png
+│   │   │   ├── gimp-preview-area.png
+│   │   │   ├── gimp-string-combo-box.png
+│   │   │   └── gimp-unit-menu.png
+│   │   ├── libgimpwidgets-docs.sgml
+│   │   ├── libgimpwidgets-overrides.txt
+│   │   ├── libgimpwidgets-sections.txt
+│   │   ├── libgimpwidgets.types
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── version.in
+│   │   └── visual-index.xml
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── parasites.txt
+│   ├── pat.txt
+│   ├── README
+│   ├── README.gtkdoc
+│   ├── release-howto.txt
+│   ├── structure.xml
+│   ├── submitting-patches.txt
+│   ├── tagging.txt
+│   ├── tools
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README.shooter
+│   │   ├── shadow.c
+│   │   ├── shadow.h
+│   │   ├── shooter.c
+│   │   ├── units.c
+│   │   ├── units.h
+│   │   ├── widgets.c
+│   │   └── widgets.h
+│   ├── ui-framework.txt
+│   ├── undo.txt
+│   ├── vbr.txt
+│   └── xcf.txt
+├── docs
+│   ├── gimp.1.in
+│   ├── gimprc.5.in
+│   ├── gimptool.1.in
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── Wilber_Construction_Kit.xcf.gz
+│   ├── Wilber.xcf.gz
+│   └── Wilber.xcf.gz.README
+├── etc
+│   ├── controllerrc
+│   ├── gimprc
+│   ├── gtkrc
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── menurc
+│   ├── sessionrc
+│   ├── templaterc
+│   └── unitrc
+├── gimp.pc.in
+├── gimpthumb.pc.in
+├── gimpui.pc.in
+├── gimp-zip.in
+├── gtk-doc.make
+├── HACKING
+├── INSTALL
+├── install-sh
+├── libgimp
+│   ├── COPYING
+│   ├── gimpaspectpreview.c
+│   ├── gimpaspectpreview.h
+│   ├── gimpbrushes.c
+│   ├── gimpbrushes.h
+│   ├── gimpbrushes_pdb.c
+│   ├── gimpbrushes_pdb.h
+│   ├── gimpbrushmenu.c
+│   ├── gimpbrushmenu.h
+│   ├── gimpbrush_pdb.c
+│   ├── gimpbrush_pdb.h
+│   ├── gimpbrushselectbutton.c
+│   ├── gimpbrushselectbutton.h
+│   ├── gimpbrushselect.c
+│   ├── gimpbrushselect.h
+│   ├── gimpbrushselect_pdb.c
+│   ├── gimpbrushselect_pdb.h
+│   ├── gimpbuffer_pdb.c
+│   ├── gimpbuffer_pdb.h
+│   ├── gimp.c
+│   ├── gimpchannel.c
+│   ├── gimpchannel.h
+│   ├── gimpchannel_pdb.c
+│   ├── gimpchannel_pdb.h
+│   ├── gimpcolor_pdb.c
+│   ├── gimpcolor_pdb.h
+│   ├── gimpcompat.h
+│   ├── gimpcontext_pdb.c
+│   ├── gimpcontext_pdb.h
+│   ├── gimpconvert_pdb.c
+│   ├── gimpconvert_pdb.h
+│   ├── gimp.def
+│   ├── gimpdisplay_pdb.c
+│   ├── gimpdisplay_pdb.h
+│   ├── gimpdrawable.c
+│   ├── gimpdrawable.h
+│   ├── gimpdrawable_pdb.c
+│   ├── gimpdrawable_pdb.h
+│   ├── gimpdrawablepreview.c
+│   ├── gimpdrawablepreview.h
+│   ├── gimpdrawabletransform_pdb.c
+│   ├── gimpdrawabletransform_pdb.h
+│   ├── gimpdynamics_pdb.c
+│   ├── gimpdynamics_pdb.h
+│   ├── gimpedit_pdb.c
+│   ├── gimpedit_pdb.h
+│   ├── gimpenums.c
+│   ├── gimpenums.c.tail
+│   ├── gimpenums.h
+│   ├── gimpexport.c
+│   ├── gimpexport.h
+│   ├── gimpfileops_pdb.c
+│   ├── gimpfileops_pdb.h
+│   ├── gimpfloatingsel_pdb.c
+│   ├── gimpfloatingsel_pdb.h
+│   ├── gimpfontmenu.c
+│   ├── gimpfontmenu.h
+│   ├── gimpfontselectbutton.c
+│   ├── gimpfontselectbutton.h
+│   ├── gimpfontselect.c
+│   ├── gimpfontselect.h
+│   ├── gimpfontselect_pdb.c
+│   ├── gimpfontselect_pdb.h
+│   ├── gimpfonts_pdb.c
+│   ├── gimpfonts_pdb.h
+│   ├── gimpgimprc.c
+│   ├── gimpgimprc.h
+│   ├── gimpgimprc_pdb.c
+│   ├── gimpgimprc_pdb.h
+│   ├── gimpgradientmenu.c
+│   ├── gimpgradientmenu.h
+│   ├── gimpgradient_pdb.c
+│   ├── gimpgradient_pdb.h
+│   ├── gimpgradients.c
+│   ├── gimpgradientselectbutton.c
+│   ├── gimpgradientselectbutton.h
+│   ├── gimpgradientselect.c
+│   ├── gimpgradientselect.h
+│   ├── gimpgradientselect_pdb.c
+│   ├── gimpgradientselect_pdb.h
+│   ├── gimpgradients.h
+│   ├── gimpgradients_pdb.c
+│   ├── gimpgradients_pdb.h
+│   ├── gimpgrid_pdb.c
+│   ├── gimpgrid_pdb.h
+│   ├── gimpguides_pdb.c
+│   ├── gimpguides_pdb.h
+│   ├── gimp.h
+│   ├── gimphelp_pdb.c
+│   ├── gimphelp_pdb.h
+│   ├── gimpimage.c
+│   ├── gimpimagecombobox.c
+│   ├── gimpimagecombobox.h
+│   ├── gimpimage.h
+│   ├── gimpimage_pdb.c
+│   ├── gimpimage_pdb.h
+│   ├── gimpimageselect_pdb.c
+│   ├── gimpimageselect_pdb.h
+│   ├── gimpitemcombobox.c
+│   ├── gimpitemcombobox.h
+│   ├── gimpitem_pdb.c
+│   ├── gimpitem_pdb.h
+│   ├── gimpitemtransform_pdb.c
+│   ├── gimpitemtransform_pdb.h
+│   ├── gimplayer.c
+│   ├── gimplayer.h
+│   ├── gimplayer_pdb.c
+│   ├── gimplayer_pdb.h
+│   ├── gimpmenu.c
+│   ├── gimpmenu.h
+│   ├── gimpmessage_pdb.c
+│   ├── gimpmessage_pdb.h
+│   ├── gimppainttools_pdb.c
+│   ├── gimppainttools_pdb.h
+│   ├── gimppalette.c
+│   ├── gimppalette.h
+│   ├── gimppalettemenu.c
+│   ├── gimppalettemenu.h
+│   ├── gimppalette_pdb.c
+│   ├── gimppalette_pdb.h
+│   ├── gimppalettes.c
+│   ├── gimppaletteselectbutton.c
+│   ├── gimppaletteselectbutton.h
+│   ├── gimppaletteselect.c
+│   ├── gimppaletteselect.h
+│   ├── gimppaletteselect_pdb.c
+│   ├── gimppaletteselect_pdb.h
+│   ├── gimppalettes.h
+│   ├── gimppalettes_pdb.c
+│   ├── gimppalettes_pdb.h
+│   ├── gimppaths_pdb.c
+│   ├── gimppaths_pdb.h
+│   ├── gimppatternmenu.c
+│   ├── gimppatternmenu.h
+│   ├── gimppattern_pdb.c
+│   ├── gimppattern_pdb.h
+│   ├── gimppatterns.c
+│   ├── gimppatternselectbutton.c
+│   ├── gimppatternselectbutton.h
+│   ├── gimppatternselect.c
+│   ├── gimppatternselect.h
+│   ├── gimppatternselect_pdb.c
+│   ├── gimppatternselect_pdb.h
+│   ├── gimppatterns.h
+│   ├── gimppatterns_pdb.c
+│   ├── gimppatterns_pdb.h
+│   ├── gimp_pdb.c
+│   ├── gimp_pdb.h
+│   ├── gimp_pdb_headers.h
+│   ├── gimppixbuf.c
+│   ├── gimppixbuf.h
+│   ├── gimppixelfetcher.c
+│   ├── gimppixelfetcher.h
+│   ├── gimppixelrgn.c
+│   ├── gimppixelrgn.h
+│   ├── gimpplugin.c
+│   ├── gimpplugin.h
+│   ├── gimpplugin_pdb.c
+│   ├── gimpplugin_pdb.h
+│   ├── gimpprocbrowserdialog.c
+│   ├── gimpprocbrowserdialog.h
+│   ├── gimpproceduraldb.c
+│   ├── gimpproceduraldb.h
+│   ├── gimpproceduraldb_pdb.c
+│   ├── gimpproceduraldb_pdb.h
+│   ├── gimpprocview.c
+│   ├── gimpprocview.h
+│   ├── gimpprogressbar.c
+│   ├── gimpprogressbar.h
+│   ├── gimpprogress.c
+│   ├── gimpprogress.h
+│   ├── gimpprogress_pdb.c
+│   ├── gimpprogress_pdb.h
+│   ├── gimpregioniterator.c
+│   ├── gimpregioniterator.h
+│   ├── gimpselectbutton.c
+│   ├── gimpselectbutton.h
+│   ├── gimpselection.c
+│   ├── gimpselection.h
+│   ├── gimpselection_pdb.c
+│   ├── gimpselection_pdb.h
+│   ├── gimpselectiontools_pdb.c
+│   ├── gimpselectiontools_pdb.h
+│   ├── gimptextlayer_pdb.c
+│   ├── gimptextlayer_pdb.h
+│   ├── gimptexttool_pdb.c
+│   ├── gimptexttool_pdb.h
+│   ├── gimptile.c
+│   ├── gimptile.h
+│   ├── gimptransformtools_pdb.c
+│   ├── gimptransformtools_pdb.h
+│   ├── gimptypes.h
+│   ├── gimpui.c
+│   ├── gimpui.def
+│   ├── gimpui.h
+│   ├── gimpuimarshal.c
+│   ├── gimpuimarshal.h
+│   ├── gimpuimarshal.list
+│   ├── gimpuitypes.h
+│   ├── gimpundo_pdb.c
+│   ├── gimpundo_pdb.h
+│   ├── gimpunitcache.c
+│   ├── gimpunitcache.h
+│   ├── gimpunit_pdb.c
+│   ├── gimpunit_pdb.h
+│   ├── gimpvectors.c
+│   ├── gimpvectors.h
+│   ├── gimpvectors_pdb.c
+│   ├── gimpvectors_pdb.h
+│   ├── gimpzoompreview.c
+│   ├── gimpzoompreview.h
+│   ├── libgimp-intl.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── stdplugins-intl.h
+├── libgimpbase
+│   ├── gimpbase.def
+│   ├── gimpbaseenums.c
+│   ├── gimpbaseenums.h
+│   ├── gimpbase.h
+│   ├── gimpbase-private.c
+│   ├── gimpbase-private.h
+│   ├── gimpbasetypes.c
+│   ├── gimpbasetypes.h
+│   ├── gimpchecks.c
+│   ├── gimpchecks.h
+│   ├── gimpcpuaccel.c
+│   ├── gimpcpuaccel.h
+│   ├── gimpdatafiles.c
+│   ├── gimpdatafiles.h
+│   ├── gimpenv.c
+│   ├── gimpenv.h
+│   ├── gimplimits.h
+│   ├── gimpmemsize.c
+│   ├── gimpmemsize.h
+│   ├── gimpparam.h
+│   ├── gimpparasite.c
+│   ├── gimpparasite.h
+│   ├── gimpparasiteio.c
+│   ├── gimpparasiteio.h
+│   ├── gimpprotocol.c
+│   ├── gimpprotocol.h
+│   ├── gimprectangle.c
+│   ├── gimprectangle.h
+│   ├── gimpreloc.c
+│   ├── gimpreloc.h
+│   ├── gimpsignal.c
+│   ├── gimpsignal.h
+│   ├── gimpunit.c
+│   ├── gimpunit.h
+│   ├── gimputils.c
+│   ├── gimputils.h
+│   ├── gimpversion.h
+│   ├── gimpwin32-io.h
+│   ├── gimpwire.c
+│   ├── gimpwire.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── test-cpu-accel.c
+├── libgimpcolor
+│   ├── gimpadaptivesupersample.c
+│   ├── gimpadaptivesupersample.h
+│   ├── gimpbilinear.c
+│   ├── gimpbilinear.h
+│   ├── gimpcairocolor.c
+│   ├── gimpcairocolor.h
+│   ├── gimpcmyk.c
+│   ├── gimpcmyk.h
+│   ├── gimpcolor.def
+│   ├── gimpcolor.h
+│   ├── gimpcolormanaged.c
+│   ├── gimpcolormanaged.h
+│   ├── gimpcolorspace.c
+│   ├── gimpcolorspace.h
+│   ├── gimpcolortypes.h
+│   ├── gimphsl.c
+│   ├── gimphsl.h
+│   ├── gimphsv.c
+│   ├── gimphsv.h
+│   ├── gimprgb.c
+│   ├── gimprgb.h
+│   ├── gimprgb-parse.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── test-color-parser.c
+├── libgimpconfig
+│   ├── gimpcolorconfig.c
+│   ├── gimpcolorconfig-enums.c
+│   ├── gimpcolorconfig-enums.h
+│   ├── gimpcolorconfig.h
+│   ├── gimpconfig.def
+│   ├── gimpconfig-deserialize.c
+│   ├── gimpconfig-deserialize.h
+│   ├── gimpconfig-error.c
+│   ├── gimpconfig-error.h
+│   ├── gimpconfig.h
+│   ├── gimpconfig-iface.c
+│   ├── gimpconfig-iface.h
+│   ├── gimpconfig-params.h
+│   ├── gimpconfig-path.c
+│   ├── gimpconfig-path.h
+│   ├── gimpconfig-serialize.c
+│   ├── gimpconfig-serialize.h
+│   ├── gimpconfigtypes.h
+│   ├── gimpconfig-utils.c
+│   ├── gimpconfig-utils.h
+│   ├── gimpconfigwriter.c
+│   ├── gimpconfigwriter.h
+│   ├── gimpscanner.c
+│   ├── gimpscanner.h
+│   ├── Makefile.am
+│   └── Makefile.in
+├── libgimpmath
+│   ├── gimpmath.def
+│   ├── gimpmath.h
+│   ├── gimpmathtypes.h
+│   ├── gimpmatrix.c
+│   ├── gimpmatrix.h
+│   ├── gimpmd5.c
+│   ├── gimpmd5.h
+│   ├── gimpvector.c
+│   ├── gimpvector.h
+│   ├── Makefile.am
+│   └── Makefile.in
+├── libgimpmodule
+│   ├── gimpmodule.c
+│   ├── gimpmoduledb.c
+│   ├── gimpmoduledb.h
+│   ├── gimpmodule.def
+│   ├── gimpmodule.h
+│   ├── gimpmoduletypes.h
+│   ├── Makefile.am
+│   └── Makefile.in
+├── libgimpthumb
+│   ├── gimpthumb.def
+│   ├── gimpthumb-enums.c
+│   ├── gimpthumb-enums.h
+│   ├── gimpthumb-error.c
+│   ├── gimpthumb-error.h
+│   ├── gimpthumb.h
+│   ├── gimpthumbnail.c
+│   ├── gimpthumbnail.h
+│   ├── gimp-thumbnail-list.c
+│   ├── gimpthumb-types.h
+│   ├── gimpthumb-utils.c
+│   ├── gimpthumb-utils.h
+│   ├── Makefile.am
+│   └── Makefile.in
+├── libgimpwidgets
+│   ├── gimp3migration.c
+│   ├── gimp3migration.h
+│   ├── gimpbrowser.c
+│   ├── gimpbrowser.h
+│   ├── gimpbutton.c
+│   ├── gimpbutton.h
+│   ├── gimpcairo-utils.c
+│   ├── gimpcairo-utils.h
+│   ├── gimpcellrenderercolor.c
+│   ├── gimpcellrenderercolor.h
+│   ├── gimpcellrenderertoggle.c
+│   ├── gimpcellrenderertoggle.h
+│   ├── gimpchainbutton.c
+│   ├── gimpchainbutton.h
+│   ├── gimpcolorarea.c
+│   ├── gimpcolorarea.h
+│   ├── gimpcolorbutton.c
+│   ├── gimpcolorbutton.h
+│   ├── gimpcolordisplay.c
+│   ├── gimpcolordisplay.h
+│   ├── gimpcolordisplaystack.c
+│   ├── gimpcolordisplaystack.h
+│   ├── gimpcolorhexentry.c
+│   ├── gimpcolorhexentry.h
+│   ├── gimpcolornotebook.c
+│   ├── gimpcolornotebook.h
+│   ├── gimpcolorprofilecombobox.c
+│   ├── gimpcolorprofilecombobox.h
+│   ├── gimpcolorprofilestore.c
+│   ├── gimpcolorprofilestore.h
+│   ├── gimpcolorprofilestore-private.h
+│   ├── gimpcolorscale.c
+│   ├── gimpcolorscale.h
+│   ├── gimpcolorscales.c
+│   ├── gimpcolorscales.h
+│   ├── gimpcolorselect.c
+│   ├── gimpcolorselect.h
+│   ├── gimpcolorselection.c
+│   ├── gimpcolorselection.h
+│   ├── gimpcolorselector.c
+│   ├── gimpcolorselector.h
+│   ├── gimpcontroller.c
+│   ├── gimpcontroller.h
+│   ├── gimpdialog.c
+│   ├── gimpdialog.h
+│   ├── gimpeevl.c
+│   ├── gimpeevl.h
+│   ├── gimpenumcombobox.c
+│   ├── gimpenumcombobox.h
+│   ├── gimpenumlabel.c
+│   ├── gimpenumlabel.h
+│   ├── gimpenumstore.c
+│   ├── gimpenumstore.h
+│   ├── gimpenumwidgets.c
+│   ├── gimpenumwidgets.h
+│   ├── gimpfileentry.c
+│   ├── gimpfileentry.h
+│   ├── gimpframe.c
+│   ├── gimpframe.h
+│   ├── gimphelpui.c
+│   ├── gimphelpui.h
+│   ├── gimphintbox.c
+│   ├── gimphintbox.h
+│   ├── gimpintcombobox.c
+│   ├── gimpintcombobox.h
+│   ├── gimpintstore.c
+│   ├── gimpintstore.h
+│   ├── gimpmemsizeentry.c
+│   ├── gimpmemsizeentry.h
+│   ├── gimpnumberpairentry.c
+│   ├── gimpnumberpairentry.h
+│   ├── gimpoffsetarea.c
+│   ├── gimpoffsetarea.h
+│   ├── gimpoldwidgets.c
+│   ├── gimpoldwidgets.h
+│   ├── gimppageselector.c
+│   ├── gimppageselector.h
+│   ├── gimppatheditor.c
+│   ├── gimppatheditor.h
+│   ├── gimppickbutton.c
+│   ├── gimppickbutton.h
+│   ├── gimppixmap.c
+│   ├── gimppixmap.h
+│   ├── gimppreviewarea.c
+│   ├── gimppreviewarea.h
+│   ├── gimppreview.c
+│   ├── gimppreview.h
+│   ├── gimppropwidgets.c
+│   ├── gimppropwidgets.h
+│   ├── gimpquerybox.c
+│   ├── gimpquerybox.h
+│   ├── gimpruler.c
+│   ├── gimpruler.h
+│   ├── gimpscaleentry.c
+│   ├── gimpscaleentry.h
+│   ├── gimpscrolledpreview.c
+│   ├── gimpscrolledpreview.h
+│   ├── gimpsizeentry.c
+│   ├── gimpsizeentry.h
+│   ├── gimpstock.c
+│   ├── gimpstock.h
+│   ├── gimpstringcombobox.c
+│   ├── gimpstringcombobox.h
+│   ├── gimpunitcombobox.c
+│   ├── gimpunitcombobox.h
+│   ├── gimpunitmenu.c
+│   ├── gimpunitmenu.h
+│   ├── gimpunitstore.c
+│   ├── gimpunitstore.h
+│   ├── gimpwidgets.c
+│   ├── gimpwidgets.def
+│   ├── gimpwidgetsenums.c
+│   ├── gimpwidgetsenums.h
+│   ├── gimpwidgets-error.c
+│   ├── gimpwidgets-error.h
+│   ├── gimpwidgets.h
+│   ├── gimpwidgetsmarshal.c
+│   ├── gimpwidgetsmarshal.h
+│   ├── gimpwidgetsmarshal.list
+│   ├── gimpwidgets-private.c
+│   ├── gimpwidgets-private.h
+│   ├── gimpwidgetstypes.h
+│   ├── gimp-wilber-pixbufs.h
+│   ├── gimpzoommodel.c
+│   ├── gimpzoommodel.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── test-eevl.c
+│   ├── test-preview-area.c
+│   ├── wilber-16.png
+│   ├── wilber-32.png
+│   ├── wilber-48.png
+│   └── wilber-64.png
+├── LICENSE
+├── ltmain.sh
+├── m4macros
+│   ├── alsa.m4
+│   ├── binreloc.m4
+│   ├── detectcflags.m4
+│   ├── gimp-2.0.m4
+│   ├── gimpprint.m4
+│   ├── gtk-doc.m4
+│   ├── intltool.m4
+│   ├── libtool.m4
+│   ├── lt~obsolete.m4
+│   ├── ltoptions.m4
+│   ├── ltsugar.m4
+│   ├── ltversion.m4
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── pythondev.m4
+├── Makefile.am
+├── Makefile.in
+├── menus
+│   ├── brush-editor-menu.xml
+│   ├── brushes-menu.xml
+│   ├── buffers-menu.xml
+│   ├── channels-menu.xml
+│   ├── colormap-menu.xml
+│   ├── cursor-info-menu.xml
+│   ├── dialogs-menuitems.xml
+│   ├── dockable-menu.xml
+│   ├── dockable-menu.xml.in
+│   ├── documents-menu.xml
+│   ├── dynamics-editor-menu.xml
+│   ├── dynamics-menu.xml
+│   ├── error-console-menu.xml
+│   ├── fonts-menu.xml
+│   ├── gradient-editor-menu.xml
+│   ├── gradients-menu.xml
+│   ├── gtkuimanager.dtd
+│   ├── image-menu.xml
+│   ├── image-menu.xml.in
+│   ├── images-menu.xml
+│   ├── layers-menu.xml
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── menus.xsl
+│   ├── palette-editor-menu.xml
+│   ├── palettes-menu.xml
+│   ├── patterns-menu.xml
+│   ├── quick-mask-menu.xml
+│   ├── sample-points-menu.xml
+│   ├── selection-menu.xml
+│   ├── templates-menu.xml
+│   ├── text-editor-toolbar.xml
+│   ├── text-tool-menu.xml
+│   ├── tool-options-menu.xml
+│   ├── tool-preset-editor-menu.xml
+│   ├── tool-presets-menu.xml
+│   ├── undo-menu.xml
+│   └── vectors-menu.xml
+├── missing
+├── modules
+│   ├── color-selector-cmyk.c
+│   ├── color-selector-cmyk-lcms.c
+│   ├── color-selector-water.c
+│   ├── color-selector-wheel.c
+│   ├── controller-dx-dinput.c
+│   ├── controller-linux-input.c
+│   ├── controller-midi.c
+│   ├── display-filter-color-blind.c
+│   ├── display-filter-gamma.c
+│   ├── display-filter-high-contrast.c
+│   ├── display-filter-lcms.c
+│   ├── display-filter-proof.c
+│   ├── gimpcolorwheel.c
+│   ├── gimpcolorwheel.h
+│   ├── gimpinputdevicestore-dx.c
+│   ├── gimpinputdevicestore-gudev.c
+│   ├── gimpinputdevicestore.h
+│   ├── Makefile.am
+│   └── Makefile.in
+├── NEWS
+├── NEWS.pre-2-0
+├── NEWS.pre-2-2
+├── NEWS.pre-2-4
+├── NEWS.pre-2-6
+├── NEWS.pre-2-8
+├── plug-ins
+│   ├── color-rotate
+│   │   ├── color-rotate.c
+│   │   ├── color-rotate-callbacks.c
+│   │   ├── color-rotate-callbacks.h
+│   │   ├── color-rotate-dialog.c
+│   │   ├── color-rotate-dialog.h
+│   │   ├── color-rotate-draw.c
+│   │   ├── color-rotate-draw.h
+│   │   ├── color-rotate.h
+│   │   ├── color-rotate-stock.c
+│   │   ├── color-rotate-stock.h
+│   │   ├── color-rotate-utils.c
+│   │   ├── color-rotate-utils.h
+│   │   ├── images
+│   │   │   ├── color-rotate-360.png
+│   │   │   ├── color-rotate-a-b.png
+│   │   │   ├── color-rotate-ccw.png
+│   │   │   ├── color-rotate-cw.png
+│   │   │   ├── Makefile.am
+│   │   │   └── Makefile.in
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── common
+│   │   ├── alien-map.c
+│   │   ├── align-layers.c
+│   │   ├── animation-optimize.c
+│   │   ├── animation-play.c
+│   │   ├── antialias.c
+│   │   ├── apply-canvas.c
+│   │   ├── blinds.c
+│   │   ├── blur.c
+│   │   ├── blur-gauss.c
+│   │   ├── blur-gauss-selective.c
+│   │   ├── blur-motion.c
+│   │   ├── border-average.c
+│   │   ├── bump-map.c
+│   │   ├── cartoon.c
+│   │   ├── channel-mixer.c
+│   │   ├── checkerboard.c
+│   │   ├── cml-explorer.c
+│   │   ├── color-cube-analyze.c
+│   │   ├── color-enhance.c
+│   │   ├── color-exchange.c
+│   │   ├── colorify.c
+│   │   ├── colormap-remap.c
+│   │   ├── color-to-alpha.c
+│   │   ├── compose.c
+│   │   ├── contrast-normalize.c
+│   │   ├── contrast-retinex.c
+│   │   ├── contrast-stretch.c
+│   │   ├── contrast-stretch-hsv.c
+│   │   ├── convolution-matrix.c
+│   │   ├── crop-auto.c
+│   │   ├── crop-zealous.c
+│   │   ├── cubism.c
+│   │   ├── curve-bend.c
+│   │   ├── decompose.c
+│   │   ├── deinterlace.c
+│   │   ├── depth-merge.c
+│   │   ├── despeckle.c
+│   │   ├── destripe.c
+│   │   ├── diffraction.c
+│   │   ├── displace.c
+│   │   ├── edge.c
+│   │   ├── edge-dog.c
+│   │   ├── edge-laplace.c
+│   │   ├── edge-neon.c
+│   │   ├── edge-sobel.c
+│   │   ├── emboss.c
+│   │   ├── engrave.c
+│   │   ├── file-aa.c
+│   │   ├── file-cel.c
+│   │   ├── file-csource.c
+│   │   ├── file-desktop-link.c
+│   │   ├── file-dicom.c
+│   │   ├── file-gbr.c
+│   │   ├── file-gif-load.c
+│   │   ├── file-gif-save.c
+│   │   ├── file-gih.c
+│   │   ├── file-glob.c
+│   │   ├── file-header.c
+│   │   ├── file-html-table.c
+│   │   ├── file-jp2-load.c
+│   │   ├── file-mng.c
+│   │   ├── file-pat.c
+│   │   ├── file-pcx.c
+│   │   ├── file-pdf-load.c
+│   │   ├── file-pdf-save.c
+│   │   ├── file-pix.c
+│   │   ├── file-png.c
+│   │   ├── file-pnm.c
+│   │   ├── file-ps.c
+│   │   ├── file-psp.c
+│   │   ├── file-raw.c
+│   │   ├── file-sunras.c
+│   │   ├── file-svg.c
+│   │   ├── file-tga.c
+│   │   ├── file-tiff-load.c
+│   │   ├── file-tiff-save.c
+│   │   ├── file-wmf.c
+│   │   ├── file-xbm.c
+│   │   ├── file-xmc.c
+│   │   ├── file-xpm.c
+│   │   ├── file-xwd.c
+│   │   ├── film.c
+│   │   ├── filter-pack.c
+│   │   ├── fractal-trace.c
+│   │   ├── gimprc.common
+│   │   ├── gradient-map.c
+│   │   ├── grid.c
+│   │   ├── guillotine.c
+│   │   ├── hot.c
+│   │   ├── illusion.c
+│   │   ├── iwarp.c
+│   │   ├── jigsaw.c
+│   │   ├── lcms.c
+│   │   ├── lens-apply.c
+│   │   ├── lens-distortion.c
+│   │   ├── lens-flare.c
+│   │   ├── mail.c
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── max-rgb.c
+│   │   ├── mkgen.pl
+│   │   ├── mosaic.c
+│   │   ├── newsprint.c
+│   │   ├── nl-filter.c
+│   │   ├── noise-hsv.c
+│   │   ├── noise-randomize.c
+│   │   ├── noise-rgb.c
+│   │   ├── noise-solid.c
+│   │   ├── noise-spread.c
+│   │   ├── nova.c
+│   │   ├── oilify.c
+│   │   ├── photocopy.c
+│   │   ├── pixelize.c
+│   │   ├── plasma.c
+│   │   ├── plugin-browser.c
+│   │   ├── plugin-defs.pl
+│   │   ├── polar-coords.c
+│   │   ├── procedure-browser.c
+│   │   ├── qbist.c
+│   │   ├── red-eye-removal.c
+│   │   ├── ripple.c
+│   │   ├── rotate.c
+│   │   ├── sample-colorize.c
+│   │   ├── screenshot.c
+│   │   ├── semi-flatten.c
+│   │   ├── sharpen.c
+│   │   ├── shift.c
+│   │   ├── sinus.c
+│   │   ├── smooth-palette.c
+│   │   ├── softglow.c
+│   │   ├── sparkle.c
+│   │   ├── sphere-designer.c
+│   │   ├── threshold-alpha.c
+│   │   ├── tile.c
+│   │   ├── tile-glass.c
+│   │   ├── tile-paper.c
+│   │   ├── tile-seamless.c
+│   │   ├── tile-small.c
+│   │   ├── unit-editor.c
+│   │   ├── unsharp-mask.c
+│   │   ├── value-invert.c
+│   │   ├── value-propagate.c
+│   │   ├── van-gogh-lic.c
+│   │   ├── video.c
+│   │   ├── warp.c
+│   │   ├── waves.c
+│   │   ├── web-browser.c
+│   │   ├── web-page.c
+│   │   ├── whirl-pinch.c
+│   │   └── wind.c
+│   ├── file-bmp
+│   │   ├── bmp.c
+│   │   ├── bmp.h
+│   │   ├── bmp-read.c
+│   │   ├── bmp-write.c
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-compressor
+│   │   ├── file-compressor.c
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-faxg3
+│   │   ├── faxg3.c
+│   │   ├── g3.c
+│   │   ├── g3.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-fits
+│   │   ├── fits.c
+│   │   ├── fits-io.c
+│   │   ├── fits-io.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-fli
+│   │   ├── fli.c
+│   │   ├── fli-gimp.c
+│   │   ├── fli.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-ico
+│   │   ├── ico.c
+│   │   ├── ico-dialog.c
+│   │   ├── ico-dialog.h
+│   │   ├── ico.h
+│   │   ├── ico-load.c
+│   │   ├── ico-load.h
+│   │   ├── ico-save.c
+│   │   ├── ico-save.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-jpeg
+│   │   ├── gimpexif.c
+│   │   ├── gimpexif.h
+│   │   ├── jpeg.c
+│   │   ├── jpeg-exif.c
+│   │   ├── jpeg-exif.h
+│   │   ├── jpeg.h
+│   │   ├── jpeg-icc.c
+│   │   ├── jpeg-icc.h
+│   │   ├── jpeg-load.c
+│   │   ├── jpeg-load.h
+│   │   ├── jpegqual.c
+│   │   ├── jpeg-quality.c
+│   │   ├── jpeg-quality.h
+│   │   ├── jpeg-save.c
+│   │   ├── jpeg-save.h
+│   │   ├── jpeg-settings.c
+│   │   ├── jpeg-settings.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── file-psd
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── new-resource-ids.txt
+│   │   ├── psd.c
+│   │   ├── psd.h
+│   │   ├── psd-image-res-load.c
+│   │   ├── psd-image-res-load.h
+│   │   ├── psd-layer-res-load.c
+│   │   ├── psd-layer-res-load.h
+│   │   ├── psd-load.c
+│   │   ├── psd-load.h
+│   │   ├── psd-save.c
+│   │   ├── psd-thumb-load.c
+│   │   ├── psd-thumb-load.h
+│   │   ├── psd-util.c
+│   │   ├── psd-util.h
+│   │   └── TODO.txt
+│   ├── file-sgi
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── sgi.c
+│   │   ├── sgi-lib.c
+│   │   └── sgi-lib.h
+│   ├── file-uri
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── uri-backend-gvfs.c
+│   │   ├── uri-backend.h
+│   │   ├── uri-backend-libcurl.c
+│   │   ├── uri-backend-wget.c
+│   │   └── uri.c
+│   ├── file-xjt
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README
+│   │   ├── README_xjt_fileformat.txt
+│   │   ├── xjpeg.c
+│   │   ├── xjpeg.h
+│   │   └── xjt.c
+│   ├── flame
+│   │   ├── cmap.c
+│   │   ├── cmap.h
+│   │   ├── flame.c
+│   │   ├── flame.h
+│   │   ├── libifs.c
+│   │   ├── libifs.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README
+│   │   ├── rect.c
+│   │   └── rect.h
+│   ├── fractal-explorer
+│   │   ├── examples
+│   │   │   ├── Asteroid_Field
+│   │   │   ├── Bar_Code_Label
+│   │   │   ├── Beauty_of_Nature
+│   │   │   ├── Blue_Curtain
+│   │   │   ├── Car_Track
+│   │   │   ├── Energetic_Diamond
+│   │   │   ├── Explosive
+│   │   │   ├── Flower
+│   │   │   ├── Fragments
+│   │   │   ├── Hemp
+│   │   │   ├── High_Voltage
+│   │   │   ├── Hoops
+│   │   │   ├── Ice_Crystal
+│   │   │   ├── Leaves
+│   │   │   ├── Lightning
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── Mandelbrot
+│   │   │   ├── Marble
+│   │   │   ├── Marble2
+│   │   │   ├── Medusa
+│   │   │   ├── Nautilus
+│   │   │   ├── Nebula
+│   │   │   ├── Plant
+│   │   │   ├── Rose
+│   │   │   ├── Saturn
+│   │   │   ├── Snow_Crystal
+│   │   │   ├── Soma
+│   │   │   ├── Spark
+│   │   │   ├── Suns
+│   │   │   ├── Tentacles
+│   │   │   ├── The_Green_Place
+│   │   │   ├── Wave
+│   │   │   ├── Wood
+│   │   │   └── Zooming_Circle
+│   │   ├── fractal-explorer.c
+│   │   ├── fractal-explorer-dialogs.c
+│   │   ├── fractal-explorer-dialogs.h
+│   │   ├── fractal-explorer.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── gfig
+│   │   ├── gfig-arc.c
+│   │   ├── gfig-arc.h
+│   │   ├── gfig-bezier.c
+│   │   ├── gfig-bezier.h
+│   │   ├── gfig.c
+│   │   ├── gfig-circle.c
+│   │   ├── gfig-circle.h
+│   │   ├── gfig-dialog.c
+│   │   ├── gfig-dialog.h
+│   │   ├── gfig-dobject.c
+│   │   ├── gfig-dobject.h
+│   │   ├── gfig-ellipse.c
+│   │   ├── gfig-ellipse.h
+│   │   ├── gfig-examples
+│   │   │   ├── A_star
+│   │   │   ├── curves
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── polys
+│   │   │   ├── ring
+│   │   │   ├── ring+star
+│   │   │   ├── simily
+│   │   │   ├── spirals_and_stars
+│   │   │   ├── sprial
+│   │   │   ├── star2
+│   │   │   └── stars
+│   │   ├── gfig-grid.c
+│   │   ├── gfig-grid.h
+│   │   ├── gfig.h
+│   │   ├── gfig-line.c
+│   │   ├── gfig-line.h
+│   │   ├── gfig-poly.c
+│   │   ├── gfig-poly.h
+│   │   ├── gfig-preview.c
+│   │   ├── gfig-preview.h
+│   │   ├── gfig-rectangle.c
+│   │   ├── gfig-rectangle.h
+│   │   ├── gfig-spiral.c
+│   │   ├── gfig-spiral.h
+│   │   ├── gfig-star.c
+│   │   ├── gfig-star.h
+│   │   ├── gfig-stock.c
+│   │   ├── gfig-stock.h
+│   │   ├── gfig-style.c
+│   │   ├── gfig-style.h
+│   │   ├── gfig-types.h
+│   │   ├── images
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── stock-bezier.png
+│   │   │   ├── stock-circle.png
+│   │   │   ├── stock-copy-object.png
+│   │   │   ├── stock-curve.png
+│   │   │   ├── stock-delete-object.png
+│   │   │   ├── stock-ellipse.png
+│   │   │   ├── stock-line.png
+│   │   │   ├── stock-logo.png
+│   │   │   ├── stock-move-object.png
+│   │   │   ├── stock-move-point.png
+│   │   │   ├── stock-polygon.png
+│   │   │   ├── stock-rectangle.png
+│   │   │   ├── stock-select-object.png
+│   │   │   ├── stock-show-all.png
+│   │   │   ├── stock-spiral.png
+│   │   │   └── stock-star.png
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── README
+│   ├── gimpressionist
+│   │   ├── brush.c
+│   │   ├── Brushes
+│   │   │   ├── arrow01.pgm
+│   │   │   ├── ball.ppm
+│   │   │   ├── blob.ppm
+│   │   │   ├── box.ppm
+│   │   │   ├── chalk01.pgm
+│   │   │   ├── cone.ppm
+│   │   │   ├── crayon01.pgm
+│   │   │   ├── crayon02.pgm
+│   │   │   ├── crayon03.pgm
+│   │   │   ├── crayon04.pgm
+│   │   │   ├── crayon05.pgm
+│   │   │   ├── crayon06.pgm
+│   │   │   ├── crayon07.pgm
+│   │   │   ├── crayon08.pgm
+│   │   │   ├── defaultbrush.pgm
+│   │   │   ├── dribble.pgm
+│   │   │   ├── fabric01.pgm
+│   │   │   ├── fabric02.pgm
+│   │   │   ├── fabric03.pgm
+│   │   │   ├── fabric.pgm
+│   │   │   ├── flower01.pgm
+│   │   │   ├── flower02.pgm
+│   │   │   ├── flower03.pgm
+│   │   │   ├── flower04.pgm
+│   │   │   ├── grad01.pgm
+│   │   │   ├── grad02.pgm
+│   │   │   ├── grad03.pgm
+│   │   │   ├── heart.ppm
+│   │   │   ├── leaf01.pgm
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── paintbrush01.pgm
+│   │   │   ├── paintbrush02.pgm
+│   │   │   ├── paintbrush03.pgm
+│   │   │   ├── paintbrush04.pgm
+│   │   │   ├── paintbrush.pgm
+│   │   │   ├── paper01.pgm
+│   │   │   ├── paper02.pgm
+│   │   │   ├── paper03.pgm
+│   │   │   ├── paper04.pgm
+│   │   │   ├── pentagram.pgm
+│   │   │   ├── scribble.pgm
+│   │   │   ├── shape01.pgm
+│   │   │   ├── shape02.pgm
+│   │   │   ├── shape03.pgm
+│   │   │   ├── shape04.pgm
+│   │   │   ├── snow1.pgm
+│   │   │   ├── sphere.ppm
+│   │   │   ├── splat1.pgm
+│   │   │   ├── splat2.pgm
+│   │   │   ├── splat3.pgm
+│   │   │   ├── spunge01.pgm
+│   │   │   ├── spunge02.pgm
+│   │   │   ├── spunge03.pgm
+│   │   │   ├── spunge04.pgm
+│   │   │   ├── spunge05.pgm
+│   │   │   ├── strange01.pgm
+│   │   │   ├── thegimp.pgm
+│   │   │   ├── torus.ppm
+│   │   │   ├── wavy.pgm
+│   │   │   ├── weave.pgm
+│   │   │   └── worm.pgm
+│   │   ├── brush.h
+│   │   ├── color.c
+│   │   ├── color.h
+│   │   ├── general.c
+│   │   ├── general.h
+│   │   ├── gimp.c
+│   │   ├── gimpressionist.c
+│   │   ├── gimpressionist.h
+│   │   ├── globals.c
+│   │   ├── infile.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── orientation.c
+│   │   ├── orientation.h
+│   │   ├── orientmap.c
+│   │   ├── orientmap.h
+│   │   ├── Paper
+│   │   │   ├── bricks2.pgm
+│   │   │   ├── bricks.pgm
+│   │   │   ├── burlap.pgm
+│   │   │   ├── canvas2.pgm
+│   │   │   ├── defaultpaper.pgm
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── marble2.pgm
+│   │   │   ├── marble.pgm
+│   │   │   ├── stone.pgm
+│   │   │   └── struc.pgm
+│   │   ├── paper.c
+│   │   ├── paper.h
+│   │   ├── placement.c
+│   │   ├── placement.h
+│   │   ├── plasma.c
+│   │   ├── ppmtool.c
+│   │   ├── ppmtool.h
+│   │   ├── Presets
+│   │   │   ├── ApplyCanvas
+│   │   │   ├── Ballpark
+│   │   │   ├── Canvas
+│   │   │   ├── Crosshatch
+│   │   │   ├── Cubism
+│   │   │   ├── Dotify
+│   │   │   ├── Embroidery
+│   │   │   ├── Feathers
+│   │   │   ├── Felt-marker
+│   │   │   ├── Flowerbed
+│   │   │   ├── Furry
+│   │   │   ├── Line-art
+│   │   │   ├── Line-art-2
+│   │   │   ├── Maggot-invasion
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── MarbleMadness
+│   │   │   ├── Mossy
+│   │   │   ├── Painted_Rock
+│   │   │   ├── Parquette
+│   │   │   ├── Patchwork
+│   │   │   ├── Ringworks
+│   │   │   ├── Sample
+│   │   │   ├── Smash
+│   │   │   ├── Straws
+│   │   │   ├── Weave
+│   │   │   └── Wormcan
+│   │   ├── presets.c
+│   │   ├── presets.h
+│   │   ├── preview.c
+│   │   ├── preview.h
+│   │   ├── random.h
+│   │   ├── README
+│   │   ├── repaint.c
+│   │   ├── size.c
+│   │   ├── size.h
+│   │   ├── sizemap.c
+│   │   └── utils.c
+│   ├── gradient-flare
+│   │   ├── flares
+│   │   │   ├── Bright_Star
+│   │   │   ├── Classic
+│   │   │   ├── Default
+│   │   │   ├── Distant_Sun
+│   │   │   ├── GFlare_101
+│   │   │   ├── GFlare_102
+│   │   │   ├── Hidden_Planet
+│   │   │   ├── Makefile.am
+│   │   │   └── Makefile.in
+│   │   ├── gradient-flare.c
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── README
+│   ├── help
+│   │   ├── gimphelp.c
+│   │   ├── gimphelpdomain.c
+│   │   ├── gimphelpdomain.h
+│   │   ├── gimphelp.h
+│   │   ├── gimphelpitem.c
+│   │   ├── gimphelpitem.h
+│   │   ├── gimphelplocale.c
+│   │   ├── gimphelplocale.h
+│   │   ├── gimp-help-lookup.c
+│   │   ├── gimphelpprogress.c
+│   │   ├── gimphelpprogress.h
+│   │   ├── gimphelpprogress-private.h
+│   │   ├── gimphelptypes.h
+│   │   ├── help.c
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── help-browser
+│   │   ├── dialog.c
+│   │   ├── dialog.h
+│   │   ├── gimpthrobberaction.c
+│   │   ├── gimpthrobberaction.h
+│   │   ├── gimpthrobber.c
+│   │   ├── gimpthrobber.h
+│   │   ├── help-browser.c
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── uri.c
+│   │   └── uri.h
+│   ├── ifs-compose
+│   │   ├── ifs-compose.c
+│   │   ├── ifs-compose.h
+│   │   ├── ifs-compose-storage.c
+│   │   ├── ifs-compose-utils.c
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── README.ifscompose
+│   ├── imagemap
+│   │   ├── images
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── stock-circle.png
+│   │   │   ├── stock-coord.png
+│   │   │   ├── stock-dimension.png
+│   │   │   ├── stock-java.png
+│   │   │   ├── stock-polygon.png
+│   │   │   ├── stock-rectangle.png
+│   │   │   ├── stock-to-back.png
+│   │   │   └── stock-to-front.png
+│   │   ├── imap_about.c
+│   │   ├── imap_about.h
+│   │   ├── imap_browse.c
+│   │   ├── imap_browse.h
+│   │   ├── imap_cern.l
+│   │   ├── imap_cern_lex.c
+│   │   ├── imap_cern_parse.c
+│   │   ├── imap_cern_parse.h
+│   │   ├── imap_cern.y
+│   │   ├── imap_circle.c
+│   │   ├── imap_circle.h
+│   │   ├── imap_cmd_clear.c
+│   │   ├── imap_cmd_copy.c
+│   │   ├── imap_cmd_copy_object.c
+│   │   ├── imap_cmd_create.c
+│   │   ├── imap_cmd_cut.c
+│   │   ├── imap_cmd_cut_object.c
+│   │   ├── imap_cmd_delete.c
+│   │   ├── imap_cmd_delete_point.c
+│   │   ├── imap_cmd_edit_object.c
+│   │   ├── imap_cmd_gimp_guides.c
+│   │   ├── imap_cmd_guides.c
+│   │   ├── imap_cmd_insert_point.c
+│   │   ├── imap_cmd_move.c
+│   │   ├── imap_cmd_move_down.c
+│   │   ├── imap_cmd_move_sash.c
+│   │   ├── imap_cmd_move_selected.c
+│   │   ├── imap_cmd_move_to_front.c
+│   │   ├── imap_cmd_move_up.c
+│   │   ├── imap_cmd_object_down.c
+│   │   ├── imap_cmd_object_move.c
+│   │   ├── imap_cmd_object_up.c
+│   │   ├── imap_cmd_paste.c
+│   │   ├── imap_cmd_select_all.c
+│   │   ├── imap_cmd_select.c
+│   │   ├── imap_cmd_select_next.c
+│   │   ├── imap_cmd_select_prev.c
+│   │   ├── imap_cmd_select_region.c
+│   │   ├── imap_cmd_send_to_back.c
+│   │   ├── imap_cmd_unselect_all.c
+│   │   ├── imap_cmd_unselect.c
+│   │   ├── imap_command.c
+│   │   ├── imap_command.h
+│   │   ├── imap_commands.h
+│   │   ├── imap_csim.l
+│   │   ├── imap_csim_lex.c
+│   │   ├── imap_csim_parse.c
+│   │   ├── imap_csim_parse.h
+│   │   ├── imap_csim.y
+│   │   ├── imap_default_dialog.c
+│   │   ├── imap_default_dialog.h
+│   │   ├── imap_edit_area_info.c
+│   │   ├── imap_edit_area_info.h
+│   │   ├── imap_file.c
+│   │   ├── imap_file.h
+│   │   ├── imap_grid.c
+│   │   ├── imap_grid.h
+│   │   ├── imap_main.c
+│   │   ├── imap_main.h
+│   │   ├── imap_menu.c
+│   │   ├── imap_menu_funcs.c
+│   │   ├── imap_menu_funcs.h
+│   │   ├── imap_menu.h
+│   │   ├── imap_misc.c
+│   │   ├── imap_misc.h
+│   │   ├── imap_mru.c
+│   │   ├── imap_mru.h
+│   │   ├── imap_ncsa.l
+│   │   ├── imap_ncsa_lex.c
+│   │   ├── imap_ncsa_parse.c
+│   │   ├── imap_ncsa_parse.h
+│   │   ├── imap_ncsa.y
+│   │   ├── imap_object.c
+│   │   ├── imap_object.h
+│   │   ├── imap_object_popup.c
+│   │   ├── imap_object_popup.h
+│   │   ├── imap_polygon.c
+│   │   ├── imap_polygon.h
+│   │   ├── imap_preferences.c
+│   │   ├── imap_preferences.h
+│   │   ├── imap_preview.c
+│   │   ├── imap_preview.h
+│   │   ├── imap_rectangle.c
+│   │   ├── imap_rectangle.h
+│   │   ├── imap_selection.c
+│   │   ├── imap_selection.h
+│   │   ├── imap_settings.c
+│   │   ├── imap_settings.h
+│   │   ├── imap_source.c
+│   │   ├── imap_source.h
+│   │   ├── imap_statusbar.c
+│   │   ├── imap_statusbar.h
+│   │   ├── imap_stock.c
+│   │   ├── imap_stock.h
+│   │   ├── imap_string.c
+│   │   ├── imap_string.h
+│   │   ├── imap_table.c
+│   │   ├── imap_table.h
+│   │   ├── imap_taglist.c
+│   │   ├── imap_taglist.h
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── lighting
+│   │   ├── images
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── stock-intensity-ambient-high.png
+│   │   │   ├── stock-intensity-ambient-low.png
+│   │   │   ├── stock-intensity-diffuse-high.png
+│   │   │   ├── stock-intensity-diffuse-low.png
+│   │   │   ├── stock-reflectivity-diffuse-high.png
+│   │   │   ├── stock-reflectivity-diffuse-low.png
+│   │   │   ├── stock-reflectivity-highlight-high.png
+│   │   │   ├── stock-reflectivity-highlight-low.png
+│   │   │   ├── stock-reflectivity-specular-high.png
+│   │   │   └── stock-reflectivity-specular-low.png
+│   │   ├── lighting-apply.c
+│   │   ├── lighting-apply.h
+│   │   ├── lighting-image.c
+│   │   ├── lighting-image.h
+│   │   ├── lighting-main.c
+│   │   ├── lighting-main.h
+│   │   ├── lighting-preview.c
+│   │   ├── lighting-preview.h
+│   │   ├── lighting-shade.c
+│   │   ├── lighting-shade.h
+│   │   ├── lighting-stock.c
+│   │   ├── lighting-stock.h
+│   │   ├── lighting-ui.c
+│   │   ├── lighting-ui.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README
+│   │   └── TODO
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── map-object
+│   │   ├── arcball.c
+│   │   ├── arcball.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── map-object-apply.c
+│   │   ├── map-object-apply.h
+│   │   ├── map-object-image.c
+│   │   ├── map-object-image.h
+│   │   ├── map-object-main.c
+│   │   ├── map-object-main.h
+│   │   ├── map-object-preview.c
+│   │   ├── map-object-preview.h
+│   │   ├── map-object-shade.c
+│   │   ├── map-object-shade.h
+│   │   ├── map-object-stock.c
+│   │   ├── map-object-stock.h
+│   │   ├── map-object-ui.c
+│   │   ├── map-object-ui.h
+│   │   ├── README
+│   │   └── TODO
+│   ├── maze
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── maze-algorithms.c
+│   │   ├── maze-algorithms.h
+│   │   ├── maze.c
+│   │   ├── maze-dialog.c
+│   │   ├── maze-dialog.h
+│   │   ├── maze.h
+│   │   ├── maze-utils.c
+│   │   └── maze-utils.h
+│   ├── metadata
+│   │   ├── exif-decode.c
+│   │   ├── exif-decode.h
+│   │   ├── gimpxmpmodelentry.c
+│   │   ├── gimpxmpmodelentry.h
+│   │   ├── gimpxmpmodeltext.c
+│   │   ├── gimpxmpmodeltext.h
+│   │   ├── gimpxmpmodelwidget.c
+│   │   ├── gimpxmpmodelwidget.h
+│   │   ├── interface.c
+│   │   ├── interface.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── metadata.c
+│   │   ├── metadata.h
+│   │   ├── README
+│   │   ├── xmpdump.c
+│   │   ├── xmp-encode.c
+│   │   ├── xmp-encode.h
+│   │   ├── xmp-model.c
+│   │   ├── xmp-model.h
+│   │   ├── xmp-parse.c
+│   │   ├── xmp-parse.h
+│   │   ├── xmp-schemas.c
+│   │   └── xmp-schemas.h
+│   ├── pagecurl
+│   │   ├── curl0.png
+│   │   ├── curl1.png
+│   │   ├── curl2.png
+│   │   ├── curl3.png
+│   │   ├── curl4.png
+│   │   ├── curl5.png
+│   │   ├── curl6.png
+│   │   ├── curl7.png
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── pagecurl.c
+│   ├── print
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── print.c
+│   │   ├── print-draw-page.c
+│   │   ├── print-draw-page.h
+│   │   ├── print.h
+│   │   ├── print-page-layout.c
+│   │   ├── print-page-layout.h
+│   │   ├── print-page-setup.c
+│   │   ├── print-page-setup.h
+│   │   ├── print-preview.c
+│   │   ├── print-preview.h
+│   │   ├── print-settings.c
+│   │   ├── print-settings.h
+│   │   ├── print-utils.c
+│   │   └── print-utils.h
+│   ├── pygimp
+│   │   ├── gimpcolormodule.c
+│   │   ├── gimpcolor-types.defs
+│   │   ├── gimpenumsmodule.c
+│   │   ├── gimpenums.py
+│   │   ├── gimpenums-types.defs
+│   │   ├── gimpfu.py
+│   │   ├── gimpmodule.c
+│   │   ├── gimpplugin.py
+│   │   ├── gimpshelf.py
+│   │   ├── gimpthumb.c
+│   │   ├── gimpthumb.defs
+│   │   ├── gimpthumbmodule.c
+│   │   ├── gimpthumb.override
+│   │   ├── gimpui.c
+│   │   ├── gimpui.defs
+│   │   ├── gimpuimodule.c
+│   │   ├── gimpui.override
+│   │   ├── gimpui.py
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── plug-ins
+│   │   │   ├── benchmark-foreground-extract.py
+│   │   │   ├── clothify.py
+│   │   │   ├── colorxhtml.py
+│   │   │   ├── file-openraster.py
+│   │   │   ├── foggify.py
+│   │   │   ├── gradients-save-as-css.py
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── palette-offset.py
+│   │   │   ├── palette-sort.py
+│   │   │   ├── palette-to-gradient.py
+│   │   │   ├── pyconsole.py
+│   │   │   ├── py-slice.py
+│   │   │   ├── python-console.py
+│   │   │   ├── python-eval.py
+│   │   │   ├── shadow_bevel.py
+│   │   │   ├── sphere.py
+│   │   │   ├── text-brush.py
+│   │   │   └── whirlpinch.py
+│   │   ├── py-compile
+│   │   ├── pygimp-api.h
+│   │   ├── pygimpcolor-api.h
+│   │   ├── pygimpcolor.h
+│   │   ├── pygimp-colors.c
+│   │   ├── pygimp-display.c
+│   │   ├── pygimp-drawable.c
+│   │   ├── pygimp.h
+│   │   ├── pygimp-image.c
+│   │   ├── pygimp-intl.h
+│   │   ├── pygimp-item.c
+│   │   ├── pygimp-logo.png
+│   │   ├── pygimp-parasite.c
+│   │   ├── pygimp-pdb.c
+│   │   ├── pygimp-tile.c
+│   │   ├── pygimp-util.h
+│   │   └── pygimp-vectors.c
+│   ├── script-fu
+│   │   ├── ftx
+│   │   │   ├── ftx.c
+│   │   │   ├── ftx-functions.txt
+│   │   │   ├── ftx.h
+│   │   │   ├── LICENSE
+│   │   │   ├── listhome.scm
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   └── README
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── scheme-wrapper.c
+│   │   ├── scheme-wrapper.h
+│   │   ├── script-fu.c
+│   │   ├── script-fu-console.c
+│   │   ├── script-fu-console.h
+│   │   ├── script-fu-enums.h
+│   │   ├── script-fu-eval.c
+│   │   ├── script-fu-eval.h
+│   │   ├── script-fu-interface.c
+│   │   ├── script-fu-interface.h
+│   │   ├── script-fu-intl.h
+│   │   ├── script-fu-regex.c
+│   │   ├── script-fu-regex.h
+│   │   ├── script-fu-script.c
+│   │   ├── script-fu-script.h
+│   │   ├── script-fu-scripts.c
+│   │   ├── script-fu-scripts.h
+│   │   ├── script-fu-server.c
+│   │   ├── script-fu-server.h
+│   │   ├── script-fu-text-console.c
+│   │   ├── script-fu-text-console.h
+│   │   ├── script-fu-types.h
+│   │   ├── script-fu-utils.c
+│   │   ├── script-fu-utils.h
+│   │   ├── scripts
+│   │   │   ├── 3d-outline.scm
+│   │   │   ├── 3dTruchet.scm
+│   │   │   ├── add-bevel.scm
+│   │   │   ├── addborder.scm
+│   │   │   ├── alien-glow-arrow.scm
+│   │   │   ├── alien-glow-bar.scm
+│   │   │   ├── alien-glow-bullet.scm
+│   │   │   ├── alien-glow-button.scm
+│   │   │   ├── alien-glow-logo.scm
+│   │   │   ├── alien-neon-logo.scm
+│   │   │   ├── basic1-logo.scm
+│   │   │   ├── basic2-logo.scm
+│   │   │   ├── beveled-button.scm
+│   │   │   ├── beveled-pattern-arrow.scm
+│   │   │   ├── beveled-pattern-bullet.scm
+│   │   │   ├── beveled-pattern-button.scm
+│   │   │   ├── beveled-pattern-heading.scm
+│   │   │   ├── beveled-pattern-hrule.scm
+│   │   │   ├── blend-anim.scm
+│   │   │   ├── blended-logo.scm
+│   │   │   ├── bovinated-logo.scm
+│   │   │   ├── burn-in-anim.scm
+│   │   │   ├── camo.scm
+│   │   │   ├── carved-logo.scm
+│   │   │   ├── carve-it.scm
+│   │   │   ├── chalk.scm
+│   │   │   ├── chip-away.scm
+│   │   │   ├── chrome-it.scm
+│   │   │   ├── chrome-logo.scm
+│   │   │   ├── circuit.scm
+│   │   │   ├── clothify.scm
+│   │   │   ├── coffee.scm
+│   │   │   ├── comic-logo.scm
+│   │   │   ├── contactsheet.scm
+│   │   │   ├── coolmetal-logo.scm
+│   │   │   ├── copy-visible.scm
+│   │   │   ├── crystal-logo.scm
+│   │   │   ├── difference-clouds.scm
+│   │   │   ├── distress-selection.scm
+│   │   │   ├── drop-shadow.scm
+│   │   │   ├── erase-rows.scm
+│   │   │   ├── flatland.scm
+│   │   │   ├── font-map.scm
+│   │   │   ├── frosty-logo.scm
+│   │   │   ├── fuzzyborder.scm
+│   │   │   ├── gimp-online.scm
+│   │   │   ├── glossy.scm
+│   │   │   ├── glowing-logo.scm
+│   │   │   ├── gradient-bevel-logo.scm
+│   │   │   ├── gradient-example.scm
+│   │   │   ├── grid-system.scm
+│   │   │   ├── guides-from-selection.scm
+│   │   │   ├── guides-new-percent.scm
+│   │   │   ├── guides-new.scm
+│   │   │   ├── guides-remove-all.scm
+│   │   │   ├── i26-gunya2.scm
+│   │   │   ├── images
+│   │   │   │   ├── beavis.jpg
+│   │   │   │   ├── Makefile.am
+│   │   │   │   ├── Makefile.in
+│   │   │   │   ├── texture1.jpg
+│   │   │   │   ├── texture2.jpg
+│   │   │   │   ├── texture3.jpg
+│   │   │   │   └── texture.jpg
+│   │   │   ├── land.scm
+│   │   │   ├── lava.scm
+│   │   │   ├── line-nova.scm
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── mkbrush.scm
+│   │   │   ├── neon-logo.scm
+│   │   │   ├── news-text.scm
+│   │   │   ├── old-photo.scm
+│   │   │   ├── palette-export.scm
+│   │   │   ├── paste-as-brush.scm
+│   │   │   ├── paste-as-pattern.scm
+│   │   │   ├── perspective-shadow.scm
+│   │   │   ├── plug-in-compat.init
+│   │   │   ├── predator.scm
+│   │   │   ├── pupi-button.scm
+│   │   │   ├── rendermap.scm
+│   │   │   ├── reverse-layers.scm
+│   │   │   ├── ripply-anim.scm
+│   │   │   ├── round-corners.scm
+│   │   │   ├── script-fu-compat.init
+│   │   │   ├── script-fu.init
+│   │   │   ├── script-fu-set-cmap.scm
+│   │   │   ├── script-fu-util.scm
+│   │   │   ├── selection-round.scm
+│   │   │   ├── select-to-brush.scm
+│   │   │   ├── select-to-image.scm
+│   │   │   ├── select-to-pattern.scm
+│   │   │   ├── slide.scm
+│   │   │   ├── sota-chrome-logo.scm
+│   │   │   ├── speed-text.scm
+│   │   │   ├── spinning-globe.scm
+│   │   │   ├── spyrogimp.scm
+│   │   │   ├── starscape-logo.scm
+│   │   │   ├── swirltile.scm
+│   │   │   ├── swirly-pattern.scm
+│   │   │   ├── test-sphere.scm
+│   │   │   ├── text-circle.scm
+│   │   │   ├── textured-logo.scm
+│   │   │   ├── tileblur.scm
+│   │   │   ├── title-header.scm
+│   │   │   ├── t-o-p-logo.scm
+│   │   │   ├── truchet.scm
+│   │   │   ├── ts-helloworld.scm
+│   │   │   ├── unsharp-mask.scm
+│   │   │   ├── waves-anim.scm
+│   │   │   ├── weave.scm
+│   │   │   └── xach-effect.scm
+│   │   └── tinyscheme
+│   │       ├── BUILDING
+│   │       ├── CHANGES
+│   │       ├── COPYING
+│   │       ├── hack.txt
+│   │       ├── Makefile.am
+│   │       ├── Makefile.in
+│   │       ├── Manual.txt
+│   │       ├── MiniSCHEMETribute.txt
+│   │       ├── opdefines.h
+│   │       ├── README
+│   │       ├── scheme.c
+│   │       ├── scheme.h
+│   │       └── scheme-private.h
+│   ├── selection-to-path
+│   │   ├── bitmap.h
+│   │   ├── bounding-box.h
+│   │   ├── curve.c
+│   │   ├── curve.h
+│   │   ├── edge.c
+│   │   ├── edge.h
+│   │   ├── fit.c
+│   │   ├── fit.h
+│   │   ├── global.h
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── math.c
+│   │   ├── pxl-outline.c
+│   │   ├── pxl-outline.h
+│   │   ├── README
+│   │   ├── README.limn
+│   │   ├── selection-to-path.c
+│   │   ├── selection-to-path-dialog.c
+│   │   ├── selection-to-path.h
+│   │   ├── spline.c
+│   │   ├── spline.h
+│   │   ├── types.h
+│   │   ├── vector.c
+│   │   └── vector.h
+│   ├── twain
+│   │   ├── gimp-twain.png
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── README
+│   │   ├── twain.c
+│   │   ├── twain.h
+│   │   ├── tw_dump.c
+│   │   ├── tw_dump.h
+│   │   ├── tw_func.c
+│   │   ├── tw_func.h
+│   │   ├── tw_local.h
+│   │   ├── tw_mac.c
+│   │   ├── tw_platform.h
+│   │   ├── tw_util.c
+│   │   ├── tw_util.h
+│   │   └── tw_win.c
+│   ├── ui
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── plug-in-file-gif.ui
+│   │   └── plug-in-file-png.ui
+│   └── win-snap
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── resource.h
+│       ├── select.cur
+│       ├── small.ico
+│       ├── winsnap.c
+│       ├── winsnap.h
+│       ├── winsnap.ico
+│       └── winsnap.rc
+├── po
+│   ├── am.po
+│   ├── an.po
+│   ├── ar.po
+│   ├── ast.po
+│   ├── az.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── csb.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── ga.po
+│   ├── gd.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hi.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── ka.po
+│   ├── kk.po
+│   ├── km.po
+│   ├── kn.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ml.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── nds.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── si.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── te.po
+│   ├── th.po
+│   ├── tr.po
+│   ├── tt.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── xh.po
+│   ├── yi.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── po-libgimp
+│   ├── an.po
+│   ├── ar.po
+│   ├── az.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── ga.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── kk.po
+│   ├── km.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── te.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── xh.po
+│   ├── yi.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── po-plug-ins
+│   ├── an.po
+│   ├── ar.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── ga.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── km.po
+│   ├── kn.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── xh.po
+│   ├── yi.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── po-python
+│   ├── an.po
+│   ├── ar.po
+│   ├── az.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── ga.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── km.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── te.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── xh.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── po-script-fu
+│   ├── an.po
+│   ├── ar.po
+│   ├── az.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── ga.po
+│   ├── gd.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── km.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── te.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── xh.po
+│   ├── yi.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── po-tips
+│   ├── an.po
+│   ├── ar.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── br.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── is.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── km.po
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ms.po
+│   ├── my.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── POTFILES.skip
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
+├── py-compile
+├── README
+├── README.i18n
+├── test-driver
+├── themes
+│   ├── Default
+│   │   ├── gtkrc
+│   │   ├── images
+│   │   │   ├── gimp-dialog-icons.xcf.gz
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── preferences
+│   │   │   │   ├── color-management-22.png
+│   │   │   │   ├── color-management.png
+│   │   │   │   ├── controllers-22.png
+│   │   │   │   ├── controllers.png
+│   │   │   │   ├── default-comment.png
+│   │   │   │   ├── default-grid-22.png
+│   │   │   │   ├── default-grid.png
+│   │   │   │   ├── display-22.png
+│   │   │   │   ├── display.png
+│   │   │   │   ├── environment-22.png
+│   │   │   │   ├── environment.png
+│   │   │   │   ├── folders-22.png
+│   │   │   │   ├── folders-brushes-22.png
+│   │   │   │   ├── folders-brushes.png
+│   │   │   │   ├── folders-dynamics-22.png
+│   │   │   │   ├── folders-dynamics.png
+│   │   │   │   ├── folders-environ-22.png
+│   │   │   │   ├── folders-environ.png
+│   │   │   │   ├── folders-fonts-22.png
+│   │   │   │   ├── folders-fonts.png
+│   │   │   │   ├── folders-gradients-22.png
+│   │   │   │   ├── folders-gradients.png
+│   │   │   │   ├── folders-interp-22.png
+│   │   │   │   ├── folders-interp.png
+│   │   │   │   ├── folders-modules-22.png
+│   │   │   │   ├── folders-modules.png
+│   │   │   │   ├── folders-palettes-22.png
+│   │   │   │   ├── folders-palettes.png
+│   │   │   │   ├── folders-patterns-22.png
+│   │   │   │   ├── folders-patterns.png
+│   │   │   │   ├── folders-plug-ins-22.png
+│   │   │   │   ├── folders-plug-ins.png
+│   │   │   │   ├── folders.png
+│   │   │   │   ├── folders-scripts-22.png
+│   │   │   │   ├── folders-scripts.png
+│   │   │   │   ├── folders-themes-22.png
+│   │   │   │   ├── folders-themes.png
+│   │   │   │   ├── folders-tool-plug-ins-22.png
+│   │   │   │   ├── folders-tool-plug-ins.png
+│   │   │   │   ├── folders-tool-presets-22.png
+│   │   │   │   ├── folders-tool-presets.png
+│   │   │   │   ├── folders-tools-22.png
+│   │   │   │   ├── folders.xcf.gz
+│   │   │   │   ├── help-system-22.png
+│   │   │   │   ├── help-system.png
+│   │   │   │   ├── image-title-22.png
+│   │   │   │   ├── image-title.png
+│   │   │   │   ├── image-windows-22.png
+│   │   │   │   ├── image-windows.png
+│   │   │   │   ├── input-devices-22.png
+│   │   │   │   ├── input-devices.png
+│   │   │   │   ├── interface-22.png
+│   │   │   │   ├── interface.png
+│   │   │   │   ├── Makefile.am
+│   │   │   │   ├── Makefile.in
+│   │   │   │   ├── new-image-22.png
+│   │   │   │   ├── new-image.png
+│   │   │   │   ├── session-22.png
+│   │   │   │   ├── session.png
+│   │   │   │   ├── theme-22.png
+│   │   │   │   ├── theme.png
+│   │   │   │   ├── toolbox-22.png
+│   │   │   │   ├── toolbox.png
+│   │   │   │   ├── tool-options-22.png
+│   │   │   │   ├── tool-options.png
+│   │   │   │   ├── window-management-22.png
+│   │   │   │   └── window-management.png
+│   │   │   ├── stock-anchor-16.png
+│   │   │   ├── stock-cap-butt-16.png
+│   │   │   ├── stock-cap-round-16.png
+│   │   │   ├── stock-cap-square-16.png
+│   │   │   ├── stock-center-16.png
+│   │   │   ├── stock-center-24.png
+│   │   │   ├── stock-channel-16.png
+│   │   │   ├── stock-channel-24.png
+│   │   │   ├── stock-channel-32.png
+│   │   │   ├── stock-channel-48.png
+│   │   │   ├── stock-channel-alpha-16.png
+│   │   │   ├── stock-channel-alpha-24.png
+│   │   │   ├── stock-channel-alpha-32.png
+│   │   │   ├── stock-channel-alpha-48.png
+│   │   │   ├── stock-channel-blue-16.png
+│   │   │   ├── stock-channel-blue-24.png
+│   │   │   ├── stock-channel-blue-32.png
+│   │   │   ├── stock-channel-blue-48.png
+│   │   │   ├── stock-channel-gray-16.png
+│   │   │   ├── stock-channel-gray-24.png
+│   │   │   ├── stock-channel-gray-32.png
+│   │   │   ├── stock-channel-gray-48.png
+│   │   │   ├── stock-channel-green-16.png
+│   │   │   ├── stock-channel-green-24.png
+│   │   │   ├── stock-channel-green-32.png
+│   │   │   ├── stock-channel-green-48.png
+│   │   │   ├── stock-channel-indexed-16.png
+│   │   │   ├── stock-channel-indexed-24.png
+│   │   │   ├── stock-channel-indexed-32.png
+│   │   │   ├── stock-channel-indexed-48.png
+│   │   │   ├── stock-channel-red-16.png
+│   │   │   ├── stock-channel-red-24.png
+│   │   │   ├── stock-channel-red-32.png
+│   │   │   ├── stock-channel-red-48.png
+│   │   │   ├── stock-channels-16.png
+│   │   │   ├── stock-channels-24.png
+│   │   │   ├── stock-char-picker-22.png
+│   │   │   ├── stock-close-12.png
+│   │   │   ├── stock-colormap-16.png
+│   │   │   ├── stock-colormap-24.png
+│   │   │   ├── stock-color-picker-black-18.png
+│   │   │   ├── stock-color-picker-gray-18.png
+│   │   │   ├── stock-color-picker-white-18.png
+│   │   │   ├── stock-color-pick-from-screen-16.png
+│   │   │   ├── stock-color-triangle-16.png
+│   │   │   ├── stock-controller-16.png
+│   │   │   ├── stock-controller-24.png
+│   │   │   ├── stock-controller-keyboard-16.png
+│   │   │   ├── stock-controller-keyboard-24.png
+│   │   │   ├── stock-controller-linux-input-16.png
+│   │   │   ├── stock-controller-linux-input-24.png
+│   │   │   ├── stock-controller-midi-16.png
+│   │   │   ├── stock-controller-midi-24.png
+│   │   │   ├── stock-controller-wheel-16.png
+│   │   │   ├── stock-controller-wheel-24.png
+│   │   │   ├── stock-convert-grayscale-16.png
+│   │   │   ├── stock-convert-indexed-16.png
+│   │   │   ├── stock-convert-rgb-16.png
+│   │   │   ├── stock-cursor-16.png
+│   │   │   ├── stock-cursor-24.png
+│   │   │   ├── stock-curve-free-16.png
+│   │   │   ├── stock-curve-smooth-16.png
+│   │   │   ├── stock-default-colors-12.png
+│   │   │   ├── stock-device-status-16.png
+│   │   │   ├── stock-device-status-24.png
+│   │   │   ├── stock-display-filter-16.png
+│   │   │   ├── stock-display-filter-24.png
+│   │   │   ├── stock-display-filter-colorblind-16.png
+│   │   │   ├── stock-display-filter-colorblind-24.png
+│   │   │   ├── stock-display-filter-contrast-16.png
+│   │   │   ├── stock-display-filter-contrast-24.png
+│   │   │   ├── stock-display-filter-gamma-16.png
+│   │   │   ├── stock-display-filter-gamma-24.png
+│   │   │   ├── stock-display-filter-lcms-16.png
+│   │   │   ├── stock-display-filter-lcms-24.png
+│   │   │   ├── stock-display-filter-proof-16.png
+│   │   │   ├── stock-display-filter-proof-24.png
+│   │   │   ├── stock-duplicate-16.png
+│   │   │   ├── stock-dynamics-16.png
+│   │   │   ├── stock-dynamics-22.png
+│   │   │   ├── stock-edit-16.png
+│   │   │   ├── stock-error-64.png
+│   │   │   ├── stock-eye-12.png
+│   │   │   ├── stock-eye-20.png
+│   │   │   ├── stock-flip-horizontal-16.png
+│   │   │   ├── stock-flip-vertical-16.png
+│   │   │   ├── stock-floating-selection-16.png
+│   │   │   ├── stock-floating-selection-24.png
+│   │   │   ├── stock-floating-selection-32.png
+│   │   │   ├── stock-floating-selection-48.png
+│   │   │   ├── stock-frame-64.png
+│   │   │   ├── stock-gegl-16.png
+│   │   │   ├── stock-gegl-22.png
+│   │   │   ├── stock-gradient-bilinear-16.png
+│   │   │   ├── stock-gradient-conical-asymmetric-16.png
+│   │   │   ├── stock-gradient-conical-symmetric-16.png
+│   │   │   ├── stock-gradient-linear-16.png
+│   │   │   ├── stock-gradient-radial-16.png
+│   │   │   ├── stock-gradient-shapeburst-angular-16.png
+│   │   │   ├── stock-gradient-shapeburst-dimpled-16.png
+│   │   │   ├── stock-gradient-shapeburst-spherical-16.png
+│   │   │   ├── stock-gradient-spiral-anticlockwise-16.png
+│   │   │   ├── stock-gradient-spiral-clockwise-16.png
+│   │   │   ├── stock-gradient-square-16.png
+│   │   │   ├── stock-gravity-east-24.png
+│   │   │   ├── stock-gravity-north-24.png
+│   │   │   ├── stock-gravity-north-east-24.png
+│   │   │   ├── stock-gravity-north-west-24.png
+│   │   │   ├── stock-gravity-south-24.png
+│   │   │   ├── stock-gravity-south-east-24.png
+│   │   │   ├── stock-gravity-south-west-24.png
+│   │   │   ├── stock-gravity-west-24.png
+│   │   │   ├── stock-grid-16.png
+│   │   │   ├── stock-hcenter-24.png
+│   │   │   ├── stock-hchain-24.png
+│   │   │   ├── stock-hchain-broken-24.png
+│   │   │   ├── stock-histogram-16.png
+│   │   │   ├── stock-histogram-22.png
+│   │   │   ├── stock-histogram-linear-16.png
+│   │   │   ├── stock-histogram-logarithmic-16.png
+│   │   │   ├── stock-image-16.png
+│   │   │   ├── stock-image-24.png
+│   │   │   ├── stock-image-32.png
+│   │   │   ├── stock-image-48.png
+│   │   │   ├── stock-images-16.png
+│   │   │   ├── stock-images-24.png
+│   │   │   ├── stock-info-16.png
+│   │   │   ├── stock-info-24.png
+│   │   │   ├── stock-info-64.png
+│   │   │   ├── stock-input-device-16.png
+│   │   │   ├── stock-input-device-22.png
+│   │   │   ├── stock-invert-16.png
+│   │   │   ├── stock-join-bevel-16.png
+│   │   │   ├── stock-join-miter-16.png
+│   │   │   ├── stock-join-round-16.png
+│   │   │   ├── stock-landscape-16.png
+│   │   │   ├── stock-landscape-22.png
+│   │   │   ├── stock-layer-16.png
+│   │   │   ├── stock-layer-24.png
+│   │   │   ├── stock-layer-32.png
+│   │   │   ├── stock-layer-48.png
+│   │   │   ├── stock-layer-mask-16.png
+│   │   │   ├── stock-layer-mask-24.png
+│   │   │   ├── stock-layer-mask-32.png
+│   │   │   ├── stock-layer-mask-48.png
+│   │   │   ├── stock-layers-16.png
+│   │   │   ├── stock-layers-24.png
+│   │   │   ├── stock-layer-to-imagesize-16.png
+│   │   │   ├── stock-letter-spacing-22.png
+│   │   │   ├── stock-line-spacing-22.png
+│   │   │   ├── stock-linked-12.png
+│   │   │   ├── stock-linked-20.png
+│   │   │   ├── stock-list-16.png
+│   │   │   ├── stock-menu-left-12.png
+│   │   │   ├── stock-menu-right-12.png
+│   │   │   ├── stock-merge-down-16.png
+│   │   │   ├── stock-move-to-screen-16.png
+│   │   │   ├── stock-move-to-screen-24.png
+│   │   │   ├── stock-navigation-16.png
+│   │   │   ├── stock-paste-as-new-16.png
+│   │   │   ├── stock-paste-into-16.png
+│   │   │   ├── stock-path-16.png
+│   │   │   ├── stock-path-22.png
+│   │   │   ├── stock-paths-16.png
+│   │   │   ├── stock-paths-22.png
+│   │   │   ├── stock-path-stroke-16.png
+│   │   │   ├── stock-plugin-16.png
+│   │   │   ├── stock-portrait-16.png
+│   │   │   ├── stock-portrait-22.png
+│   │   │   ├── stock-print-resolution-16.png
+│   │   │   ├── stock-print-resolution-24.png
+│   │   │   ├── stock-question-64.png
+│   │   │   ├── stock-quick-mask-off-12.png
+│   │   │   ├── stock-quick-mask-on-12.png
+│   │   │   ├── stock-reset-16.png
+│   │   │   ├── stock-reshow-filter-16.png
+│   │   │   ├── stock-resize-16.png
+│   │   │   ├── stock-rotate-180-16.png
+│   │   │   ├── stock-rotate-270-16.png
+│   │   │   ├── stock-rotate-90-16.png
+│   │   │   ├── stock-sample-point-16.png
+│   │   │   ├── stock-sample-point-24.png
+│   │   │   ├── stock-scale-16.png
+│   │   │   ├── stock-selection-16.png
+│   │   │   ├── stock-selection-add-16.png
+│   │   │   ├── stock-selection-all-16.png
+│   │   │   ├── stock-selection-border-16.png
+│   │   │   ├── stock-selection-grow-16.png
+│   │   │   ├── stock-selection-intersect-16.png
+│   │   │   ├── stock-selection-none-16.png
+│   │   │   ├── stock-selection-replace-16.png
+│   │   │   ├── stock-selection-shrink-16.png
+│   │   │   ├── stock-selection-stroke-16.png
+│   │   │   ├── stock-selection-subtract-16.png
+│   │   │   ├── stock-selection-to-channel-16.png
+│   │   │   ├── stock-selection-to-path-16.png
+│   │   │   ├── stock-shape-circle-16.png
+│   │   │   ├── stock-shape-diamond-16.png
+│   │   │   ├── stock-shape-square-16.png
+│   │   │   ├── stock-swap-colors-12.png
+│   │   │   ├── stock-template-16.png
+│   │   │   ├── stock-template-24.png
+│   │   │   ├── stock-text-dir-ltr-24.png
+│   │   │   ├── stock-text-dir-rtl-24.png
+│   │   │   ├── stock-text-layer-16.png
+│   │   │   ├── stock-text-layer-24.png
+│   │   │   ├── stock-text-layer-32.png
+│   │   │   ├── stock-text-layer-48.png
+│   │   │   ├── stock-texture-64.png
+│   │   │   ├── stock-toilet-paper-16.png
+│   │   │   ├── stock-toilet-paper-24.png
+│   │   │   ├── stock-tool-options-16.png
+│   │   │   ├── stock-tool-options-24.png
+│   │   │   ├── stock-tool-preset-16.png
+│   │   │   ├── stock-tool-preset-22.png
+│   │   │   ├── stock-tools-16.png
+│   │   │   ├── stock-tools-24.png
+│   │   │   ├── stock-transparency-16.png
+│   │   │   ├── stock-transparency-24.png
+│   │   │   ├── stock-undo-history-16.png
+│   │   │   ├── stock-undo-history-24.png
+│   │   │   ├── stock-user-manual-16.png
+│   │   │   ├── stock-user-manual-24.png
+│   │   │   ├── stock-user-manual-32.png
+│   │   │   ├── stock-user-manual-64.png
+│   │   │   ├── stock-vcenter-24.png
+│   │   │   ├── stock-vchain-24.png
+│   │   │   ├── stock-vchain-broken-24.png
+│   │   │   ├── stock-video-16.png
+│   │   │   ├── stock-video-24.png
+│   │   │   ├── stock-warning-16.png
+│   │   │   ├── stock-warning-24.png
+│   │   │   ├── stock-warning-64.png
+│   │   │   ├── stock-web-16.png
+│   │   │   ├── stock-web-24.png
+│   │   │   ├── stock-wilber-16.png
+│   │   │   ├── stock-wilber-22.png
+│   │   │   ├── stock-wilber-64.png
+│   │   │   ├── stock-wilber-eek-64.png
+│   │   │   ├── stock-zoom-follow-window-12.png
+│   │   │   └── tools
+│   │   │       ├── stock-tool-airbrush-16.png
+│   │   │       ├── stock-tool-airbrush-22.png
+│   │   │       ├── stock-tool-align-16.png
+│   │   │       ├── stock-tool-align-22.png
+│   │   │       ├── stock-tool-blend-16.png
+│   │   │       ├── stock-tool-blend-22.png
+│   │   │       ├── stock-tool-blur-16.png
+│   │   │       ├── stock-tool-blur-22.png
+│   │   │       ├── stock-tool-brightness-contrast-16.png
+│   │   │       ├── stock-tool-brightness-contrast-22.png
+│   │   │       ├── stock-tool-bucket-fill-16.png
+│   │   │       ├── stock-tool-bucket-fill-22.png
+│   │   │       ├── stock-tool-by-color-select-16.png
+│   │   │       ├── stock-tool-by-color-select-22.png
+│   │   │       ├── stock-tool-cage-16.png
+│   │   │       ├── stock-tool-cage-22.png
+│   │   │       ├── stock-tool-clone-16.png
+│   │   │       ├── stock-tool-clone-22.png
+│   │   │       ├── stock-tool-color-balance-16.png
+│   │   │       ├── stock-tool-color-balance-22.png
+│   │   │       ├── stock-tool-colorize-16.png
+│   │   │       ├── stock-tool-colorize-22.png
+│   │   │       ├── stock-tool-color-picker-16.png
+│   │   │       ├── stock-tool-color-picker-22.png
+│   │   │       ├── stock-tool-crop-16.png
+│   │   │       ├── stock-tool-crop-22.png
+│   │   │       ├── stock-tool-curves-16.png
+│   │   │       ├── stock-tool-curves-22.png
+│   │   │       ├── stock-tool-desaturate-16.png
+│   │   │       ├── stock-tool-desaturate-22.png
+│   │   │       ├── stock-tool-dodge-16.png
+│   │   │       ├── stock-tool-dodge-22.png
+│   │   │       ├── stock-tool-ellipse-select-16.png
+│   │   │       ├── stock-tool-ellipse-select-22.png
+│   │   │       ├── stock-tool-eraser-16.png
+│   │   │       ├── stock-tool-eraser-22.png
+│   │   │       ├── stock-tool-flip-16.png
+│   │   │       ├── stock-tool-flip-22.png
+│   │   │       ├── stock-tool-foreground-select-16.png
+│   │   │       ├── stock-tool-foreground-select-22.png
+│   │   │       ├── stock-tool-free-select-16.png
+│   │   │       ├── stock-tool-free-select-22.png
+│   │   │       ├── stock-tool-fuzzy-select-16.png
+│   │   │       ├── stock-tool-fuzzy-select-22.png
+│   │   │       ├── stock-tool-heal-16.png
+│   │   │       ├── stock-tool-heal-22.png
+│   │   │       ├── stock-tool-hue-saturation-16.png
+│   │   │       ├── stock-tool-hue-saturation-22.png
+│   │   │       ├── stock-tool-ink-16.png
+│   │   │       ├── stock-tool-ink-22.png
+│   │   │       ├── stock-tool-iscissors-16.png
+│   │   │       ├── stock-tool-iscissors-22.png
+│   │   │       ├── stock-tool-levels-16.png
+│   │   │       ├── stock-tool-levels-22.png
+│   │   │       ├── stock-tool-measure-16.png
+│   │   │       ├── stock-tool-measure-22.png
+│   │   │       ├── stock-tool-move-16.png
+│   │   │       ├── stock-tool-move-22.png
+│   │   │       ├── stock-tool-paintbrush-16.png
+│   │   │       ├── stock-tool-paintbrush-22.png
+│   │   │       ├── stock-tool-path-16.png
+│   │   │       ├── stock-tool-path-22.png
+│   │   │       ├── stock-tool-pencil-16.png
+│   │   │       ├── stock-tool-pencil-22.png
+│   │   │       ├── stock-tool-perspective-16.png
+│   │   │       ├── stock-tool-perspective-22.png
+│   │   │       ├── stock-tool-perspective-clone-16.png
+│   │   │       ├── stock-tool-perspective-clone-22.png
+│   │   │       ├── stock-tool-posterize-16.png
+│   │   │       ├── stock-tool-posterize-22.png
+│   │   │       ├── stock-tool-rect-select-16.png
+│   │   │       ├── stock-tool-rect-select-22.png
+│   │   │       ├── stock-tool-rotate-16.png
+│   │   │       ├── stock-tool-rotate-22.png
+│   │   │       ├── stock-tool-scale-16.png
+│   │   │       ├── stock-tool-scale-22.png
+│   │   │       ├── stock-tool-shear-16.png
+│   │   │       ├── stock-tool-shear-22.png
+│   │   │       ├── stock-tool-smudge-16.png
+│   │   │       ├── stock-tool-smudge-22.png
+│   │   │       ├── stock-tool-text-16.png
+│   │   │       ├── stock-tool-text-22.png
+│   │   │       ├── stock-tool-threshold-16.png
+│   │   │       ├── stock-tool-threshold-22.png
+│   │   │       ├── stock-tool-zoom-16.png
+│   │   │       └── stock-tool-zoom-22.png
+│   │   ├── Makefile.am
+│   │   └── Makefile.in
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── Small
+│       ├── gtkrc
+│       ├── Makefile.am
+│       └── Makefile.in
+└── tools
+    ├── defcheck.py
+    ├── gimp-mkenums
+    ├── gimppath2svg.py
+    ├── gimptool.c
+    ├── kernelgen.c
+    ├── Makefile.am
+    ├── Makefile.in
+    ├── pdbgen
+    │   ├── app.pl
+    │   ├── enumcode.pl
+    │   ├── enumgen.pl
+    │   ├── enums.pl
+    │   ├── groups.pl
+    │   ├── lib.pl
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── pdb
+    │   │   ├── brushes.pdb
+    │   │   ├── brush.pdb
+    │   │   ├── brush_select.pdb
+    │   │   ├── buffer.pdb
+    │   │   ├── channel.pdb
+    │   │   ├── color.pdb
+    │   │   ├── context.pdb
+    │   │   ├── convert.pdb
+    │   │   ├── display.pdb
+    │   │   ├── drawable.pdb
+    │   │   ├── drawable_transform.pdb
+    │   │   ├── dynamics.pdb
+    │   │   ├── edit.pdb
+    │   │   ├── fileops.pdb
+    │   │   ├── floating_sel.pdb
+    │   │   ├── font_select.pdb
+    │   │   ├── fonts.pdb
+    │   │   ├── gimp.pdb
+    │   │   ├── gimprc.pdb
+    │   │   ├── gradient.pdb
+    │   │   ├── gradient_select.pdb
+    │   │   ├── gradients.pdb
+    │   │   ├── grid.pdb
+    │   │   ├── guides.pdb
+    │   │   ├── help.pdb
+    │   │   ├── image.pdb
+    │   │   ├── image_select.pdb
+    │   │   ├── item.pdb
+    │   │   ├── item_transform.pdb
+    │   │   ├── layer.pdb
+    │   │   ├── message.pdb
+    │   │   ├── paint_tools.pdb
+    │   │   ├── palette.pdb
+    │   │   ├── palette_select.pdb
+    │   │   ├── palettes.pdb
+    │   │   ├── paths.pdb
+    │   │   ├── pattern.pdb
+    │   │   ├── pattern_select.pdb
+    │   │   ├── patterns.pdb
+    │   │   ├── plug_in.pdb
+    │   │   ├── procedural_db.pdb
+    │   │   ├── progress.pdb
+    │   │   ├── selection.pdb
+    │   │   ├── selection_tools.pdb
+    │   │   ├── text_layer.pdb
+    │   │   ├── text_tool.pdb
+    │   │   ├── transform_tools.pdb
+    │   │   ├── undo.pdb
+    │   │   ├── unit.pdb
+    │   │   └── vectors.pdb
+    │   ├── pdbgen.pl
+    │   ├── pdb.pl
+    │   ├── README
+    │   ├── README_NEW_PDB_PROC
+    │   ├── stddefs.pdb
+    │   └── util.pl
+    └── test-clipboard.c
+
+166 directories, 5895 files
